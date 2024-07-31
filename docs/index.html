@@ -10,8 +10,7 @@
 
 
 
-
-<title>Heritability of &gt;4,000 traits &amp; disorders in UK Biobank</title>
+<title>Data Server for >300 Published hiPSC-CM Differentiation and Maturation Protocols</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -213,15 +212,15 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">UKB Heritability</a>
+      <a class="navbar-brand" href="index.html">hiPSC-CM Protocol Mining</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="h2_browser.html">Browser</a>
+  <a href="h2_browser.html">Protocol Database</a>
 </li>
 <li>
-  <a href="downloads.html">Downloads</a>
+  <a href="downloads.html">Enriched Protocols</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -234,17 +233,17 @@ $(document).ready(function () {
       <a href="details.html">Overview</a>
     </li>
     <li>
-      <a href="select_topline.html">Selecting Primary GWAS</a>
+      <a href="select_topline.html">Standardising Terminologies</a>
     </li>
     <li>
-      <a href="confidence.html">Confidence Criteria</a>
+      <a href="confidence.html">Defining Protocol Categories</a>
     </li>
     <li>
-      <a href="significance.html">Significance Thresholds</a>
+      <a href="significance.html">Fitting Decision Tree Classifier</a>
     </li>
   </ul>
 </li>
-<li class="dropdown">
+<!-- <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Plots
      
@@ -286,7 +285,7 @@ $(document).ready(function () {
     </li>
   </ul>
 </li>
-      </ul>
+      </ul> -->
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -299,13 +298,10 @@ $(document).ready(function () {
       <a href="credits.html">Credits</a>
     </li>
     <li>
-      <a href="https://github.com/Nealelab/UKBB_ldsc">Site Github</a>
+      <a href="https://github.com/phycochow/palpantlab_hiPSC_database">Site Github</a>
     </li>
     <li>
-      <a href="https://github.com/Nealelab/UKBB_ldsc_scripts">Analysis Github</a>
-    </li>
-    <li>
-      <a href="https://www.nealelab.is/uk-biobank">Neale Lab UKB</a>
+      <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab UKB</a>
     </li>
   </ul>
 </li>
@@ -318,14 +314,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Heritability of &gt;4,000 traits &amp; disorders in UK Biobank</h1>
+<h1 class="title toc-ignore">Data Server for >300 Published hiPSC-CM Differentiation and Maturation Protocols</h1>
 
 </div>
 
 
 <p><br></p>
 <div class="well">
-<p>As you may know, the UK Biobank released data on ~500,000 individuals to the scientific community to advance research on genetics. The <a href="http://nealelab.is">Neale Lab</a> has been working to make some basic analyses of that data freely available; you can read more about the overall effort <a href="http://www.nealelab.is/uk-biobank">here</a>.</p>
+<p>performed data mining on 300 hiPSC-CM studies (Ewoldt et al., 2024 manuscript) to find common themes that influence physiological performance. In brief, my analysis confirms a clear knowledge gap in how variation in protocol parameters, like genetic background of hiPSCs, affect maturation and downstream hiPSC-CM function. It also points at the limited number and diversity with in-vitro datasets. And despite the transcriptomic insights of genome-wide CRISPR screens (Padmanabhan et al., 2024), hiPSC-CMs do not fully recapitulate complex cell and organ-level physiology that can be causal of traits (Cao et al., 2023), which shifts this project’s attention to alternative data resources. <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab</a> has been working to make some basic analyses of that data freely available; you can read more about the overall effort <a href="http://www.nealelab.is/uk-biobank">here</a>.</p>
 <p>
 </p>
 <p>Building on the initial genome-wide association analyses, we’ve now estimated the heritability of each of those traits and disorders, over 4,000 as of this writing. As with the primary GWAS analyses, we’re making the LD Score Regression SNP-heritability results available for <a href="h2_browser.html">browsing</a> and bulk <a href="downloads.html">download</a>.</p>
