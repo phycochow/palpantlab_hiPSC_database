@@ -2,9 +2,9 @@ name: "UKBB-ldsc"
 output_dir: "../docs"
 exclude: ["analytics_header.html","ukbb_h2_*","h2_part_template.html"]
 navbar:
-  title: "UKB Heritability"
+  title: "hiPSC-CM Protocol Mining"
   left:
-    - text: "Browser"
+    - text: "Protocol Database"
       href: h2_browser.html
     - text: "Downloads"
       href: downloads.html
