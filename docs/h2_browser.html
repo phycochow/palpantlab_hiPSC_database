@@ -318,148 +318,17 @@
     }
   </style>
 
-<!-- Adding a line break -->
-<p><br></p>
-
-<!-- Container for the DataTables widget -->
-<div id="htmlwidget-3da7a46cee266e156d1e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-
-<!-- Script containing the JSON configuration for the DataTables widget -->
-<script type="application/json" data-for="htmlwidget-3da7a46cee266e156d1e">{
-        "x": {
-            "crosstalkOptions": {
-                "key": ["1", "2"],  <!-- Keys for crosstalk -->
-                "group": "SharedData281767ba"  <!-- Group for shared data across widgets -->
-            },
-            "filter": "none",
-            "vertical": false,
-            "extensions": ["Buttons"],  <!-- Extensions used in the DataTable -->
-            "data": [
-                ["100001_irnt", "R86"],
-                ["<a href='h2_summary_100001_irnt.html'>Food weight</a>", "<a href='h2_summary_100002_irnt.html'>energy</a>"],
-                [0.017, 0.0128],
-                [0.0491, 0.536],
-                [2.23e-05, 0.49],
-                ["z4", "nominal"],
-                ["none", "isMidNeff;isNumericOrdinal;"],
-                [1.006, 0.9958],
-                [0.00977, 0.00913],
-                ["0.257", "0.676"],
-                [1.07, 1.04],
-                [0.084, -0.0832],
-                [51453, 51453],
-                ["continuous_irnt", "continuous_irnt"],
-                [0.799, null],
-                ["phesant", "phesant"],
-                ["female", "male"]
-            ],  <!-- Data for the table -->
-            "container": "<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Neff</th>\n <th>Var Type</th>\n <th>Prev.</th>\n <th>Source</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>",
-            <!-- Table structure with headers -->
-            "options": {
-                "scrollY": "475px",  <!-- Vertical scroll size -->
-                "scrollX": true,  <!-- Enable horizontal scrolling -->
-                "pageLength": 15,  <!-- Number of rows per page -->
-                "autoWidth": false,
-                "search": {
-                    "regex": true  <!-- Enable regex in search -->
-                },
-                "order": [[4, "asc"], [6, "asc"]],  <!-- Default sort order -->
-                "columnDefs": [
-                    {
-                        "targets": 13,  <!-- Targeting specific column -->
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 8,  <!-- Formatting significance for display -->
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 2,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 3,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 9,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 11,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 12,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "targets": 15,
-                        "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"
-                    },
-                    {
-                        "visible": false,  <!-- Hide certain columns -->
-                        "targets": []
-                    },
-                    {
-                        "width": "300px",  <!-- Setting width for columns -->
-                        "targets": 1
-                    },
-                    {
-                        "width": "150px",
-                        "targets": 0
-                    },
-                    {
-                        "className": "dt-right dt-nowrap",  <!-- Aligning text to the right -->
-                        "targets": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-                    },
-                    {
-                        "searchable": false,  <!-- Disable search on specific columns -->
-                        "targets": [2, 3, 4, 8, 9, 10, 11]
-                    },
-                    {
-                        "orderData": [10, 9],  <!-- Custom ordering of columns -->
-                        "targets": 10
-                    },
-                    {
-                        "orderSequence": ["desc", "asc"],  <!-- Order sequence for columns -->
-                        "targets": [2, 8]
-                    }
-                ],
-                "dom": "Bfrtip",  <!-- DOM positioning for elements -->
-                "buttons": [
-                    {
-                        "extend": "colvis",  <!-- Button to select columns -->
-                        "className": "btn btn-primary",
-                        "text": "Select Columns"
-                    }
-                ],
-                "orderClasses": false,
-                "lengthMenu": [10, 15, 25, 50, 100]  <!-- Options for number of rows displayed -->
-            },
-            "selection": {
-                "mode": "none",  <!-- Selection mode -->
-                "selected": null,
-                "target": "row",
-                "selectable": null
-            }
-        },
-        "evals": [
-            "options.columnDefs.0.render",
-            "options.columnDefs.1.render",
-            "options.columnDefs.2.render",
-            "options.columnDefs.3.render",
-            "options.columnDefs.4.render",
-            "options.columnDefs.5.render",
-            "options.columnDefs.6.render",
-            "options.columnDefs.7.render"
-        ],
-        "jsHooks": []
-    }
-</script>
-
-<!-- Adding another line break -->
-<p><br></p>
+  <!-- Adding a line break -->
+  <p><br></p>
+  
+  <!-- Container for the DataTables widget -->
+    <div id="htmlwidget-3da7a46cee266e156d1e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+    
+  <!-- Script containing the JSON configuration for the DataTables widget -->
+  <script type="application/json" data-for="htmlwidget-3da7a46cee266e156d1e">{"x":{"crosstalkOptions":{"key":["1","2"],"group":"SharedData281767ba"},"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["100001_irnt","R86"],["<a href='h2_summary_100001_irnt.html'>Food weight</a>","<a href='h2_summary_100002_irnt.html'>energy</a>"],[0.017,0.0128],[0.0491,0.536],[2.23e-05,0.49],["z4","nominal"],["none","isMidNeff;isNumericOrdinal;"],[1.006,0.9958],[0.00977,0.00913],["0.257","0.676"],[1.07,1.04],[0.084,-0.0832],[51453,51453],["continuous_irnt","continuous_irnt"],[0.799,null],["phesant","phesant"],["female","male"]],"container":"<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Neff</th>\n <th>Var Type</th>\n <th>Prev.</th>\n <th>Source</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>","options":{"scrollY":"475px","scrollX":true,"pageLength":15,"autoWidth":false,"search":{"regex":true},"order":[[4,"asc"],[6,"asc"]],"columnDefs":[{"targets":13,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"},{"targets":8,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"},{"targets":2,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":3,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":9,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":11,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":12,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":15,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"visible":false,"targets":[]},{"width":"300px","targets":1},{"width":"150px","targets":0},{"className":"dt-right dt-nowrap","targets":[2,3,4,5,6,7,8,9,10,11,12,13]},{"searchable":false,"targets":[2,3,4,8,9,10,11]},{"orderData":[10,9],"targets":10},{"orderSequence":["desc","asc"],"targets":[2,8]}],"dom":"Bfrtip","buttons":[{"extend":"colvis","className":"btn btn-primary","text":"Select Columns"}],"orderClasses":false,"lengthMenu":[10,15,25,50,100]},"selection":{"mode":"none","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render","options.columnDefs.6.render","options.columnDefs.7.render"],"jsHooks":[]}</script>
+  
+  <!-- Adding another line break -->
+  <p><br></p>
 
 
   
