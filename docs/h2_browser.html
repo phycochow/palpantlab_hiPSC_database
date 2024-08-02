@@ -555,9 +555,9 @@ $(document).ready(function() {
         "autoWidth": false,
         "order": [[4, "asc"]],
         "columnDefs": [
+            { width: '20%', targets: 0 },
             { "targets": 2, "render": $.fn.dataTable.render.number(',', '.', 3) },
             { "targets": [2, 4], "searchable": false },
-            { "width": "1000px", "targets": 1 }
         ],
         "dom": "Bfrtip",
         "buttons": [
