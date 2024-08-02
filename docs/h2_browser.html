@@ -325,15 +325,18 @@
   
   <!-- Script containing the JSON configuration for the DataTables widget -->
   <script type="application/json" data-for="htmlwidget-3da7a46cee266e156d1e">
-  {
+   {
     "x": {
+      // Crosstalk options for linking multiple widgets
       "crosstalkOptions": {
         "key": ["1", "2"],
         "group": "SharedData281767ba"
       },
       "filter": "none",
       "vertical": false,
-      "extensions": ["Buttons"],
+      "extensions": ["Buttons"], // Enable the Buttons extension
+  
+      // Data for the table rows
       "data": [
         ["100001_irnt", "R86"],
         ["<a href='h2_summary_100001_irnt.html'>Food weight</a>", "<a href='h2_summary_100002_irnt.html'>energy</a>"],
@@ -353,65 +356,60 @@
         ["phesant", "phesant"],
         ["female", "male"]
       ],
-      "container": "<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>",
+  
+      // HTML for the table container
+      "container": "<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Neff</th>\n <th>Var Type</th>\n <th>Prev.</th>\n <th>Source</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>",
+  
+      // DataTables options
       "options": {
-        "scrollY": "475px",
-        "scrollX": true,
-        "pageLength": 15,
+        "scrollY": "475px", // Enable vertical scrolling
+        "scrollX": true, // Enable horizontal scrolling
+        "pageLength": 15, // Number of rows per page
         "autoWidth": false,
-        "search": {
-          "regex": true
-        },
-        "order": [[4, "asc"], [6, "asc"]],
+        "search": {"regex": true}, // Enable regex in search
+        "order": [[4, "asc"], [6, "asc"]], // Default sorting
+  
+        // Column-specific definitions
         "columnDefs": [
-          {
-            "targets": 13,
-            "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"
-          },
-          {
-            "targets": 8,
-            "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"
-          },
-          {
-            "visible": false,
-            "targets": []
-          },
-          {
-            "width": "300px",
-            "targets": 1
-          },
-          {
-            "width": "150px",
-            "targets": 0
-          },
-          {
-            "className": "dt-right dt-nowrap",
-            "targets": [2]
-          },
-          {
-            "searchable": false,
-            "targets": [2]
-          },
-          {
-            "orderData": [10, 9],
-            "targets": 10
-          },
-          {
-            "orderSequence": ["desc", "asc"],
-            "targets": [2, 8]
-          }
+          // Custom rendering functions for specific columns
+          {"targets": 13, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"},
+          {"targets": 8, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"},
+          {"targets": 2, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          {"targets": 3, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          {"targets": 9, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          {"targets": 11, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          {"targets": 12, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          {"targets": 15, "render": "function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},
+          
+          // Hide specific columns
+          {"visible": false, "targets": []},
+          
+          // Set column widths
+          {"width": "300px", "targets": 1},
+          {"width": "150px", "targets": 0},
+          
+          // Set CSS classes for specific columns
+          {"className": "dt-right dt-nowrap", "targets": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]},
+          
+          // Disable searching on specific columns
+          {"searchable": false, "targets": [2, 3, 4, 8, 9, 10, 11]},
+          
+          // Custom ordering for specific columns
+          {"orderData": [10, 9], "targets": 10},
+          {"orderSequence": ["desc", "asc"], "targets": [2, 8]}
         ],
+        
+        // DOM positioning of DataTables elements
         "dom": "Bfrtip",
-        "buttons": [
-          {
-            "extend": "colvis",
-            "className": "btn btn-primary",
-            "text": "Select Columns"
-          }
-        ],
+        
+        // Custom buttons
+        "buttons": [{"extend": "colvis", "className": "btn btn-primary", "text": "Select Columns"}],
+        
         "orderClasses": false,
-        "lengthMenu": [10, 15, 25, 50, 100]
+        "lengthMenu": [10, 15, 25, 50, 100] // Options for rows per page
       },
+      
+      // Selection options
       "selection": {
         "mode": "none",
         "selected": null,
@@ -419,9 +417,17 @@
         "selectable": null
       }
     },
+    
+    // JavaScript functions to be evaluated
     "evals": [
       "options.columnDefs.0.render",
       "options.columnDefs.1.render",
+      "options.columnDefs.2.render",
+      "options.columnDefs.3.render",
+      "options.columnDefs.4.render",
+      "options.columnDefs.5.render",
+      "options.columnDefs.6.render",
+      "options.columnDefs.7.render"
     ],
     "jsHooks": []
   }
