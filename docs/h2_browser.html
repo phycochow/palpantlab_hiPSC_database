@@ -4,516 +4,481 @@
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Results from the Palpant Lab and Chen lab" />
 
 
-<meta name="author" content="Results from the Palpant Lab and Chen lab" />
+  <title>Data Server for >300 Published hiPSC-CM Differentiation and Maturation Protocols</title>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+  <script src="site_libs/navigation-1.1/tabsets.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/datatables-binding-0.24/datatables.js"></script>
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css" rel="stylesheet" />
+  <script src="site_libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js"></script>
+  <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js"></script>
+  <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js"></script>
+  <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+  <!-- setup favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
+
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
 
 
-<title>Data Server for >300 Published hiPSC-CM Differentiation and Maturation Protocols</title>
+  <!-- Basic analytics to track views and downloads -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.24/datatables.js"></script>
-<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css" rel="stylesheet" />
-<script src="site_libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js"></script>
-<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js"></script>
-<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js"></script>
-<script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-<!-- setup favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="&nbsp;"/>
-<meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
+    ga('create', 'UA-106608402-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
 
+  </script>
 
-<!-- Basic analytics to track views and downloads -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <script>
+  /**
+  * Function that tracks a click on an outbound link in Analytics.
+  # modifications from: https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/
+  */
+  var trackOutboundLink = function(url) {
+      // check if the GA object exists and that it has initialized
+      if(typeof ga !== 'undefined' && ga.loaded) {
+          // if yes, rely on GA to follow link
+          ga('send', 'event', 'outbound', 'click', url, {
+              'transport': 'beacon',
+              'hitCallback': function(){document.location = url;}
+          });
+      } else {
+          // if not, follow link ourselves
+          document.location = url;
+      }
+  }
+  </script>
 
-  ga('create', 'UA-106608402-1', 'auto');
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
-
-</script>
-
-<script>
-/**
-* Function that tracks a click on an outbound link in Analytics.
-# modifications from: https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/
-*/
-var trackOutboundLink = function(url) {
-    // check if the GA object exists and that it has initialized
-    if(typeof ga !== 'undefined' && ga.loaded) {
-        // if yes, rely on GA to follow link
-        ga('send', 'event', 'outbound', 'click', url, {
-            'transport': 'beacon',
-            'hitCallback': function(){document.location = url;}
-        });
-    } else {
-        // if not, follow link ourselves
-        document.location = url;
+  <style type="text/css">
+    h1 {
+      font-size: 34px;
     }
-}
-</script>
+    h1.title {
+      font-size: 38px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 12px;
+    }
+    .table th:not([align]) {
+      text-align: left;
+    }
+  </style>
 
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-<link rel="stylesheet" href="sandflat.min.css" type="text/css" />
-<link rel="stylesheet" href="dt_style.css" type="text/css" />
+  <link rel="stylesheet" href="sandflat.min.css" type="text/css" />
+  <link rel="stylesheet" href="dt_style.css" type="text/css" />
 
 </head>
 
 <body>
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-</style>
+  <style type = "text/css">
+  .main-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  code {
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  img {
+    max-width:100%;
+    height: auto;
+  }
+  .tabbed-pane {
+    padding-top: 12px;
+  }
+  button.code-folding-btn:focus {
+    outline: none;
+  }
+  </style>
+
+  <style type="text/css">
+  /* padding for bootstrap navbar */
+  body {
+    padding-top: 51px;
+    padding-bottom: 40px;
+  }
+  /* offset scroll position for anchor links (for fixed navbar)  */
+  .section h1 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+
+  .section h2 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+  .section h3 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+  .section h4 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+  .section h5 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+  .section h6 {
+    padding-top: 56px;
+    margin-top: -56px;
+  }
+  </style>
+
+  <script>
+  // manage active state of menu based on current page
+  $(document).ready(function () {
+    // active menu anchor
+    href = window.location.pathname
+    href = href.substr(href.lastIndexOf('/') + 1)
+    if (href === "")
+      href = "index.html";
+    var menuAnchor = $('a[href="' + href + '"]');
+
+    // mark it active
+    menuAnchor.parent().addClass('active');
+
+    // if it's got a parent navbar menu mark it active as well
+    menuAnchor.closest('li.dropdown').addClass('active');
+  });
+  </script>
 
 
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
+  <div class="container-fluid main-container">
 
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-</style>
+    <!-- tabsets -->
+    <script>
+    $(document).ready(function () {
+      window.buildTabsets("TOC");
+    });
+    </script>
 
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-
-<div class="container-fluid main-container">
-
-<!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
-
-<!-- code folding -->
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">hiPSC-CM Protocol Mining</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="h2_browser.html">Study Database</a>
-</li>
-<li>
-  <a href="downloads.html">Enriched Protocols</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Methods
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="details.html">Overview</a>
-    </li>
-    <li>
-      <a href="select_topline.html">Standardising Terminologies</a>
-    </li>
-    <li>
-      <a href="confidence.html">Defining Protocol Categories</a>
-    </li>
-    <li>
-      <a href="significance.html">Fitting Decision Tree Classifier</a>
-    </li>
-  </ul>
-</li>
-<!-- <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Plots
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="viz_h2.html">Heritability and Intercept</a>
-    </li>
-    <li>
-      <a href="viz_annot.html">Partitioned Annotations</a>
-    </li>
-    <li>
-      <a href="viz_sampsize.html">Sample Size Scaling</a>
-    </li>
-    <li>
-      <a href="viz_R1vR2.html">Round 1 vs. Round 2</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Archive
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="round1_details.html">Round 1 Methods</a>
-    </li>
-    <li>
-      <a href="round1_h2_browser.html">Round 1 Browser</a>
-    </li>
-    <li>
-      <a href="round1_h2_univar_browser.html">Round 1 Univariate Browser</a>
-    </li>
-    <li>
-      <a href="round1_plots_home.html">Round 1 Plots</a>
-    </li>
-  </ul>
-</li>
-      </ul> -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    About
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="credits.html">Credits</a>
-    </li>
-    <li>
-      <a href="https://github.com/phycochow/palpantlab_hiPSC_database">Site Github</a>
-    </li>
-    <li>
-      <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab UKB</a>
-    </li>
-  </ul>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
+  <!-- code folding -->
+  <!-- Navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    
+      <!-- Navbar Header: Includes the brand name and the toggle button for collapsing the navbar -->
+      <div class="navbar-header">
+        <!-- Toggle button for mobile view -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- Brand name -->
+        <a class="navbar-brand" href="index.html">hiPSC-CM Protocol Mining</a>
+      </div>
+      
+      <!-- Navbar links and dropdowns -->
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+        
+          <!-- Single link: Study Database -->
+          <li>
+            <a href="h2_browser.html">Study Database</a>
+          </li>
+          
+          <!-- Single link: Enriched Protocols -->
+          <li>
+            <a href="downloads.html">Enriched Protocols</a>
+          </li>
+          
+          <!-- Dropdown: Methods -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Methods
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="details.html">Overview</a>
+              </li>
+              <li>
+                <a href="select_topline.html">Standardising Terminologies</a>
+              </li>
+              <li>
+                <a href="confidence.html">Defining Protocol Categories</a>
+              </li>
+              <li>
+                <a href="significance.html">Fitting Decision Tree Classifier</a>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- Right-aligned navigation links -->
+          <ul class="nav navbar-nav navbar-right">
+          
+            <!-- Dropdown: About -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                About
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="credits.html">Credits</a>
+                </li>
+                <li>
+                  <a href="https://github.com/phycochow/palpantlab_hiPSC_database">Site Github</a>
+                </li>
+                <li>
+                  <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab UKB</a>
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </ul>
+      </div><!--/.nav-collapse -->
+      
+    </div><!--/.container -->
+  </div><!--/.navbar -->
 
 
-
-<h1 class="title toc-ignore">300 Published hiPSC-CM Differentiation and Maturation Protocols</h1>
-<h4 class="author"><em>Results from the <a href="credits.html">Neale Lab</a></em></h4>
-<h4 class="date"><em>Last updated 2024-08-16</em></h4>
-
-</div>
-
-
-<!-- CSS for code snippets, since Rmd seems to override the main CSS -->
-<style>
-code{
-    color: #c7254e;
-    background-color: #f9f2f4;
-}
-</style>
-<style>
-div.main-container {
-  max-width: 1800px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.well {
-  max-width: 1000px
-}
-</style>
-<p><br></p>
-<div id="htmlwidget-3da7a46cee266e156d1e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+  <div class="fluid-row" id="header">
+    <h1 class="title toc-ignore">300 Published hiPSC-CM Differentiation and Maturation Protocols</h1>
+    <h4 class="author"><em>Results from the <a href="credits.html">Chen Lab</a>, processed by the <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab</a></em></h4>
+    <h4 class="date"><em>Last updated 2024-08-16</em></h4>
+  </div>
 
 
+  <!-- CSS for code snippets, since Rmd seems to override the main CSS -->
+  <style>
+    code{
+        color: #c7254e;
+        background-color: #f9f2f4;
+    }
+  </style>
 
+  <style>
+    div.main-container {
+      max-width: 1800px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .well {
+      max-width: 1000px
+    }
+  </style>
 
-<script type="application/json" data-for="htmlwidget-3da7a46cee266e156d1e">{"x":{"crosstalkOptions":{"key":["1","2"],"group":"SharedData281767ba"},"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["100001_irnt","R86"],["<a href='h2_summary_100001_irnt.html'>Food weight</a>","<a href='h2_summary_100002_irnt.html'>energy</a>"],[0.017,0.0128],[0.0491,0.536],[2.23e-05,0.49],["z4","nominal"],["none","isMidNeff;isNumericOrdinal;"],[1.006,0.9958],[0.00977,0.00913],["0.257","0.676"],[1.07,1.04],[0.084,-0.0832],[51453,51453],["continuous_irnt","continuous_irnt"],[0.799,null],["phesant","phesant"],["female","male"]],"container":"<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Neff</th>\n <th>Var Type</th>\n <th>Prev.</th>\n <th>Source</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>","options":{"scrollY":"475px","scrollX":true,"pageLength":15,"autoWidth":false,"search":{"regex":true},"order":[[4,"asc"],[6,"asc"]],"columnDefs":[{"targets":13,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"},{"targets":8,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"},{"targets":2,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":3,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":9,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":11,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":12,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":15,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"visible":false,"targets":[]},{"width":"300px","targets":1},{"width":"150px","targets":0},{"className":"dt-right dt-nowrap","targets":[2,3,4,5,6,7,8,9,10,11,12,13]},{"searchable":false,"targets":[2,3,4,8,9,10,11]},{"orderData":[10,9],"targets":10},{"orderSequence":["desc","asc"],"targets":[2,8]}],"dom":"Bfrtip","buttons":[{"extend":"colvis","className":"btn btn-primary","text":"Select Columns"}],"orderClasses":false,"lengthMenu":[10,15,25,50,100]},"selection":{"mode":"none","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render","options.columnDefs.6.render","options.columnDefs.7.render"],"jsHooks":[]}</script>
-<p><br></p>
+  <p><br></p>
+
+  <div id="htmlwidget-3da7a46cee266e156d1e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+
+  <script type="application/json" data-for="htmlwidget-3da7a46cee266e156d1e">{"x":{"crosstalkOptions":{"key":["1","2"],"group":"SharedData281767ba"},"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["100001_irnt","R86"],["<a href='h2_summary_100001_irnt.html'>Food weight</a>","<a href='h2_summary_100002_irnt.html'>energy</a>"],[0.017,0.0128],[0.0491,0.536],[2.23e-05,0.49],["z4","nominal"],["none","isMidNeff;isNumericOrdinal;"],[1.006,0.9958],[0.00977,0.00913],["0.257","0.676"],[1.07,1.04],[0.084,-0.0832],[51453,51453],["continuous_irnt","continuous_irnt"],[0.799,null],["phesant","phesant"],["female","male"]],"container":"<table class=\"stripe hover compact\">\n <thead>\n <tr>\n <th>ID</th>\n <th>Phenotype</th>\n <th>h2</th>\n <th>h2 se</th>\n <th>h2 p</th>\n <th>h2 sig?</th>\n <th>Confidence</th>\n <th>Notes</th>\n <th>Int.</th>\n <th>Int. se</th>\n <th>Int. p</th>\n <th>Lambda</th>\n <th>Ratio</th>\n <th>Neff</th>\n <th>Var Type</th>\n <th>Prev.</th>\n <th>Source</th>\n <th>Sex</th>\n </tr>\n </thead>\n</table>","options":{"scrollY":"475px","scrollX":true,"pageLength":15,"autoWidth":false,"search":{"regex":true},"order":[[4,"asc"],[6,"asc"]],"columnDefs":[{"targets":13,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\", null);\n }"},{"targets":8,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 4, 3, \",\", \".\", null);\n }"},{"targets":2,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":3,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":9,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":11,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":12,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"targets":15,"render":"function(data, type, row, meta) {\n return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\", null);\n }"},{"visible":false,"targets":[]},{"width":"300px","targets":1},{"width":"150px","targets":0},{"className":"dt-right dt-nowrap","targets":[2,3,4,5,6,7,8,9,10,11,12,13]},{"searchable":false,"targets":[2,3,4,8,9,10,11]},{"orderData":[10,9],"targets":10},{"orderSequence":["desc","asc"],"targets":[2,8]}],"dom":"Bfrtip","buttons":[{"extend":"colvis","className":"btn btn-primary","text":"Select Columns"}],"orderClasses":false,"lengthMenu":[10,15,25,50,100]},"selection":{"mode":"none","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render","options.columnDefs.6.render","options.columnDefs.7.render"],"jsHooks":[]}</script>
+  
+  <p><br></p>
 
   
 <!-- <div class="col-lg-8 col-lg-offset-2">
-<div class="well">
-<p>The above table provides results of partitioned LD score regression (LDSR) for GWAS of 4178 UK Biobank phenotypes. You can read more about this analysis on the <a href="methods.html">methods page</a> and find links to more information about the underlying GWAS on the <a href="http://www.nealelab.is/uk-biobank">Neale Lab blog</a>.</p>
-<p>Additional fields can be viewed using the “Select Columns” button at the top left (columns described below). Use the search box at the top right to filter the table.</p>
-<p>You can also <a href="downloads.html">download the complete results file</a>.</p>
-</div>
-</div>
-<div class="col-lg-8 col-lg-offset-2">
-<div class="well">
-<h3 id="search-suggestions"><strong>Search Suggestions</strong></h3>
-<p>Use the search box on the top right of the table to filter the table.</p>
-<p>
-</p>
-<h4 id="find-phenotypes-by-name"><strong>Find phenotypes by name</strong></h4>
-<ul>
-<li>Description, e.g. <code>height</code> or <code>&quot;Time spent&quot;</code></li>
-<li>ICD code, e.g. <code>I25</code></li>
-<li>ID, e.g. <code>2734</code>, i.e. the phenotype ID matching the <a href="http://biobank.ctsu.ox.ac.uk/crystal/search.cgi">UK Biobank showcase</a></li>
-</ul>
-<p>
-</p>
-<h4 id="focus-on-a-certain-results-category"><strong>Focus on a certain results category</strong></h4>
-<p>Searches include all non-numeric fields, so you filter on flags in multiple columns. For example, try</p>
-<ul>
-<li><code>z7 finngen</code> for highly significant <span class="math inline">\(h^2_g\)</span> results for ICD10-based endpoints defined by <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a></li>
-<li><code>female medication</code> for medication codes where the primary GWAS is in females only</li>
-</ul>
-<p>
-</p>
-<h4 id="construct-complex-searches"><strong>Construct complex searches</strong></h4>
-<p>Your search can include <a href="https://www.debuggex.com/cheatsheet/regex/javascript">JavaScript-style regular expressions</a>. These are especially useful for combining keyword options or using e.g. the word boundary <code>\b</code> to delineate strings that might appear elsewhere. For example, try</p>
-<ul>
-<li><code>\bz[47] \bmedium \bmale</code> for medium confidence results with <span class="math inline">\(z&gt;4\)</span> or <span class="math inline">\(z&gt;7\)</span> for <span class="math inline">\(h^2_g\)</span> and where the primary GWAS is in males</li>
-<li><code>(beer|wine|alcohol)</code> for all phenotypes containing the terms “beer”, “wine”, or “alcohol”</li>
-<li><code>&quot;blood pressure&quot; ^((?!(medication)).)*$</code> for all phenotypes containing “blood pressure” but not “medication”</li>
-</ul>
-</div>
-</div>
-<div class="col-lg-8 col-lg-offset-2">
-<div class="well">
-<h3 id="table-columns"><strong>Table Columns</strong></h3>
-<p>The above browser includes the following fields:</p>
-<table>
-<colgroup>
-<col width="17%" />
-<col width="82%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong> (hidden)</td>
-<td>either the UK Biobank phenotype code (e.g. matching the <a href="http://biobank.ctsu.ox.ac.uk/crystal/index.cgi">UKB Showcase</a>), an ICD10 code, or a <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a> endpoint code</td>
-</tr>
-<tr class="even">
-<td><strong>Phenotype</strong></td>
-<td>Name/description of the phenotype. Clink to link to a more detailed set of LDSR results for the phenotype.</td>
-</tr>
-<tr class="odd">
-<td><strong>h2</strong></td>
-<td>the SNP heritability estimate from partitioned LD score regression. Value is given on the liability scale for binary phenotypes, assuming that the population prevalence matches the prevalence in the UK Biobank analysis set.</td>
-</tr>
-<tr class="even">
-<td><strong>h2 se</strong> (hidden)</td>
-<td>standard error of the SNP heritability estimate.</td>
-</tr>
-<tr class="odd">
-<td><strong>h2 p</strong></td>
-<td>p-value for the test that the SNP hertability is greater than 0.</td>
-</tr>
-<tr class="even">
-<td><strong>h2 sig?</strong></td>
-<td>whether the SNP heritability estimate is statisitical significant at different thresholds. Possible values are <code>z7</code> (z &gt; 7, highly significant), <code>z4</code> (z &gt; 4, significant after correction for multiple testing), <code>nominal</code> (p &lt; .05), <code>nonsig</code> (p &gt; .05), or <code>NA</code> (low confidence results). See <a href="significance.html">methods</a> for more details.</td>
-</tr>
-<tr class="odd">
-<td><strong>Confidence</strong></td>
-<td>confidence rating for the SNP hertiability estimate. One of <code>low</code>, <code>medium</code>, <code>high</code>, or <code>none</code>. See <a href="confidence.html">methods</a> for more details.</td>
-</tr>
-<tr class="even">
-<td><strong>Notes</strong> (hidden)</td>
-<td>explanation of confidence ratings lower than “high”, as a list of flags delimited with semi-colons. Possible flags are</td>
-</tr>
-<tr class="odd">
-<td><strong>Int.</strong></td>
-<td>the intercept term from partitioned LD score regression. Values &gt; 1 may indicate population stratification, confounding, or some other model misspecification.</td>
-</tr>
-<tr class="even">
-<td><strong>Int. se</strong> (hidden)</td>
-<td>standard error of the estimated LD score regression intercept.</td>
-</tr>
-<tr class="odd">
-<td><strong>Int. p</strong></td>
-<td>p-value for the LD score regression intercept testing whether the intercept is greater than 1.</td>
-</tr>
-<tr class="even">
-<td><strong>Lambda</strong> (hidden)</td>
-<td>(Median observed <span class="math inline">\(\chi^2\)</span>)/(Median of 1 degree of freedom <span class="math inline">\(chi^2\)</span> distribution). Genomic control measure of inflation of GWAS results for the SNPs used in the LDSR analysis. Increases with sample size.</td>
-</tr>
-<tr class="odd">
-<td><strong>Ratio</strong> (hidden)</td>
-<td>(Estimated LDSR intercept -1)/(Mean observed <span class="math inline">\(\chi^2\)</span> -1). Measure of the proportion of inflation of GWAS results that is not explained by the relationship with LD modelled by LDSR. May reflect remaining stratification, confounding, structure, or model misspecification.</td>
-</tr>
-<tr class="even">
-<td><strong>Neff</strong></td>
-<td>The effective sample size in the UKB GWAS analysis set. For binary variables is 4/(1/<span class="math inline">\(N_{case}\)</span>)+(1/<span class="math inline">\(N_{control}\)</span>), otherwise is the sample size. More info on the GWAS analysis set is available on the <a href="http://www.nealelab.is/uk-biobank">Neale Lab blog</a>.</td>
-</tr>
-<tr class="odd">
-<td><strong>Var Type</strong> (hidden)</td>
-<td>Measurement type for the phenotype. One of <code>binary</code>, <code>ordinal</code>, <code>continuous_irnt</code> (i.e. inverse rank-normalized), or <code>continuous_raw</code>.</td>
-</tr>
-<tr class="even">
-<td><strong>Prev.</strong> (hidden)</td>
-<td>prevalence for binary phenotypes. Is blank if the variable isn’t binary.</td>
-</tr>
-<tr class="odd">
-<td><strong>Source</strong></td>
-<td>the GWAS batch the phenotype belonged to. One of: <a href="https://github.com/astheeggeggs/PHESANT">PHESANT</a>, ICD10, <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a>, or biomarkers.</td>
-</tr>
-<tr class="even">
-<td><strong>Sex</strong> (hidden)</td>
-<td>the sex strata used as the primary GWAS for this phenotype, e.g. to limit choice of controls for sex-specific case/control phenotypes. One of: <code>both</code>, <code>female</code>, or <code>male</code>.</td>
-</tr>
-</tbody>
-</table>
-<p>Hidden fields can be accessed using the “Select Columns” botton on the top left of the browser table. Search includes all fields even when hidden.</p>
-<p>Click on a phenotype for more detailed results from the partitioned LD score regression analysis.</p>
-</div>
-</div>
+  <div class="well">
+    <p>The above table provides results of partitioned LD score regression (LDSR) for GWAS of 4178 UK Biobank phenotypes. You can read more about this analysis on the <a href="methods.html">methods page</a> and find links to more information about the underlying GWAS on the <a href="http://www.nealelab.is/uk-biobank">Neale Lab blog</a>.</p>
+    <p>Additional fields can be viewed using the “Select Columns” button at the top left (columns described below). Use the search box at the top right to filter the table.</p>
+    <p>You can also <a href="downloads.html">download the complete results file</a>.</p>
+  </div>
 
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="well">
+      <h3 id="search-suggestions"><strong>Search Suggestions</strong></h3>
+      <p>Use the search box on the top right of the table to filter the table.</p>
+
+      <h4 id="find-phenotypes-by-name"><strong>Find phenotypes by name</strong></h4>
+      <ul>
+        <li>Description, e.g. <code>height</code> or <code>&quot;Time spent&quot;</code></li>
+        <li>ICD code, e.g. <code>I25</code></li>
+        <li>ID, e.g. <code>2734</code>, i.e. the phenotype ID matching the <a href="http://biobank.ctsu.ox.ac.uk/crystal/search.cgi">UK Biobank showcase</a></li>
+      </ul>
+
+      <h4 id="focus-on-a-certain-results-category"><strong>Focus on a certain results category</strong></h4>
+      <p>Searches include all non-numeric fields, so you filter on flags in multiple columns. For example, try</p>
+      <ul>
+        <li><code>z7 finngen</code> for highly significant <span class="math inline">\(h^2_g\)</span> results for ICD10-based endpoints defined by <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a></li>
+        <li><code>female medication</code> for medication codes where the primary GWAS is in females only</li>
+      </ul>
+
+      <h4 id="construct-complex-searches"><strong>Construct complex searches</strong></h4>
+      <p>Your search can include <a href="https://www.debuggex.com/cheatsheet/regex/javascript">JavaScript-style regular expressions</a>. These are especially useful for combining keyword options or using e.g. the word boundary <code>\b</code> to delineate strings that might appear elsewhere. For example, try</p>
+      <ul>
+        <li><code>\bz[47] \bmedium \bmale</code> for medium confidence results with <span class="math inline">\(z&gt;4\)</span> or <span class="math inline">\(z&gt;7\)</span> for <span class="math inline">\(h^2_g\)</span> and where the primary GWAS is in males</li>
+        <li><code>(beer|wine|alcohol)</code> for all phenotypes containing the terms “beer”, “wine”, or “alcohol”</li>
+        <li><code>&quot;blood pressure&quot; ^((?!(medication)).)*$</code> for all phenotypes containing “blood pressure” but not “medication”</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="well">
+      <h3 id="table-columns"><strong>Table Columns</strong></h3>
+      <p>The above browser includes the following fields:</p>
+      <table>
+        <colgroup>
+          <col width="17%" />
+          <col width="82%" />
+        </colgroup>
+        <thead>
+          <tr class="header">
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="odd">
+            <td><strong>ID</strong> (hidden)</td>
+            <td>either the UK Biobank phenotype code (e.g. matching the <a href="http://biobank.ctsu.ox.ac.uk/crystal/index.cgi">UKB Showcase</a>), an ICD10 code, or a <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a> endpoint code</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Phenotype</strong></td>
+            <td>Name/description of the phenotype. Clink to link to a more detailed set of LDSR results for the phenotype.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>h2</strong></td>
+            <td>the SNP heritability estimate from partitioned LD score regression. Value is given on the liability scale for binary phenotypes, assuming that the population prevalence matches the prevalence in the UK Biobank analysis set.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>h2 se</strong> (hidden)</td>
+            <td>standard error of the SNP heritability estimate.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>h2 p</strong></td>
+            <td>p-value for the test that the SNP hertability is greater than 0.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>h2 sig?</strong></td>
+            <td>whether the SNP heritability estimate is statistically significant at different thresholds. Possible values are <code>z7</code> (z &gt; 7, highly significant), <code>z4</code> (z &gt; 4, significant after correction for multiple testing), <code>nominal</code> (p &lt; .05), <code>nonsig</code> (p &gt; .05), or <code>NA</code> (low confidence results). See <a href="significance.html">methods</a> for more details.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Confidence</strong></td>
+            <td>confidence rating for the SNP heritability estimate. One of <code>low</code>, <code>medium</code>, <code>high</code>, or <code>none</code>. See <a href="confidence.html">methods</a> for more details.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Notes</strong> (hidden)</td>
+            <td>explanation of confidence ratings lower than “high”, as a list of flags delimited with semi-colons. Possible flags are</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Int.</strong></td>
+            <td>the intercept term from partitioned LD score regression. Values &gt; 1 may indicate population stratification, confounding, or some other model misspecification.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Int. se</strong> (hidden)</td>
+            <td>standard error of the estimated LD score regression intercept.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Int. p</strong></td>
+            <td>p-value for the LD score regression intercept testing whether the intercept is greater than 1.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Lambda</strong> (hidden)</td>
+            <td>(Median observed <span class="math inline">\(\chi^2\)</span>)/(Median of 1 degree of freedom <span class="math inline">\(chi^2\)</span> distribution). Genomic control measure of inflation of GWAS results for the SNPs used in the LDSR analysis. Increases with sample size.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Ratio</strong> (hidden)</td>
+            <td>(Estimated LDSR intercept -1)/(Mean observed <span class="math inline">\(\chi^2\)</span> -1). Measure of the proportion of inflation of GWAS results that is not explained by the relationship with LD modelled by LDSR. May reflect remaining stratification, confounding, structure, or model misspecification.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Neff</strong></td>
+            <td>The effective sample size in the UKB GWAS analysis set. For binary variables is 4/(1/<span class="math inline">\(N_{case}\)</span>)+(1/<span class="math inline">\(N_{control}\)</span>), otherwise is the sample size. More info on the GWAS analysis set is available on the <a href="http://www.nealelab.is/uk-biobank">Neale Lab blog</a>.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Var Type</strong> (hidden)</td>
+            <td>Measurement type for the phenotype. One of <code>binary</code>, <code>ordinal</code>, <code>continuous_irnt</code> (i.e. inverse rank-normalized), or <code>continuous_raw</code>.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Prev.</strong> (hidden)</td>
+            <td>prevalence for binary phenotypes. Is blank if the variable isn’t binary.</td>
+          </tr>
+          <tr class="odd">
+            <td><strong>Source</strong></td>
+            <td>the GWAS batch the phenotype belonged to. One of: <a href="https://github.com/astheeggeggs/PHESANT">PHESANT</a>, ICD10, <a href="https://www.finngen.fi/en/researchers/clinical-endpoints">FinnGen</a>, or biomarkers.</td>
+          </tr>
+          <tr class="even">
+            <td><strong>Sex</strong> (hidden)</td>
+            <td>the sex strata used as the primary GWAS for this phenotype, e.g. to limit choice of controls for sex-specific case/control phenotypes. One of: <code>both</code>, <code>female</code>, or <code>male</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Hidden fields can be accessed using the “Select Columns” button on the top left of the browser table. Search includes all fields even when hidden.</p>
+      <p>Click on a phenotype for more detailed results from the partitioned LD score regression analysis.</p>
+    </div>
+  </div>
 </div>
  -->
-<script>
 
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
+  <script>
+   // add bootstrap table styles to pandoc tables
+    function bootstrapStylePandocTables() {
+      $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+    }
+    $(document).ready(function () {
+      bootstrapStylePandocTables();
+    });
+  </script>
 
-
-</script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
 
 </body>
 </html>
