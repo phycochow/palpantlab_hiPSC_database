@@ -1,4 +1,4 @@
-# UKBB ldsc site
+# hiPSC CM Protocol Database
 
 Scripts used for generating the [results site](https://nealelab.github.io/UKBB_ldsc/) for LD score regression ([LDSC](https://github.com/bulik/ldsc)) analysis of the [UK Biobank GWAS](https://github.com/Nealelab/UK_Biobank_GWAS) produced by the [Neale Lab](http://www.nealelab.is/uk-biobank). You can read more about that GWAS effort [here](http://www.nealelab.is/blog/2017/7/19/rapid-gwas-of-thousands-of-phenotypes-for-337000-samples-in-the-uk-biobank) and read the [hertiabililty analysis post](http://www.nealelab.is/blog/2017/9/15/heritability-of-2000-traits-and-disorders-in-the-uk-biobank) for our initial thoughts on these results.
 
