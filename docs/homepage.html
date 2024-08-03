@@ -162,7 +162,7 @@
         }
     </style>
 
-<!-- Manages active state of menu based on current page -->
+    <!-- Manages active state of menu based on current page -->
     <script>
       $(document).ready(function () {
         // active menu anchor
@@ -253,54 +253,71 @@
 
       <!-- Title -->
       <div class="fluid-row" id="header">
-        <h2 class="title toc-ignore">Differentiation and Maturation Protocols Influences the Functionaility of Stem Cell Derived Cardiomyocytes</h1>
+        <h1 class="title toc-ignore">Data Server for >300 Published hiPSC-CM Differentiation and Maturation Protocols</h1>
       </div>
+
+      <p><br></p> <!-- Line break -->
 
       <div class="well">
         <p>
-          We performed data mining on 300 hiPSC-CM studies (Ewoldt et al., 2024 manuscript) to find common themes that influence physiological performance and establish a clear knowledge gap in how variation in protocol parameters, like genetic background of hiPSCs, affect maturation and downstream hiPSC-CM function. It also points at the limited number and diversity within in-vitro datasets. And despite the transcriptomic insights of genome-wide CRISPR screens (Padmanabhan et al., 2024), hiPSC-CMs do not fully recapitulate complex cell and organ-level physiology that can be causal of traits (Cao et al., 2023), which shifts this project’s attention to alternative data resources. The <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Lab</a> has been working to make some basic analyses of that data freely available; you can read more about the overall effort <a href="http://www.nealelab.is/uk-biobank">here</a>.
+          With modern advancements in cutting-edge stem cell technology, it is now possible to generate human stem cell derived cardiomyocytes (hiPSC-CMs) for the development of cardioprotective interventions. hiPSC-CMs can be used for regenerative medicine or to model ischaemic-reperfusion injury responses (oxygen deprivation) commonly found in heart diseases.
         </p>
-        
-        <p><br></p> <!-- line break -->
+        <p>
+          We performed data mining on 314 hiPSC-CM studies to find common themes that influence physiological performance and establish a series of protocol parameters, like the genetic background of hiPSCs, that are enriched to impact downstream hiPSC-CM function. The <a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Group</a> has been working to provide comprehensive analyses of that data through machine learning, epigenetics and statistical genetics. If you’re interested in additional findings, you can read more about the overall effort <a href="https://imb.uq.edu.au/research-groups/palpant">here</a>.
+        </p>
+
+        <p><br></p> <!-- Line break -->
 
         <p>
-          Building on the initial genome-wide association analyses, we’ve now estimated the heritability of each of those traits and disorders, over 4,000 as of this writing. As with the primary GWAS analyses, we’re making the LD Score Regression SNP-heritability results available for <a href="h2_browser.html">browsing</a> and bulk <a href="downloads.html">download</a>.
+          <a href="h2_browser.html" class="btn btn-primary btn-lg">Browse Latest Protocols</a>
+          <a href="viz_h2.html" class="btn btn-primary btn-lg">Explore Findings</a>
+          <a href="downloads.html" class="btn btn-primary btn-lg">Download Datasets</a>
+        </p>
+        
+        <p><br></p> <!-- Line break -->
+    
+        <p>
+          We view these results as preliminary and subject to change. They rely only on reported protocols from successful, published study designs. We encourage users to upload their own protocols and peer review similar studies.
         </p>
         
         <p>
-          If you’re interested in additional traits, additional ancestry groups, and/or other heritability estimation methods, SNP heritability estimates are also now available from the <a href="https://pan.ukbb.broadinstitute.org/docs/heritability">Pan-UK Biobank analysis</a>.
+          If you want more information, please <strong>contact us at: <a href="mailto:n.palpant@uq.edu.au">n.palpant@uq.edu.au</a>.</strong>
         </p>
-        
-        <p><br></p>
-        <p>
-          <a href="h2_browser.html" class="btn btn-primary btn-lg">Browse <span class="math inline">\(h^2\)</span></a>
-          <a href="viz_h2.html" class="btn btn-primary btn-lg">Explore Plots</a>
-          <a href="downloads.html" class="btn btn-primary btn-lg">Download Results</a>
-        </p>
-        
-        <p><br></p>
-        <p>You can learn more about the Round 2 Neale Lab GWAS heritability analysis in this series of blog posts:</p>
-        <ul>
-          <li><a href="http://www.nealelab.is/blog/2017/9/13/heritability-101-what-is-heritability">Heritability 101: What is “heritability”?</a></li>
-          <li><a href="http://www.nealelab.is/blog/2017/9/13/heritability-201-types-of-heritability-and-how-we-estimate-it">Heritability 201: Types of heritability and how we estimate it</a></li>
-          <li><a href="http://www.nealelab.is/blog/2017/9/20/insights-from-estimates-of-snp-heritability-for-2000-traits-and-disorders-in-uk-biobank">Insights from estimates of SNP-heritability for &gt;2,000 traits and disorders in UK Biobank</a></li>
-        </ul>
-        
-        <p>More technical descriptions are also available:</p>
-        <ul>
-          <li><a href="http://www.nealelab.is/blog/2017/9/14/heritability-501-ldsr-based-h2-in-ukbb-for-the-technically-minded">Heritability 501: LDSR-based <span class="math inline">\(h^2\)</span> in UKBB for the technically-minded</a></li>
-          <li><a href="https://github.com/Nealelab/UKBB_ldsc_scripts">UKBB_ldsc_scripts GitHub repository</a></li>
-        </ul>
-        
-        <p>
-          We view these results as preliminary and subject to change. They rely on uniform automated GWAS of thousands of variables, each of which can potentially be refined by subject matter experts. You can <a href="viz_R1vR2.html">view the change between our Round 1 and Round 2 results here</a>. But we hope you’ll agree that the current results still provide an interesting and useful look at the genetics of the many diverse traits and disorders studied in the UK Biobank, and are potentially informative for highlighting phenotypes meriting further follow-up.
-        </p>
-        
-        <p>
-          If you want more information, please <strong>contact us at: <a href="mailto:nealelab.ukb@gmail.com">nealelab.ukb@gmail.com</a>.</strong>
-        </p>
-      </div>
 
+      </div> <!-- well -->
+
+      <p><br></p> <!-- Line break -->
+
+      <div class="well">
+        <h3 id="faq">FAQ</h3>
+
+        <h4 id="what-is-the-importance-of-this-study"><strong>What is the importance of this study?</strong></h4>
+        <p>Ischaemic-reperfusion injury (oxygen deprivation) to the heart muscle remains the leading cause of death and disability worldwide. Despite decades of extensive research and successful preclinical trials, there are no clinically-approved drugs to block the acute injury response. hiPSC-CMs account for the species-specific differences in cardiac physiology, genetics, and disease progression that are overlooked in preclinical animal models. But the embryonic nature of hiPSC-CMs makes them inappropriate to model adult heart diseases. During pregnancy, embryos share oxygen with their mothers. The foetal heart operates in an environment with lower oxygen levels and is adapted to generate energy by primarily relying on oxygen-free, glycolytic metabolism, which makes cardiomyocytes resistant to ischemic-reperfusion injury. That is why disease modelling with hiPSC-CMs requires maturation protocols to recapitulate the adult state. However, these protocols are often exclusive to a few research groups and have not been systematically compared to find best protocol variables affecting hiPSC-CM function.</p>
+
+        <h4 id="what-does-the-current-dataset-contain"><strong>What does the current dataset contain?</strong></h4>
+        <p>Ewoldt et al. systematically analysed 300 studies focusing on maturation benchmarking for ventricular cardiomyocytes, which aims to improve hiPSC-CMs’ embryonic characteristics to model adult cardiac diseases (cite). In section V, the authors determined that most protocols are exclusive to research groups and not appropriately compared to other existing ones. There is insufficient data to identify protocol parameters that yield the best functional outcomes, which in turn hinders the progression of the field. They provide a dataset with 56 (study characteristics) x 300 (hiPSC studies) and urge researchers to continue adding to the starting database.</p>
+
+        <p>In our recent paper, we compiled evidence that glycaemic variability in diabetes is a significant risk factor for heart muscle dysfunction and ischemia . We included 14 metabolic maturation studies to Ewoldt et al.’s dataset and performed a quantitative analysis on hiPSC-CM functional outcomes to enrich for protocol parameters. We applied feature importance analysis on 8 ventricular cardiomyocyte functionality measurements</p>
+
+      </div> <!-- well -->
+
+      <p><br></p> <!-- Line break -->
+
+      <div class="well">
+        <h3 id="credits">Special Acknowledgements</h3>
+
+        <p>This website is a replica of the <a href="https://nealelab.github.io/UKBB_ldsc/index.html">UK Biobank trait heritabilty browser</a> by Benjamin Neale's lab.</p>
+        <p>We would like to thank them for</p>
+        <ul>
+          <li><strong>Website design:</strong> Raymond Walters</li>
+        </ul>
+
+        <p>The 300 hiPSC-CM studies in the original dataset is publicly avaiable, provided by Christopher Chen's lab.</p>
+ 
+        <p>Please see <a href="credits.html">Credits</a> for complete acknowledgements.</p>
+      </div> <!-- well -->
+
+      <p><br></p> <!-- Line break -->
 
     </div> <!-- container-fluid main-container -->
   </body>
