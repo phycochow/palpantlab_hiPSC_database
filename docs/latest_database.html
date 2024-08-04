@@ -1,54 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV Data Loader with DataTables</title>
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <!-- ############## -->
+  <!-- Header Content -->
+  <!-- ############## -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="generator" content="pandoc"/>
+
+    <title>Latest hiPSC-CM Protocols</title>
+    <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="site_libs/navigation-1.1/tabsets.js"></script>
+    <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+
+    <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="site_libs/datatables-binding-0.24/datatables.js"></script>
+    <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+    <link href="site_libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js"></script>
+    <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+    <!-- Favicons for Apple and Windows users -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
+
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
+
+    <!-- Basic analytics to track views and downloads -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-106608402-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Function that tracks a click on an outbound link in Analytics. From: https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking -->
+    <script>
+    var trackOutboundLink = function(url) {
+        // check if the GA object exists and that it has initialized
+        if(typeof ga !== 'undefined' && ga.loaded) {
+            // if yes, rely on GA to follow link
+            ga('send', 'event', 'outbound', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function(){document.location = url;}
+            });
+        } else {
+            // if not, follow link ourselves
+            document.location = url;
+        }
+    }
+    </script>
+
+    <style type="text/css">
+        h1 {
+            font-size: 34px;
+        }
+
+        h1.title {
+            font-size: 38px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        h6 {
+            font-size: 12px;
+        }
+
+        .table th:not([align]) {
+            text-align: left;
+        }
+    </style>
+        
+    <link rel="stylesheet" href="sandflat.min.css" type="text/css"/>
+    <link rel="stylesheet" href="dt_style.css" type="text/css"/>
+  </head>
+
+  <!-- ############ -->
+  <!-- Body content -->
+  <!-- ############ -->
+  <body>
+
+    <style type="text/css">
+      .main-container {
+          max-width: 940px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      code {
+          color: inherit;
+          background-color: rgba(0, 0, 0, 0.04);
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+
+      .tabbed-pane {
+          padding-top: 12px;
+      }
+
+      button.code-folding-btn:focus {
+          outline: none;
+      }
+    </style>
+
+    <style type="text/css">
+        /* Padding for bootstrap navbar */
+        body {
+            padding-top: 51px;
+            padding-bottom: 40px;
+        }
+
+        /* Offset scroll position for anchor links (for fixed navbar) */
+        .section h1, 
+        .section h2, 
+        .section h3, 
+        .section h4, 
+        .section h5, 
+        .section h6 {
+            padding-top: 56px;
+            margin-top: -56px;
+        }
+    </style>
+
+    <!-- Manages active state of menu based on current page -->
+    <script>
+      $(document).ready(function () {
+        // active menu anchor
+        href = window.location.pathname
+        href = href.substr(href.lastIndexOf('/') + 1)
+        if (href === "")
+          href = "index.html";
+        var menuAnchor = $('a[href="' + href + '"]');
+
+        // mark it active
+        menuAnchor.parent().addClass('active');
+
+        // if it's got a parent navbar menu mark it active as well
+        menuAnchor.closest('li.dropdown').addClass('active');
+      });
+    </script>
+
+    <!-- This is the container for the body of the website. This is the primary cause of margins and padding bugs -->
+    <div class="container-fluid main-container">
+
+        <!-- Builds tabsets -->
+        <script>
+        $(document).ready(function () {
+          window.buildTabsets("TOC");
+        });
+        </script>
+
+        <!-- The backbone of the server. Nagivation bar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Navbar Header: Includes the brand name and the toggle button for collapsing the navbar -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Brand name -->
+                    <a class="navbar-brand" href="homepage.html">hiPSC-CM Protocol Mining</a>
+                </div> <!-- navbar-header -->
+
+              <!-- Navbar links and dropdowns -->
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Study Database<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="latest_database.html">Latest Version</a></li>
+                            <li><a href="original_database.html">Original Version</a></li>
+                        </ul> <!-- dropdown-menu -->
+                    </li> <!-- dropdown -->
+
+                    <li><a href="result_plots.html">Enriched Protocols</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Methods<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="methods_overview.html">Overview</a></li>
+                            <li><a href="standard_terms.html">Standardising Terminologies</a></li>
+                            <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
+                            <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
+                        </ul> <!-- dropdown-menu -->
+                    </li> <!-- dropdown -->
+                </ul> <!-- nav navbar-nav -->
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                      About<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="credits.html">Credits & Citations</a></li>
+                      <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database">Server Code</a></li>
+                      <li><a href="https://imb.uq.edu.au/research-groups/palpant">Palpant Group</a></li>
+                    </ul> <!-- dropdown-menu -->
+                  </li> <!-- dropdown -->
+                </ul> <!-- nav navbar-nav navbar-right -->
+
+                </div> <!-- navbar-collapse -->
+
+            </div> <!-- container -->
+        </div> <!-- navbar navbar-default navbar-fixed-top-->
+
+    
+    <!-- Start of database -->
     <h1>CSV Data</h1>
     <div id="csv-data"></div>
 
-    <!-- jQuery and DataTables JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- Include jQuery and DataTables CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
+  <!--   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
 
     <script>
+        let csvData = [];
+
         async function loadCSV() {
             try {
                 const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/data.csv');
                 const csvText = await response.text();
                 const rows = csvText.split('\n').map(row => row.split(','));
-                
-                const tableHTML = `
-                    <table id="csvTable" class="display" style="width:100%">
-                        <thead>
-                            <tr>${rows[0].map(header => `<th>${header}</th>`).join('')}</tr>
-                        </thead>
-                        <tbody>
-                            ${rows.slice(1).map(row => 
-                                `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
-                            ).join('')}
-                        </tbody>
-                    </table>
-                `;
 
-                document.getElementById('csv-data').innerHTML = tableHTML;
+                // Save data to variable
+                csvData = rows;
 
-                // Initialize DataTable
-                $(document).ready(function() {
-                    $('#csvTable').DataTable();
-                });
+                // Construct DataTable
+                constructDataTable(csvData);
             } catch (error) {
                 console.error('Error loading CSV:', error);
                 document.getElementById('csv-data').innerHTML = 'Error loading CSV file. See console for details.';
             }
         }
 
+        function constructDataTable(data) {
+            const tableHTML = `
+                <table id="csvTable" class="display" style="width:100%">
+                    <thead>
+                        <tr>${data[0].map(header => `<th>${header}</th>`).join('')}</tr>
+                    </thead>
+                    <tbody>
+                        ${data.slice(1).map(row => 
+                            `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+                        ).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            document.getElementById('csv-data').innerHTML = tableHTML;
+
+            // Initialize DataTable
+            $(document).ready(function() {
+                $('#csvTable').DataTable({
+                    // "scrollY": "475px",
+                    "scrollX": true,
+                    "pageLength": 5,
+                    "autoWidth": false,
+                    // "order": [[4, "asc"]],
+                    "columnDefs": [
+                    ],
+                    "dom": "Bfrtip",
+                    "buttons": [
+                        {
+                            "extend": "colvis",
+                            "className": "btn btn-primary",
+                            "text": "Select Columns"
+                        }
+                    ]
+                });
+            });
+        }
+
         loadCSV();
     </script>
-</body>
+
+
+
+    </div> <!-- container-fluid main-container -->
+
+
+
+
+
+
+    </body>
 </html>
+
+
 
