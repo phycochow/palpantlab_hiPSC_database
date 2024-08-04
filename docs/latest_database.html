@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Loader</title>
+</head>
+<body>
+    <h1>CSV Data</h1>
+    <div id="csv-data"></div>
+
+    <script>
+        async function loadCSV() {
+            try {
+                const response = await fetch('data.csv');
+                const csvText = await response.text();
+                const rows = csvText.split('\n').map(row => row.split(','));
+                
+                const tableHTML = rows.map(row => 
+                    `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+                ).join('');
+
+                document.getElementById('csv-data').innerHTML = `
+                    <table border="1">
+                        ${tableHTML}
+                    </table>
+                `;
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                document.getElementById('csv-data').innerHTML = 'Error loading CSV file. See console for details.';
+            }
+        }
+
+        loadCSV();
+    </script>
+</body>
+</html>
