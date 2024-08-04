@@ -257,8 +257,11 @@
         <!-- ################# -->
         <!-- Start of database -->
         <!-- ################# --> 
+        <div class="fluid-row" id="header">
+            <h1 class="title toc-ignore">Non-processed 314 hiPSC-CM Protocol Designs and Outcomes</h1>
+            <p>Originally 300 provided by the Chen lab, 14 added by the Palpant Group</p>
+        </div>
 
-        <h1>hiPSC-CM Protocol Designs and Outcomes</h1>
         <p><br></p> <!-- Line break -->
 
         <div class="well">
@@ -288,7 +291,7 @@
 
         async function loadTSV() {
             try {
-                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv');
+                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/data.tsv');
                 const tsvText = await response.text();
                 const rows = tsvText.split('\n').map(row => 
                     row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
@@ -375,6 +378,16 @@
 
         loadTSV();
         </script>
+
+        <div class="well">
+            <h3 id="faq"><strong>FAQ</strong></h3>
+            <p></p> <!-- Small line break -->
+
+            <h4 id="where-can-i-install-the-data"><strong>Where can I install the data?</strong></h4>
+            <p>All datasets are publicly available on Github. Click <a href="https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv">here</a> to install the preprocessed dataset shown above.</p>
+
+        </div> <!-- well -->
+
     </div> <!-- container-fluid main-container -->
 
 
