@@ -288,9 +288,11 @@
 
             async function loadTSV() {
                 try {
-                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/data.tsv');
+                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv');
                     const tsvText = await response.text();
-                    const rows = tsvText.split('\n').map(row => row.split('\t'));
+                    const rows = tsvText.split('\n').map(row => 
+                        row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
+                    );
 
                     tsvData = rows;
 
@@ -303,7 +305,6 @@
 
             function generateFormInputs(headers) {
                 const formInputs = headers.map(header => {
-                    // Extract unique values for each column from the dataset
                     const uniqueValues = [...new Set(tsvData.slice(1).map(row => row[headers.indexOf(header)]))];
                     return `
                         <div class="form-group">
@@ -326,7 +327,7 @@
 
                 headers.forEach(header => {
                     const value = document.getElementById(header).value;
-                    newRow.push(value);
+                    newRow.push(value === '' ? 'NaN' : value);
                 });
 
                 tsvData.push(newRow);
