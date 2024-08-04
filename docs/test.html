@@ -286,94 +286,94 @@
         <script>
             let tsvData = [];
 
-            async function loadTSV() {
-                try {
-                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv');
-                    const tsvText = await response.text();
-                    const rows = tsvText.split('\n').map(row => 
-                        row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
-                    );
+        async function loadTSV() {
+            try {
+                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv');
+                const tsvText = await response.text();
+                const rows = tsvText.split('\n').map(row => 
+                    row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
+                );
 
-                    tsvData = rows;
+                tsvData = rows;
 
-                    constructDataTable(tsvData);
-                } catch (error) {
-                    console.error('Error loading TSV:', error);
-                    document.getElementById('tsv-data').innerHTML = 'Error loading TSV file. See console for details.';
-                }
-            }
-
-            function generateFormInputs(headers) {
-                const formInputs = headers.map(header => {
-                    const uniqueValues = [...new Set(tsvData.slice(1).map(row => row[headers.indexOf(header)]))];
-                    return `
-                        <div class="form-group">
-                            <label for="${header}">${header}</label>
-                            <input list="${header}List" class="form-control" id="${header}" name="${header}" autocomplete="off" required>
-                            <datalist id="${header}List">
-                                ${uniqueValues.map(value => `<option value="${value}"></option>`).join('')}
-                            </datalist>
-                        </div>
-                    `;
-                }).join('');
-                document.getElementById('formInputs').innerHTML = formInputs;
-            }
-
-            document.getElementById('newRowForm').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-
-                const newRow = [];
-                const headers = tsvData[0];
-
-                headers.forEach(header => {
-                    const value = document.getElementById(header).value;
-                    newRow.push(value === '' ? 'NaN' : value);
-                });
-
-                tsvData.push(newRow);
-
-                $('#tsvTable').DataTable().destroy();
                 constructDataTable(tsvData);
+            } catch (error) {
+                console.error('Error loading TSV:', error);
+                document.getElementById('tsv-data').innerHTML = 'Error loading TSV file. See console for details.';
+            }
+        }
 
-                this.reset();
+        function generateFormInputs(headers) {
+            const formInputs = headers.map(header => {
+                const uniqueValues = [...new Set(tsvData.slice(1).map(row => row[headers.indexOf(header)]))];
+                return `
+                    <div class="form-group">
+                        <label for="${header}">${header}</label>
+                        <input list="${header}List" class="form-control" id="${header}" name="${header}" autocomplete="off" required>
+                        <datalist id="${header}List">
+                            ${uniqueValues.map(value => `<option value="${value}"></option>`).join('')}
+                        </datalist>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('formInputs').innerHTML = formInputs;
+        }
+
+        document.getElementById('newRowForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const newRow = [];
+            const headers = tsvData[0];
+
+            headers.forEach(header => {
+                const value = document.getElementById(header).value;
+                newRow.push(value === '' ? 'NaN' : value);
             });
 
-            function constructDataTable(data) {
-                generateFormInputs(data[0]); 
+            tsvData.push(newRow);
 
-                const tableHTML = `
-                    <table id="tsvTable" class="display" style="width:100%">
-                        <thead>
-                            <tr>${data[0].map(header => `<th>${header}</th>`).join('')}</tr>
-                        </thead>
-                        <tbody>
-                            ${data.slice(1).map(row => 
-                                `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
-                            ).join('')}
-                        </tbody>
-                    </table>
-                `;
+            $('#tsvTable').DataTable().destroy();
+            constructDataTable(tsvData);
 
-                document.getElementById('tsv-data').innerHTML = tableHTML;
+            this.reset();
+        });
 
-                $(document).ready(function() {
-                    $('#tsvTable').DataTable({
-                        "scrollX": true,
-                        "pageLength": 5,
-                        "autoWidth": false,
-                        "dom": "Bfrtip",
-                        "buttons": [
-                            {
-                                "extend": "colvis",
-                                "className": "btn btn-primary",
-                                "text": "Select Columns"
-                            }
-                        ]
-                    });
+        function constructDataTable(data) {
+            generateFormInputs(data[0]); 
+
+            const tableHTML = `
+                <table id="tsvTable" class="display" style="width:100%">
+                    <thead>
+                        <tr>${data[0].map(header => `<th>${header}</th>`).join('')}</tr>
+                    </thead>
+                    <tbody>
+                        ${data.slice(1).map(row => 
+                            `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+                        ).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            document.getElementById('tsv-data').innerHTML = tableHTML;
+
+            $(document).ready(function() {
+                $('#tsvTable').DataTable({
+                    "scrollX": true,
+                    "pageLength": 5,
+                    "autoWidth": false,
+                    "dom": "Bfrtip",
+                    "buttons": [
+                        {
+                            "extend": "colvis",
+                            "className": "btn btn-primary",
+                            "text": "Select Columns"
+                        }
+                    ]
                 });
-            }
+            });
+        }
 
-            loadTSV();
+        loadTSV();
         </script>
     </div> <!-- container-fluid main-container -->
 
