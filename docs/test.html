@@ -288,7 +288,7 @@
 
             async function loadTSV() {
                 try {
-                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/YCao_updated_dataset.tsv');
+                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/data.tsv');
                     const tsvText = await response.text();
                     const rows = tsvText.split('\n').map(row => row.split('\t'));
 
