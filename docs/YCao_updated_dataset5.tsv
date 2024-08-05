@@ -1,0 +1,320 @@
+3D: Type of Stromal Cell	3D: Types of Endothelial Cell 	3D: Cell Composition (CM-EC-SC)	3D: Estimated Tissue Cell Density (10^6 cells/mL)	3D:Estimated Tissue size (mm2)	Immunofluorescent Imaging?	SEM or TEM	Sarcomere/Cellular Alignment Analysis?	Sarcomere Length (um)	Cell Area (um2)	T-tubules Present?	Contractile Analyses Method	Force (mN)	Stress (mN/mm2)	Upstroke Velocity (um/s)	Calcium Handling Analyses Method	Amplitude (F/F0)	Beat Rate (BPM)	Time to Peak (ms)	Time to Relaxation (ms)	Conduction Velocity (cm/s)	Electrical Physiology Analyses Method	AP Conduction Velocity (cm/s)	AP Amplitude (mV)	Resting Membrane Potential (mV)	Max Capture Rate (Hz)	Metabolic Analyses Method	Gene Analyses Method	Pharmacological Interventions
+					Yes	TEM	Yes	1.015	700		Impedance monitoring				Calcium 5 kit						Patch clamp	14.0				Gene expression	PCR, RNA-seq	
+					Yes		Yes				Gene expression																PCR	Thyroid hormone (T3)
+					Yes	TEM	Yes																					
+					Yes				3000												Patch clamp		125					
+					Yes	TEM	Yes		2400																	Mitochondria staining, mitochondrial respiratory complex activity		
+					Yes	SEM																				Clark-type oxygen electrode, MitoTracker staining	PCR	
+																										Seahorse, metabolic assays	PCR, ATAC-Seq	AICAR, compound C, nicotinamide (NAM), trichostatin A (TSA)
+																					Patch clamping					Gene expression	PCR	
+								1.73	1000			10				0.2										Seahorse		Hormone stimulation, T3
+						TEM	Yes	2.1							Â Fluo-4Â 	0.06										Seahorse	RNA-seq, PCR	Â T3 hormone, GW7647Â 
+																												
+																												
+																												
+																												
+					Yes	TEM	Yes	2.1		Yes	Motion tracking analysis			33							Patch clamp	41.0	122	-67.0		Seahorse	RNA-seq, PCR	
+		100, 0, 0	6.45		Yes	TEM	Yes	1.6			Post deflection				Dye						MEA; Optical mapping	10.0				Seahorse; metabolic flux	RNA-seq, PCR	
+					Yes				1800						Dye						Patch clamp	16.0	100	-70.0			Proteomics	caffeine
+					Yes	TEM	Yes				Motion tracking analysis		0.5	70	Dye	4.0		99								Seahorse	Microarray	
+		100, 0, 0	10.0	6	Yes	EM		1.9			TFM				Dye						Patch clamp; optical mapping		110	-80.0		Seahorse	RNA-seq, PCR	isoproterenol, tetrodotoxin
+					Yes			1.7			Motion tracking analysis				Dye		35.0	190			Optical mapping					Seahorse	PCR	isoproterenol
+					Yes				6000																	Seahorse	PCR	
+					Yes	TEM		2.1			Motion tracking analysis	0.0003		200	Dye	8.0					Patch clamp		114	-74.0		Seahorse	PCR	
+hCF	HUVEC	75, 10, 15	0.019	0.062	Yes	TEM		1.9		Yes	Post deflection		2.7	60 mN/mm2/s	Dye	0.6					Optical mapping	20.0			4.0		PCR	isoproterenol
+hiPSC-SC		80, 0, 20	6.6	0.05	Yes						Post deflection		3.0		Genetically encoded sensor	0.03	60.0				Optical mapping					Seahorse	PCR	verapamil, flecainide, alfuzosin, isoproterenol
+					Yes	TEM	Yes	1.75	2000		Force transducer		50.0													Metabolomics	RNA-seq	phenylephrine
+					Yes		Yes	1.7							Dye	3.0					Patch clamp		97	-85.0			PCR	isoproterenol
+					Yes		Yes	1.6							Dye	3.2					Patch clamp		95	-85.0			PCR	isoproterenol, caffeine
+hiPSC-SC		70, 0, 30	14.0	0.8	Yes	TEM		2.3		Yes	Post deflection	0.37			Dye	2.5		200	500		Patch clamp		102	-59.0		Metabolomics, Seahorse	RNA-seq, PCR	
+					Yes				2000	Yes	Motion track analysis			time to peak=0.71s	Dye	0.88		490										caffeine (for calcium content & SR)
+					Yes																						RNA-seq, PCR	
+					Yes						Motion tracking analysis															Seahorse		
+		100, 0, 0	10.0	2.5	Yes						Force transducer 	0.3	2.2		Dye			181										isoproterenol
+		100, 0, 0	0.13	0.03	Yes	TEM																						
+					Yes		Yes	2.1			Motion tracking analysis			1.2	Dye	1.8	33.0				Patch clamp		121	-81.0			RNA-seq	isoproterenol, verapamil, mavacamten
+					Yes		Yes	1.8	2000		Post deflection	0.013			Dye	0.25					Patch clamp		91	-59.0		Seahorse	RNA-seq, PCR	
+					Yes		Yes	1.8							Dye	0.8		270										
+hLF		75, 0, 25	16.0	14	Yes						Force transducer 	0.5			Dye	0.9	50.0	500									PCR	
+vascular mural cell	vascular endothelial cell	37, 15, 20			Yes						Motion tracking analysis				Genetically encoded sensor 		101.0											isoproterenol
+					Yes			1.8	3116		Nanoindenter	0.471		18	Dye												PCR	isoproterenol
+					Yes	TEM					TFM				Genetically encoded sensor	1.1	25.0				Patch clamp		170	-65.0		Seahorse	RNA-seq, PCR	lidocaine, dofetilide, nifedipine, caffiene
+hDF		90, 0, 10	150.0	20	Yes		Yes				Post deflection	0.3	0.07		Dye					4.3							Nanostring	isoproterenol
+		100, 0, 0		0.02	Yes	SEM, TEM	Yes	1.75			Motion tracking analysis				Dye	2.0	48.0	400									PCR	norepinephine
+		100, 0, 0		2							Motion tracking analysis																	
+hCF	CMVEC	65, 10, 25	5.0		Yes						Motion tracking analysis			70														doxorubicin
+					Yes						Motion tracking analysis				Dye												PCR	
+hDF	HUVEC	50, 25, 25	0.3	10	Yes						Motion tracking analysis																	
+hCF	CMVEC	57, 14, 29	0.0125	0.035	Yes																							sunitinib, doxorubicin
+heCF		80, 0, 20	0.0125	0.0078	Yes	TEM					Motion tracking analysis										Patch clamp		66	-41.0			PCR	
+		100, 0, 0	0.062	40	Yes						Motion tracking analysis				Dye		20.0											phenylephrine, isoproterenol, blebbistatin, doxorubicin
+					Yes	TEM									Dye											Seahorse	PCR	propranolol, epinephrine, atenolol, dobutamine
+					Yes										Genetically encoded sensor												PCR	dantrolene, ranolazine
+		100, 0, 0		95	Yes		Yes				Motion tracking analysis										Optical mapping	19.0					PCR	isoproterenol, BaCl2, E4031, chromanol 293B, nifedipine, bay-k 8644, cromakalim
+hCF		90, 0, 10	18.75	12	Yes	TEM	Yes	2.0			Post deflection; Force transducer		0.6	150	Dye					9.0	Patch clamp			-60.0			PCR	
+																											PCR	dofetilide, quinidine, moxifloxacin, ranolazine, verapamil, quinine, propafenone, chloroquine, terfenadine, cisapride, amiodarone, azithromycin, ritonavir, amitriptyline, nilotinib, toremifene, lidocaine, mexiletine, mibefradil, diltiazem, licarbazepine, cibenzoline, sertindole
+																					MEA							verapamil, diltiazem, loratadine, metoprolol, mexiletine, nifedipine, nitrendipine, ranolazine, tamoxifen, terfenadine, astemizole, chlorpromazine, cisapride, clarithromycin, clozapine, domperidone, droperidol, ondansetron, pimozide, risperidone, dofetilide, azimilide, bepridil, DL-sotalol, disopyramide, ibutilide, quinidine, vandetanib
+					Yes		Yes														Patch clamp	34.9		-79.0				tamoxifen, nifedipine, nitrendipine, ranolazine, diltiazem, metoprolol, verapamil, domperidone, droperidol, clozapine, terfenadine, astemizole, cisapride, pimozide, risperidone, ondansetron, disopyramide, quinidine, DI sotalol, bepridil, dofetilide, azimilide, ibutilide, vandetanib
+																											RNA-seq, PCR	
+hFF		70, 0, 30	30.0		Yes										Dye	5.0	40.0	250	1000 (time to 50%)									
+		100, 0, 0	1.0	0.07	Yes		Yes		1500												Patch clamp					Glucose consumption and Lactate production rate analysis	RNA-seq, PCR	
+					Yes						Motion tracking analysis			time to peak=0.22s							Patch clamp		100	-78.0			PCR	
+		100, 0, 0	10.3	10.2	Yes		Yes				Post deflection	0.25		20		4.0					Patch clamp; optical mapping						RNA-seq	
+															Dye		21.0											minobispropanenirtile, hexanedioic acid, titanocene dichloride, 2-amino-4-chlorophenol, 1-4-benzoquinone, di(2-ethylhexyl)phthalate, 3-4-dichlorophenyl isocyanate, isodecyl diphenyl phosphate, azobenzene, bisophenol A, tris(2-chloroethyl)phosphate, 2-ethylhexyl diphenyl phosphate, 3-3-5-5-tetrabromobisphenol A, tert-butyl phosphates isopropylated, triphenyl phosphate, tris(methylphenyl)phosphate, thiabendazole, aldicarb, captan, endosultan, 8-hydroxyquinoline, aldrin, myclobutanil, dichlorodiphenyltrichloroethane, dieldrin, heptachlor, parathion, chlorpyrifos, carbaryl, 2-phenylphenol, dazomet, acetochlor, deltamethrin, permethrin, tebuconazole, 3-iodo-2-propynyl-n-butylcarbamate, hexachlorophene, gentian violet, rotenone, manganese(2)acetate, (CH3-cyclopentadienyl)tricarbonyl Mn, methylmercuric(2)chloride, hydroxyurea, acetylsalicylic acid, atenolol, acetaminophen, sodium valproate, 6-propyl-2-thiouracil, phenobarbital sodium, thalidomide, rantidine, 6-thioquanine, 5-fluotouracil, citalopram hydrobromide, disulfiram, pyrimethamine, rantidine hydrochloride, colchicine, lidocaine, progesterone, lamotrigine, flutamide, lindane, mexiletine hydrochloride, moxifloxacin hydrochloride, nifedipine, n-acetylprocainamide, triameterene, vernacalant, cabazitaxel, ranolazine, loratadine, propafenone, quinidine sulfate, tamoxifen, bepridil hydrochloride, chlorpromazine hydrochloride, reserpine, ditiazem, diethylstilbestrol, mifepristone, mifepristone2, sotalol hydrochloride, amitriptyline hydrochloride, sotalol, mitrendipine, terfenadine, verapamil hydrochloride, sematilide, azithromycin, ibutilide fumarate, cisapride monohydrate, dofetilide
+						SEM																					PCR	
+					Yes		Yes	1.8																				
+hiPSC-SC		75, 0, 25	10.0	5							Post deflection	0.05		500 uN/s											2.5		PCR	isoproterenol
+					Yes																							
+		100, 0, 0	1.7		Yes						Motion tracking analysis		0.225													Reduction assay 		
+		100, 0, 0	25.0	14	Yes						Motion tracking analysis																	
+					Yes																Patch clamp		118	-61.3			RNA-seq	
+					Yes	SEM	Yes		1250						Dye		15.0			11.0								
+																					Patch clamp							
+hMSC		70, 0, 30		0.01	Yes		Yes																					
+					Yes						TFM	0.0002														TMRM staining	RNA-seq, PCR	
+		100, 0, 0	0.36	0.06	Yes	TEM		1.5									50.0				Optical mapping					Metabolic flux	Transcriptomics	
+					Yes		Yes	1.9																			PCR	
+					Yes										Dye						MEA						PCR	isoproterenol, nifedipine
+hMSC	HUVEC	33, 33, 33		4	Yes										Dye	2.0											PCR	
+					Yes			2.5		Yes					Dye												PCR	doxorubicin, caffeine
+hFF		70, 0, 30	15.0	4	Yes						Post deflection	1.2			Dye			300			Optical mapping						RNA-seq, PCR	isoproterenol, carbamylcholine
+					Yes						Motion tracking analysis				Dye													
+		100, 0, 0	2.5	39.5	Yes		Yes	1.75			Motion tracking analysis	1.1																
+hMSC		80, 0, 20	0.3	0.03							Motion tracking analysis				Dye	1.0	36.0	100										
+hiPSC-CF		91, 0, 9	11.0	24	Yes					Yes	Force transducer		12.0		Dye		36.0	100			Optical mapping						PCR	isoproterenol
+					Yes																							
+					Yes		Yes								Dye		40.0	150	350									
+					Yes		Yes	1.12							Dye													
+																											RNA-seq	
+						SEM															MEA							dofetilide, ATX-II, tetrodotoxin
+					Yes		Yes	1.9			TFM		1.7															
+					Yes						Motion tracking analysis				Dye					20.0		21.0						
+																					Optical mapping							carbenoxolone
+hiPSC-MC	hiPSC-EC	56, 11, 14	15.0	40	Yes		Yes				Force transducer 		0.72								Patch clamp			-35.0	6.0		PCR	
+		100, 0, 0			Yes																							
+					Yes										Dye	0.18	60.0	2000			MEA							E4031
+					Yes										Dye						Patch clamp; MEA		100 @ 1 Hz	-80.0				quinidine, amiodarone, DL-sotalol
+	hiPSC-EC	83, 17, 0	120.0	0.6	Yes	TEM																					PCR	
+		100, 0, 0		0.08	Yes	TEM					Motion tracking analysis				Dye						Patch clamp			-70.0			PCR	isoproterenol, E4031
+			1.0	0.75	Yes	TEM		1.5		Yes	Motion tracking analysis															Seahorse	RNA-seq	isoproterenol, verapamil, doxorubicin
+					Yes						Motion tracking analysis				Dye						Optical mapping							metoprolol
+hCF		90, 0, 10	50.0	2							Post deflection																	isoproterenol, dobutamine, milrinone, PACAP27, nifedipine, FPL64176, digoxin, thapsigargin, omecamtiv mecarbil, mavacamten, levosimendan
+		100, 0, 0	25.0		Yes	SEM									Dye		25.0				MEA						PCR	isoproterenol, propranolol
+					Yes																						PCR	
+		100, 0, 0	0.25	0.16	Yes			2.0			Motion tracking analysis										MEA						PCR	acetaminophen, isoprotereol, E4031
+					Yes			1.4																			RNA-seq	
+		100, 0, 0	1.6		Yes										Genetically encoded sensor	0.6	30.0		220 (time to 50%)								PCR	isoproterenol, propanolol
+					Yes	TEM		1.91		like structures											Patch clamp		115	-64.0			PCR	E4031, chromanol
+hiPSC-SMC	hiPSC-EC	50, 25, 25	1.0	800	Yes	TEM					Force transducer	1.8			Dye						Optical mapping	14.1						isoproterenol
+hiPSC-SMC	hiPSC-EC	50, 25, 25		4	Yes		Yes				Motion tracking analysis			17	Dye	2.3					Optical mapping	18.0					PCR	
+					Yes	TEM	Yes	2.0	4100	Yes	TFM	0.00042 (per cell)			Dye	0.175		375			Patch clamp; MEA	5.0	112	-75.0		Seahorse	RNA-seq, PCR	
+					Yes															8.3							PCR	verapamil, flecainide
+hiPSC-CF	hiPSC-EC	75, 15, 15	0.1	0.13	Yes	TEM	Yes	1.9		Yes	Motion tracking analysis			50	Dye			150			Patch clamp		105	-70.0		Seahorse	RNA-seq, PCR	verapamil, Bay K-8644, dbcAMP
+	hiPSC-EC	85, 0, 15	0.1	0.07	Yes						Motion tracking analysis										Patch clamp; MEA		100	-52.0			PCR	isoproterenol, verapamil
+		100, 0, 0	30.0	24	Yes	TEM									Genetically encoded sensor		40.0		310		Optical mapping	6.0						isoproterenol, carbamylcholine, E4031, ATX-II, ouabain, quinidine, lidocaine, carbenoxolone
+																					Patch clamp				1.0			
+	hiPSC-EC	67, 33, 0	0.017	225	Yes	SEM, TEM	Yes														MEA						Proteomics	
+hCF		75, 0, 25	10.0	0.012	Yes																							
+					Yes		Yes	1.9			Motion tracking analysis	0.05		45	Genetically encoded sensor			150										
+		100, 0, 0		37.5	Yes	TEM					Force transducer 	0.125					42.0			33.0							PCR	
+					Yes			1.4	1000						Dye		19.0				MEA							isoproterenol, phenylephrine, carbamylcholine, heptanol
+																												norepinephrine
+					Yes	SEM, TEM				Yes																		
+					Yes						Motion tracking analysis				Dye	2.6		250 @ 1 HZ			Optical mapping					Seahorse	Proteomics	isoproterenol
+					Yes				3500						Dye					44.0	Patch clamp; optical mapping		115	-80.0			PCR	
+					Yes										Dye	0.15	45.0											
+											Motion tracking analysis																	alfuzosin, flecainide, isoproterenol
+hiPSC-SC	hiPSC-EC		0.08	2	Yes	TEM					Motion tracking analysis				Dye	1.25	50.0				Optical mapping						RNA-seq	
+		100, 0, 0	0.325	1225	Yes		Yes																					
+hCF, hDF, hMSC, hiPSC-CF		75, 0, 25	0.14	0.18	Yes										Genetically encoded sensor	1.5											RNA-seq	
+		100, 0, 0	10.0	100																	Optical mapping			-75.0			PCR	carbamylcholine
+											"Motion tracking analysis 
+"			80	Genetically encoded sensor 						Patch clamp; MEA			-60.0				isoproterenol
+hiPSC-SC		50, 0, 50		0.5	Yes	SEM	Yes				Force transducer		4.0		Genetically encoded sensor		38.0											isoproterenol, verapamil
+					Yes						Motion tracking analysis										Optical mapping							
+		100, 0, 0			Yes																		86				PCR	
+									2000						Dye	1.1		600										
+hiPSC-SC		70, 0, 30			Yes						Motion tracking analysis			11	Dye	1.12	35.0			15.0	MEA; Optical mapping				2.0		PCR	
+		100, 0, 0	0.04	375	Yes		Yes			Yes	Motion tracking analysis				Genetically encoded sensor			300										
+hMSC		90, 0, 10		0.28	Yes						MEMS sensor	0.055																
+					Yes		Yes	1.9	2850												Patch clamp		98	-76.0			PCR	
+					Yes																						RNA-seq, PCR	
+					Yes																							
+hFF, hMSC, hCF		75, 0, 25	10.0	2.9	Yes						Post deflection		0.8															isoproterenol, nifedipine
+		100, 0, 0		100	Yes	TEM		1.35							Dye		70.0			1.5							RNA-seq, PCR	isoproterenol
+					Yes		Yes								Dye		32.0										PCR	isoproterenol
+		100, 0, 0	15.0	20	Yes						Force transducer 		0.54		Genetically encoded sensor													
+																												
+		100, 0, 0	0.2	0.03	Yes						Motion tracking analysis																	
+hDF	HUVEC	50, 25, 25	0.6	2.9	Yes						Motion tracking analysis						27.0											
+					Yes																							E4031
+		100, 0, 0		21	Yes	TEM	Yes	1.8	2163	Yes	Motion tracking analysis				Dye												PCR	isoproterenol, propranolol
+					Yes	SEM, TEM		1.7								2.0		400			Patch clamp		100	-74.0			PCR	
+hCF	CMVEC	47.6,47.6,4.8	100.0	6	Yes						Motion tracking analysis				Genetically encoded sensor	1.9	25.0	160			Patch clamp			-60.0				
+					Yes		Yes	1.75							Genetically encoded sensor	1.6		140									PCR	
+hCF		95, 0, 5	0.06	0.4	Yes																Optical mapping							E4031, ranolazine, isoproterenol,bispanol-A, 4-AP Bay K-8644
+					Yes		Yes	1.9	3750		Motion tracking analysis			3.5													PCR	
+					Yes			1.45							Dye						Patch clamp							
+					Yes		Yes														MEA	13.6						isoproterenol, fexofenadine, terfenadine
+					Yes	SEM					Motion tracking analysis				Dye		7.0				MEA							isoproterenol, verapamil, E4031
+					Yes																						PCR	doxorubicin, trastuzumab
+		100, 0, 0	0.92	0.5	Yes	SEM, TEM															Optical mapping	6.0					PCR	
+hFF		91, 0, 9	110.0	3.9	Yes						Post deflection	0.09									Optical mapping	15.0					RNA-seq, PCR	
+											Motion tracking analysis																PCR	thiolidamide, valproic acid
+		100, 0, 0	125.0	12.5	Yes						Motion tracking analysis		0.38	42	Dye		30.0											
+											Motion tracking analysis										MEA							isoproterenol
+		100, 0, 0	10.0	10	Yes						Post deflection	0.12									Patch clamp		90	-65.0			PCR	flecainide, JTV519, E4031, ivabradine, SEA0400
+		100, 0, 0	10.0	16																	Patch clamp		109	-78.0			"fluorometric quantitation with Qubit
+"	"ivabradine, E-4031, verapamil, moxifloxacin, HMR-1556, isoproterenol 
+"
+		100, 0, 0	10.0	10	Yes																Patch clamp		102	-74.0			PCR	Nifedipine, tetrodotoxin
+hMSC		91, 0, 9	5.5	0.5	Yes	TEM		1.8	350?		Post deflection; Force transducer	0.6	0.4	42	Dye			200	220								PCR	
+					Yes		Yes	1.7	1752						Dye	0.35	45.0	300									PCR	isoproterenol
+					Yes	TEM															MEA	11.0						
+					Yes	SEM, TEM															MEA						PCR	E4031, verapamil
+					Yes		Yes				Motion tracking analysis			8	Dye						Optical mapping						RNA-seq, PCR	
+		100, 0, 0		0.14	Yes																						PCR	
+					Yes		Yes	1.8			Force transducer 		10.0								Optical mapping	37.0						verapamil, isoproterenol
+					Yes	TEM		1.4	2900		Motion tracking analysis																PCR	isoproterenol, verapamil, nifedipine, nisoldipine
+		100, 0, 0			Yes										Dye		48.0										RNA-seq, PCR	ionomycin
+		100, 0, 0		0.0225	Yes		Yes	1.8			Post deflection	0.01															PCR	isoproterenol, omecamtiv mecarbil, levosimendan
+		100, 0, 0	3.0	0.1	Yes						Motion tracking analysis				Genetically encoded sensor												PCR	
+		100, 0, 0		0.13	Yes						Motion tracking analysis			50													PCR	thalidomide
+		100, 0, 0	6.0		Yes		Yes								Dye		90.0											isoproterenol
+		100, 0, 0	10.0	16	Yes	TEM					Post deflection	0.2														Seahorse	RNA-seq	GW9662
+		100, 0, 0	10.0	10	Yes	TEM		1.6		Yes	Post deflection	0.152					61.0										PCR	isoproterenol, verapamil, SEA-0400, E4031, NS-1643, ATX-II, tetrodotoxin, ouabain, rolipram, EMD-57033, Bay K-8644
+		100, 0, 0	10.0	10							Post deflection	0.6																ivabradine, isoproterenol, 4-aminopyridin
+SC		91, 0, 9	5.0	8.6	Yes	TEM					Post deflection	0.04															RNA-seq	
+		100, 0, 0	100.0	0.3	Yes	SEM, TEM					Motion tracking analysis			10							MCR				1.5		PCR	isoproterenol
+							Yes		7000												Patch clamp		120	-80.0				
+					Yes																							
+					Yes						Stretching device																RNA-seq	
+hCF		75, 0, 25	35.0	1.25	Yes						Post deflection		3.7														RNA-seq	carvedilol, losartan, pirfenidone
+hiPSC-MC	hiPSC-EC	62, 19, 2	15.0	100	Yes	TEM					Force transducer		1.5								MCR				4.5		RNA-seq	
+		100, 0, 0	5.0	0.1	Yes						Motion tracking analysis			8	Genetically encoded sensor						MEA							isoproterenol, verapamil, metoprolol, E4031
+					Yes																							
+		100, 0, 0	9.0	0.5	Yes										Dye					9.4								
+					Yes																						PCR	
+hiPSC-CF		91, 0, 9	11.0	60							Force transducer 		25.0														PCR	
+hMSC		98, 0, 2	12.0	14	Yes						Motion tracking analysis																	
+																												aspirin, doxorubicin, sunitinib, erlotinib
+		100, 0, 0	16.0	60	Yes						Force transducer		0.25	0.14 mN/s													PCR	
+		100, 0, 0		0.015	Yes																						PCR	
+											Motion tracking analysis																	
+		90, 0, 10		6	Yes						Post deflection	0.012															Nanostring	
+hiPSC-MC	hiPSC-EC	45, 18, 15	15.0	150	Yes		Yes				Force transducer		0.55								MCR				6.9		PCR	
+					Yes	SEM, TEM																					RNA-seq	
+hCF		91, 0, 9	10.0	9.6							Force transducer	0.64			Dye	0.2		230										blebbistatin
+hiPSC-CF	hiPSC-EC	85, 12.5, 2.5	118.0		Yes	SEM									Dye													
+											Post deflection						96.0					15.0						cyclophosphamide, acrolein, terfenadine, fexofenadine
+					Yes						Post deflection																	doxorubicin, atorvastatin, valproic acid, acetaminophen, n-acetyl-m-aminophenol
+hCF	HUVEC	70, 15, 15	0.165	0.25	Yes						Motion tracking analysis										Optical mapping	4.0						
+					Yes						Motion tracking analysis			45	Dye		24.0	500										isoproterenol
+hCF		70, 0, 30	30.45	25	Yes						Force transducer	1.1	3.2															
+		100, 0, 0		2	Yes						Motion tracking analysis		5.0		Dye													isoproterenol
+					Yes										Dye												PCR	
+					Yes																							
+					Yes	TEM		1.8	7696	Yes																	PCR	
+															Dye		33.0	190			Patch clamp; optical mapping		100	-75.0				isoproterenol, forskolin
+																												
+hCF	CMVEC	67, 16.5, 16.5	0.0125	0.03	Yes						Motion tracking analysis																PCR	amitriptyline, amoxicillin, acetylsalicylic acid, atenolol, AZ1-9, bepridil, captopril, chloroquine, cibenzoline, cimetidine, digoxin, diltiazem, disopyramide, dobutamine, doxorubicin, enalapril, epinephrine, flecainide, furosemide, haloperidol, isoproterenol, lapatinib, levosimendan, lisinopril, milrinone, nifedipine, paracetamol, pravastatin, quinidine, ramipril, sunitinib, tolbutamide, verapamil
+hiPSC-CF	HCAEC	50, 25, 25	0.15	0.35	Yes	TEM																						doxorubicin, L-NIO
+hiPSC-CF		50, 0, 50	40.0	0.75	Yes		Yes				Motion tracking analysis			time to peak=0.16s														bepridil, cisapride, carbenoxolone
+					Yes										Dye				790		Patch clamp							E-4031, nimodipine, chromanol 293B
+hiPSC-CF	hiPSC-EC	57, 29, 14	10.0	200	Yes						Motion tracking analysis										Optical mapping	30.0					PCR	
+		100, 0, 0	10.0	107	Yes	TEM		1.8																			PCR	
+					Yes																						PCR	
+																												norepinephrine
+hCF		91, 0, 9	50.0	1							Post deflection										Optical mapping							isoproterenol, dobutamine, milrpinone, pimobendan, levosimendan, omecamtiv mecarbil, AMG1, AMG2, pyrethrin-apelin-13
+																					Patch clamp		110	-78.0				E4031
+		100, 0, 0	10.0	3,500	Yes		Yes				Post deflection	4.6									MEA	41.0	110	-82.0				isoproterenol
+					Yes																Patch clamp		105	-39.0				tetrodotoxin, nifedipine, E4031
+		100, 0, 0	6.0	141	Yes	TEM					Force transducer 	1.2																
+					Yes																							lidocaine, nifedipine, E4031
+hCF, hADSC	HUVEC	50, 14, 36	2.0	0.07	Yes						Motion tracking analysis				Dye	0.3	42.0									Seahorse	RNA-seq	norepinephrine
+hCF	HUVEC	50, 10, 40	2.0	0.13	Yes	SEM, TEM					Motion tracking analysis				Dye			170	480 (50%)								PCR	verapamil, ryanodine, E4031, isoproterenol
+					Yes	TEM																						
+					Yes																Optical mapping	2.5						
+hDF		75, 0, 25	10.0	7	Yes						Motion tracking analysis		2.1												5.6		RNA-seq	doxorubicin, doxorubicinol
+hDF		75, 0, 25	10.0	6	Yes	TEM		2.2	1500	Yes	Post deflection	0.8	3.8		Dye				250	25.0	Patch clamp		115	-70.0		Seahorse	PCR	isoproterenol, nifedipine, verapamil, thapsigargin
+		100, 0, 0	40.0		Yes		Yes	1.7			Motion tracking analysis			15.25	Dye	0.8		315	145									isoproterenol, epinephrine, nifedipine, verapamil
+hiPSC-SMC	hiPSC-EC	58, 9, 15	20.0	60	Yes						Force transducer 		1.0			0.037	60.0	127									PCR	
+hCF		95, 0, 5	1.0								Force transducer		0.18													Seahorse		
+hCF		95, 0, 5	16.0	10	Yes						Force transducer		0.15		Dye						Optical mapping				2.9		PCR	
+		100, 0, 0	10.0	10							Post deflection				Dye						Optical mapping							epinephrine, forskolin, levosimendan, pimobendan, dobutamine, milrinone, omecamtiv mecarbil, terbutaline, verapamil, doxorubicin, sunitinib, citalopram, itraconazole, sorafenib, ivabradine, flecainide, phentolamine, zimelidine, atenolol, acetylsalicylic acid, captopril, glibenclamide, enalaprilat, clonidine, paracetamol, tolbutamide, pravastatin, sildenafil
+		100, 0, 0	10.0	16	Yes						Post deflection	0.25			Genetically encoded sensor		83.0	190										isoproterenol, nifedipine, Bay K-8644, digoxin, EMD-57033, omecamtiv mecarbil
+					Yes																						PCR	
+																											RNA-seq, PCR	doxorubicin
+					Yes						Motion tracking analysis				Dye												RNA-seq	
+		100, 0, 0		144	Yes						Force transducer	0.85	3.3															adrenaline
+hPC	BOEC	65, 29, 6		5							Force transducer	1																
+											Motion tracking analysis																	
+		100, 0, 0		0.37	Yes										Dye						Patch clamp		90	-62.0			PCR	Ivabradine
+		100, 0, 0	17.2	49-1681	Yes	TEM				Yes	Force transducer	20	22.4								Optical mapping	28.0					PCR	
+																										Seahorse		
+					Yes						Motion tracking analysis										Patch clamp		90				RNA-seq	doxorubicin, dabrafenib, dasatinib, lapatinib, pazopanib, sorafenib, sunitinib, trametinib, nilotinib, crizotinib, vandetanib, vemurafenib
+hCF		90, 0, 10	10.0	2.5							Force transducer	0.17		time to peak=0.29s	Dye		12.0										RNA-seq	isoproterenol
+					Yes										Genetically encoded sensor; Dye	3.0		250			Genetically encoded sensor; Optical mapping						PCR	cisapride, erythromycin, sotalol, nilotinib, oubain
+"Mesendoderm progenitor cels 
+"				0.05	Yes	TEM	Yes	1.75	2000						Genetically encoded sensor 	2.2	54.0				Patch clamp		104	-66.0	4.0		RNA-seq	
+					Yes			1.95							Dye			204			Patch clamp; MEA	26.0		-45.0				bepridil, cisapride, carbenoxolone, verapamil
+					Yes			1.9		Yes	Motion tracking analysis			6	Dye												PCR	
+					Yes		Yes																					
+					Yes	SEM	Yes	2.0	1500		Motion tracking analysis			1.2														blebbistatin
+					Yes																							
+					Yes		Yes				Motion tracking analysis, force transducer	0.9														Metabolic flux	PCR	isoproterenol
+		100, 0, 0	0.5		Yes						Motion tracking analysis				Dye						MEA						PCR	E4031, isoproterenol
+hCF;hDF		75, 0, 25	37.0	2	Yes		Yes				Post deflection		3.22	622	Genetically encoded sensor	0.18		210							2.7			
+		100, 0, 0	0.21	0.03	Yes	TEM										2.2										OCR chamber equipped with fiber optic sensors		
+		100, 0, 0	3.0	0.09	Yes	TEM	Yes	1.8							Dye	1.5		800									PCR	
+					Yes												108.0				MEA						PCR	E-4031, isoproterenol, propranolol
+hCF		100, 0, 10		2	Yes						Post deflection																	blebbistatin, isoproterenol, nifedipine
+		100, 0, 0		100	Yes																							
+hCF		70, 0, 30	30.0	1	Yes	EM		1.95			Post deflection	1.3	6.0								Patch clamp		97	-57.0			RNA-seq	isoproterenol, carbachol, CGP-20712A, CI-118551
+					Yes				2000																	Seahorse		
+					Yes			1.93			Motion tracking analysis; TFM						40.0											"MYK-461, CK-1827452, verapamil, propanolol
+"
+					Yes																						RNA-seq	
+																					MEA		100				PCR	NS3623, E4031
+hMSC		80, 0, 20	25.0	40	Yes			2.1			Post deflection	0.045		330	Dye	0.35		200			Patch clamp	35.0	-50				RNA-seq, PCR	cisapride 
+hCF	CMVEC	37.5, 50, 12.5	2.75	4.5	Yes		Yes				Motion tracking analysis			34														
+		100, 0, 0	10.0	5		TEM					Motion tracking analysis	0.2														Metabolic flux	PCR	blebbistatin, N-benzyl-p-toluene sulfonamide
+		100, 0, 0	5.0	100																	Patch clamp							nimodipine, E4031, norepinephrine, epinephrine, serotonin, ICI118,551, CP 20712A, nifedipine, mibefradil 
+					Yes				1900												Patch clamp			-75.0				
+hMSC	hiPSC-EC	65, 32, 3			Yes	SEM, TEM									Dye												PCR	isoproterenol, clenbuterol, diltiazem
+hFF		90, 0, 10	5.0	78.5	Yes	TEM					Motion tracking analysis										MCR				2.5		PCR	isoproterenol, carbachol, sotalol
+															Dye						MEA; Optical mapping							epinephrine, pimobendan, forskolin, acetylsalicylic acid, levosimendan, atenolol, verapamil, captopril, doxorubicin, omecamtiv mecarbil, sunitinib, ouabain
+					Yes						Motion tracking analysis																	
+		100, 0, 0	3.0	0.039	Yes						Motion tracking analysis	0.000175		38														
+					Yes	SEM, TEM		1.8							Dye	1.69				5.6	Patch clamp	5.0	75	-42.0			PCR	
+hiPSC-SC		75, 0, 25			Yes	TEM															MEA						PCR	epinephrine, nifedipine, E4031, metoprolol
+					Yes		Yes	1.6			Motion tracking analysis			5	Dye		27.0										PCR	
+					Yes										Genetically encoded sensor						Optical mapping							
+	hiPSC-EC	71, 29, 0	9.7	27	Yes																							
+hPC		86, 0, 14	2.03	22.6	Yes						Motion tracking analysis	0.45																
+colon adenocarcinoma (SW620)	hiPSC-EC	77, 23, 0	130.0	2	Yes										Genetically encoded sensor		30.0			4.2								doxorubicin, oxaliplatin
+					Yes				1200		TFM	0.00024	0.32														PCR	
+hCF		75, 0, 25	0.025	1.8	Yes						Rod deflection				Dye		45.0			18.0							RNA-seq	lidocaine, isoproterenol, flecainide, propranolol, amiodarone
+					Yes		Yes	1.75			Motion tracking analysis			7	Dye												RNA-seq	
+hFF		91, 0, 9	1.43	1.75							Post deflection	0.05									Optical mapping				2.6			
+					Yes										Dye	4.5	70.0	250									RNA-seq	isoproterenol
+					Yes										Dye	0.7	40.0				Patch clamp						PCR	isoproterenol, carbamylcholine
+					Yes	SEM	Yes				Motion tracking analysis			30	Dye		40.0										PCR	
+					Yes																						PCR	
+hCF	HUVEC	70, 15, 15	2.5		Yes			2.2																				
+					Yes																MEA		93				PCR	
+					Yes						Motion tracking analysis															Seahorse		
+					Yes		Yes		3000		Motion tracking analysis			16		1.04	40.0									Seahorse	PCR	
+		100, 0, 0	0.015	0.0625	Yes						Motion tracking analysis																	
+		100, 0, 0	50.0	9	Yes																						PCR	
+hMSC		91, 0, 9	4.4	16	Yes			1.7	9000		Post deflection 	0.21	0.95	1300	Dye	0.2		180									PCR	
+		100, 0, 0		49	Yes						Motion tracking analysis			40.5	Dye						MEA							verapamil, isoproterenol
+					Yes						Motion tracking analysis			10			90.0									Seahorse	RNA-seq	ivabradine, carbamylcholine, vernakalant
+hMSC		90, 0, 10	8.0	7.5	Yes		Yes				TFM; Post deflection	0.08	0.28								Genetically encoded sensor						PCR	
+					Yes										Dye												PCR	
+		100, 0, 0		0.28	Yes	TEM																					PCR	
+	HUVEC	9, 91, 0	11.0	19.25	Yes		Yes				Motion tracking analysis						40.0											doxorubicin
+hCF		91, 0, 9	50.0	1.7	Yes	TEM					Post deflection	2.6	23.2		Dye	0.08		290			Optical mapping	32.0	100	-65.0				E4031, isoproterenol, milrinone, diltiazem, lidocaine, nifedipine, thapsigargin
+hCF		91, 0, 9	50.0	2.5	Yes		Yes				Post deflection										Patch clamp				5.0			
+					Yes																					Metabolic flux	RNA-seq, PCR	
+					Yes			1.7																				
