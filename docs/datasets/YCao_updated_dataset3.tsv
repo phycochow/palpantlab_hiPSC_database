@@ -1,318 +1,315 @@
-AP Amplitude (mV)	Resting Membrane Potential (mV)	Max Capture Rate (Hz)	Metabolic Analyses Method	Gene Analyses Method	Pharmacological Interventions
-			Gene expression	PCR, RNA-seq	
-				PCR	Thyroid hormone (T3)
-					
-125					
-			Mitochondria staining, mitochondrial respiratory complex activity		
-			Clark-type oxygen electrode, MitoTracker staining	PCR	
-			Seahorse, metabolic assays	PCR, ATAC-Seq	AICAR, compound C, nicotinamide (NAM), trichostatin A (TSA)
-			Gene expression	PCR	
-			Seahorse		Hormone stimulation, T3
-			Seahorse	RNA-seq, PCR	 T3 hormone, GW7647 
-					
-					
-					
-					
-122	-67.0		Seahorse	RNA-seq, PCR	
-			Seahorse; metabolic flux	RNA-seq, PCR	
-100	-70.0			Proteomics	caffeine
-			Seahorse	Microarray	
-110	-80.0		Seahorse	RNA-seq, PCR	isoproterenol, tetrodotoxin
-			Seahorse	PCR	isoproterenol
-			Seahorse	PCR	
-114	-74.0		Seahorse	PCR	
-		4.0		PCR	isoproterenol
-			Seahorse	PCR	verapamil, flecainide, alfuzosin, isoproterenol
-			Metabolomics	RNA-seq	phenylephrine
-97	-85.0			PCR	isoproterenol
-95	-85.0			PCR	isoproterenol, caffeine
-102	-59.0		Metabolomics, Seahorse	RNA-seq, PCR	
-					caffeine (for calcium content & SR)
-				RNA-seq, PCR	
-			Seahorse		
-					isoproterenol
-					
-121	-81.0			RNA-seq	isoproterenol, verapamil, mavacamten
-91	-59.0		Seahorse	RNA-seq, PCR	
-					
-				PCR	
-					isoproterenol
-				PCR	isoproterenol
-170	-65.0		Seahorse	RNA-seq, PCR	lidocaine, dofetilide, nifedipine, caffiene
-				Nanostring	isoproterenol
-				PCR	norepinephine
-					
-					doxorubicin
-				PCR	
-					
-					sunitinib, doxorubicin
-66	-41.0			PCR	
-					phenylephrine, isoproterenol, blebbistatin, doxorubicin
-			Seahorse	PCR	propranolol, epinephrine, atenolol, dobutamine
-				PCR	dantrolene, ranolazine
-				PCR	isoproterenol, BaCl2, E4031, chromanol 293B, nifedipine, bay-k 8644, cromakalim
-	-60.0			PCR	
-				PCR	dofetilide, quinidine, moxifloxacin, ranolazine, verapamil, quinine, propafenone, chloroquine, terfenadine, cisapride, amiodarone, azithromycin, ritonavir, amitriptyline, nilotinib, toremifene, lidocaine, mexiletine, mibefradil, diltiazem, licarbazepine, cibenzoline, sertindole
-					verapamil, diltiazem, loratadine, metoprolol, mexiletine, nifedipine, nitrendipine, ranolazine, tamoxifen, terfenadine, astemizole, chlorpromazine, cisapride, clarithromycin, clozapine, domperidone, droperidol, ondansetron, pimozide, risperidone, dofetilide, azimilide, bepridil, DL-sotalol, disopyramide, ibutilide, quinidine, vandetanib
-	-79.0				tamoxifen, nifedipine, nitrendipine, ranolazine, diltiazem, metoprolol, verapamil, domperidone, droperidol, clozapine, terfenadine, astemizole, cisapride, pimozide, risperidone, ondansetron, disopyramide, quinidine, DI sotalol, bepridil, dofetilide, azimilide, ibutilide, vandetanib
-				RNA-seq, PCR	
-					
-			Glucose consumption and Lactate production rate analysis	RNA-seq, PCR	
-100	-78.0			PCR	
-				RNA-seq	
-					minobispropanenirtile, hexanedioic acid, titanocene dichloride, 2-amino-4-chlorophenol, 1-4-benzoquinone, di(2-ethylhexyl)phthalate, 3-4-dichlorophenyl isocyanate, isodecyl diphenyl phosphate, azobenzene, bisophenol A, tris(2-chloroethyl)phosphate, 2-ethylhexyl diphenyl phosphate, 3-3-5-5-tetrabromobisphenol A, tert-butyl phosphates isopropylated, triphenyl phosphate, tris(methylphenyl)phosphate, thiabendazole, aldicarb, captan, endosultan, 8-hydroxyquinoline, aldrin, myclobutanil, dichlorodiphenyltrichloroethane, dieldrin, heptachlor, parathion, chlorpyrifos, carbaryl, 2-phenylphenol, dazomet, acetochlor, deltamethrin, permethrin, tebuconazole, 3-iodo-2-propynyl-n-butylcarbamate, hexachlorophene, gentian violet, rotenone, manganese(2)acetate, (CH3-cyclopentadienyl)tricarbonyl Mn, methylmercuric(2)chloride, hydroxyurea, acetylsalicylic acid, atenolol, acetaminophen, sodium valproate, 6-propyl-2-thiouracil, phenobarbital sodium, thalidomide, rantidine, 6-thioquanine, 5-fluotouracil, citalopram hydrobromide, disulfiram, pyrimethamine, rantidine hydrochloride, colchicine, lidocaine, progesterone, lamotrigine, flutamide, lindane, mexiletine hydrochloride, moxifloxacin hydrochloride, nifedipine, n-acetylprocainamide, triameterene, vernacalant, cabazitaxel, ranolazine, loratadine, propafenone, quinidine sulfate, tamoxifen, bepridil hydrochloride, chlorpromazine hydrochloride, reserpine, ditiazem, diethylstilbestrol, mifepristone, mifepristone2, sotalol hydrochloride, amitriptyline hydrochloride, sotalol, mitrendipine, terfenadine, verapamil hydrochloride, sematilide, azithromycin, ibutilide fumarate, cisapride monohydrate, dofetilide
-				PCR	
-					
-		2.5		PCR	isoproterenol
-					
-			Reduction assay 		
-					
-118	-61.3			RNA-seq	
-					
-					
-					
-			TMRM staining	RNA-seq, PCR	
-			Metabolic flux	Transcriptomics	
-				PCR	
-				PCR	isoproterenol, nifedipine
-				PCR	
-				PCR	doxorubicin, caffeine
-				RNA-seq, PCR	isoproterenol, carbamylcholine
-					
-					
-					
-				PCR	isoproterenol
-					
-					
-					
-				RNA-seq	
-					dofetilide, ATX-II, tetrodotoxin
-					
-					
-					carbenoxolone
-	-35.0	6.0		PCR	
-					
-					E4031
-100 @ 1 Hz	-80.0				quinidine, amiodarone, DL-sotalol
-				PCR	
-	-70.0			PCR	isoproterenol, E4031
-			Seahorse	RNA-seq	isoproterenol, verapamil, doxorubicin
-					metoprolol
-					isoproterenol, dobutamine, milrinone, PACAP27, nifedipine, FPL64176, digoxin, thapsigargin, omecamtiv mecarbil, mavacamten, levosimendan
-				PCR	isoproterenol, propranolol
-				PCR	
-				PCR	acetaminophen, isoprotereol, E4031
-				RNA-seq	
-				PCR	isoproterenol, propanolol
-115	-64.0			PCR	E4031, chromanol
-					isoproterenol
-				PCR	
-112	-75.0		Seahorse	RNA-seq, PCR	
-				PCR	verapamil, flecainide
-105	-70.0		Seahorse	RNA-seq, PCR	verapamil, Bay K-8644, dbcAMP
-100	-52.0			PCR	isoproterenol, verapamil
-					isoproterenol, carbamylcholine, E4031, ATX-II, ouabain, quinidine, lidocaine, carbenoxolone
-		1.0			
-				Proteomics	
-					
-					
-				PCR	
-					isoproterenol, phenylephrine, carbamylcholine, heptanol
-					norepinephrine
-					
-			Seahorse	Proteomics	isoproterenol
-115	-80.0			PCR	
-					
-					alfuzosin, flecainide, isoproterenol
-				RNA-seq	
-					
-				RNA-seq	
-	-75.0			PCR	carbamylcholine
-	-60.0				isoproterenol
-					isoproterenol, verapamil
-					
-86				PCR	
-					
-		2.0		PCR	
-					
-					
-98	-76.0			PCR	
-				RNA-seq, PCR	
-					
-					isoproterenol, nifedipine
-				RNA-seq, PCR	isoproterenol
-				PCR	isoproterenol
-					
-					
-					
-					
-					E4031
-				PCR	isoproterenol, propranolol
-100	-74.0			PCR	
-	-60.0				
-				PCR	
-					E4031, ranolazine, isoproterenol,bispanol-A, 4-AP Bay K-8644
-				PCR	
-					
-					isoproterenol, fexofenadine, terfenadine
-					isoproterenol, verapamil, E4031
-				PCR	doxorubicin, trastuzumab
-				PCR	
-				RNA-seq, PCR	
-				PCR	thiolidamide, valproic acid
-					
-					isoproterenol
-90	-65.0			PCR	flecainide, JTV519, E4031, ivabradine, SEA0400
-109	-78.0			"fluorometric quantitation with Qubit
-"	"ivabradine, E-4031, verapamil, moxifloxacin, HMR-1556, isoproterenol 
-"
-102	-74.0			PCR	Nifedipine, tetrodotoxin
-				PCR	
-				PCR	isoproterenol
-					
-				PCR	E4031, verapamil
-				RNA-seq, PCR	
-				PCR	
-					verapamil, isoproterenol
-				PCR	isoproterenol, verapamil, nifedipine, nisoldipine
-				RNA-seq, PCR	ionomycin
-				PCR	isoproterenol, omecamtiv mecarbil, levosimendan
-				PCR	
-				PCR	thalidomide
-					isoproterenol
-			Seahorse	RNA-seq	GW9662
-				PCR	isoproterenol, verapamil, SEA-0400, E4031, NS-1643, ATX-II, tetrodotoxin, ouabain, rolipram, EMD-57033, Bay K-8644
-					ivabradine, isoproterenol, 4-aminopyridin
-				RNA-seq	
-		1.5		PCR	isoproterenol
-120	-80.0				
-					
-				RNA-seq	
-				RNA-seq	carvedilol, losartan, pirfenidone
-		4.5		RNA-seq	
-					isoproterenol, verapamil, metoprolol, E4031
-					
-					
-				PCR	
-				PCR	
-					
-					aspirin, doxorubicin, sunitinib, erlotinib
-				PCR	
-				PCR	
-					
-				Nanostring	
-		6.9		PCR	
-				RNA-seq	
-					blebbistatin
-					
-					cyclophosphamide, acrolein, terfenadine, fexofenadine
-					doxorubicin, atorvastatin, valproic acid, acetaminophen, n-acetyl-m-aminophenol
-					
-					isoproterenol
-					
-					isoproterenol
-				PCR	
-					
-				PCR	
-100	-75.0				isoproterenol, forskolin
-					
-				PCR	amitriptyline, amoxicillin, acetylsalicylic acid, atenolol, AZ1-9, bepridil, captopril, chloroquine, cibenzoline, cimetidine, digoxin, diltiazem, disopyramide, dobutamine, doxorubicin, enalapril, epinephrine, flecainide, furosemide, haloperidol, isoproterenol, lapatinib, levosimendan, lisinopril, milrinone, nifedipine, paracetamol, pravastatin, quinidine, ramipril, sunitinib, tolbutamide, verapamil
-					doxorubicin, L-NIO
-					bepridil, cisapride, carbenoxolone
-					E-4031, nimodipine, chromanol 293B
-				PCR	
-				PCR	
-				PCR	
-					norepinephrine
-					isoproterenol, dobutamine, milrpinone, pimobendan, levosimendan, omecamtiv mecarbil, AMG1, AMG2, pyrethrin-apelin-13
-110	-78.0				E4031
-110	-82.0				isoproterenol
-105	-39.0				tetrodotoxin, nifedipine, E4031
-					
-					lidocaine, nifedipine, E4031
-			Seahorse	RNA-seq	norepinephrine
-				PCR	verapamil, ryanodine, E4031, isoproterenol
-					
-					
-		5.6		RNA-seq	doxorubicin, doxorubicinol
-115	-70.0		Seahorse	PCR	isoproterenol, nifedipine, verapamil, thapsigargin
-					isoproterenol, epinephrine, nifedipine, verapamil
-				PCR	
-			Seahorse		
-		2.9		PCR	
-					epinephrine, forskolin, levosimendan, pimobendan, dobutamine, milrinone, omecamtiv mecarbil, terbutaline, verapamil, doxorubicin, sunitinib, citalopram, itraconazole, sorafenib, ivabradine, flecainide, phentolamine, zimelidine, atenolol, acetylsalicylic acid, captopril, glibenclamide, enalaprilat, clonidine, paracetamol, tolbutamide, pravastatin, sildenafil
-					isoproterenol, nifedipine, Bay K-8644, digoxin, EMD-57033, omecamtiv mecarbil
-				PCR	
-				RNA-seq, PCR	doxorubicin
-				RNA-seq	
-					adrenaline
-					
-					
-90	-62.0			PCR	Ivabradine
-				PCR	
-			Seahorse		
-90				RNA-seq	doxorubicin, dabrafenib, dasatinib, lapatinib, pazopanib, sorafenib, sunitinib, trametinib, nilotinib, crizotinib, vandetanib, vemurafenib
-				RNA-seq	isoproterenol
-				PCR	cisapride, erythromycin, sotalol, nilotinib, oubain
-104	-66.0	4.0		RNA-seq	
-	-45.0				bepridil, cisapride, carbenoxolone, verapamil
-				PCR	
-					
-					blebbistatin
-					
-			Metabolic flux	PCR	isoproterenol
-				PCR	E4031, isoproterenol
-		2.7			
-			OCR chamber equipped with fiber optic sensors		
-				PCR	
-				PCR	E-4031, isoproterenol, propranolol
-					blebbistatin, isoproterenol, nifedipine
-					
-97	-57.0			RNA-seq	isoproterenol, carbachol, CGP-20712A, CI-118551
-			Seahorse		
-					"MYK-461, CK-1827452, verapamil, propanolol
-"
-				RNA-seq	
-100				PCR	NS3623, E4031
--50				RNA-seq, PCR	cisapride 
-					
-			Metabolic flux	PCR	blebbistatin, N-benzyl-p-toluene sulfonamide
-					nimodipine, E4031, norepinephrine, epinephrine, serotonin, ICI118,551, CP 20712A, nifedipine, mibefradil 
-	-75.0				
-				PCR	isoproterenol, clenbuterol, diltiazem
-		2.5		PCR	isoproterenol, carbachol, sotalol
-					epinephrine, pimobendan, forskolin, acetylsalicylic acid, levosimendan, atenolol, verapamil, captopril, doxorubicin, omecamtiv mecarbil, sunitinib, ouabain
-					
-					
-75	-42.0			PCR	
-				PCR	epinephrine, nifedipine, E4031, metoprolol
-				PCR	
-					
-					
-					
-					doxorubicin, oxaliplatin
-				PCR	
-				RNA-seq	lidocaine, isoproterenol, flecainide, propranolol, amiodarone
-				RNA-seq	
-		2.6			
-				RNA-seq	isoproterenol
-				PCR	isoproterenol, carbamylcholine
-				PCR	
-				PCR	
-					
-93				PCR	
-			Seahorse		
-			Seahorse	PCR	
-					
-				PCR	
-				PCR	
-					verapamil, isoproterenol
-			Seahorse	RNA-seq	ivabradine, carbamylcholine, vernakalant
-				PCR	
-				PCR	
-				PCR	
-					doxorubicin
-100	-65.0				E4031, isoproterenol, milrinone, diltiazem, lidocaine, nifedipine, thapsigargin
-		5.0			
-			Metabolic flux	RNA-seq, PCR	
-					
+Stress (mN/mm2)	Upstroke Velocity (um/s)	Calcium Handling Analyses Method	Amplitude (F/F0)	Beat Rate (BPM)	Time to Peak (ms)	Time to Relaxation (ms)	Conduction Velocity (cm/s)	Electrical Physiology Analyses Method	AP Conduction Velocity (cm/s)
+		Calcium 5 kit						Patch clamp	14.0
+									
+									
+								Patch clamp	
+									
+									
+									
+								Patch clamping	
+			0.2						
+		 Fluo-4 	0.06						
+									
+									
+									
+									
+	33							Patch clamp	41.0
+		Dye						MEA; Optical mapping	10.0
+		Dye						Patch clamp	16.0
+0.5	70	Dye	4.0		99				
+		Dye						Patch clamp; optical mapping	
+		Dye		35.0	190			Optical mapping	
+									
+	200	Dye	8.0					Patch clamp	
+2.7	60 mN/mm2/s	Dye	0.6					Optical mapping	20.0
+3.0		Genetically encoded sensor	0.03	60.0				Optical mapping	
+50.0									
+		Dye	3.0					Patch clamp	
+		Dye	3.2					Patch clamp	
+		Dye	2.5		200	500		Patch clamp	
+	time to peak=0.71s	Dye	0.88		490				
+									
+									
+2.2		Dye			181				
+									
+	1.2	Dye	1.8	33.0				Patch clamp	
+		Dye	0.25					Patch clamp	
+		Dye	0.8		270				
+		Dye	0.9	50.0	500				
+		Genetically encoded sensor 		101.0					
+	18	Dye							
+		Genetically encoded sensor	1.1	25.0				Patch clamp	
+0.07		Dye					4.3		
+		Dye	2.0	48.0	400				
+									
+	70								
+		Dye							
+									
+									
+								Patch clamp	
+		Dye		20.0					
+		Dye							
+		Genetically encoded sensor							
+								Optical mapping	19.0
+0.6	150	Dye					9.0	Patch clamp	
+									
+								MEA	
+								Patch clamp	34.9
+									
+		Dye	5.0	40.0	250	1000 (time to 50%)			
+								Patch clamp	
+	time to peak=0.22s							Patch clamp	
+	20		4.0					Patch clamp; optical mapping	
+		Dye		21.0					
+									
+									
+	500 uN/s								
+									
+0.225									
+									
+								Patch clamp	
+		Dye		15.0			11.0		
+								Patch clamp	
+									
+									
+				50.0				Optical mapping	
+									
+		Dye						MEA	
+		Dye	2.0						
+		Dye							
+		Dye			300			Optical mapping	
+		Dye							
+									
+		Dye	1.0	36.0	100				
+12.0		Dye		36.0	100			Optical mapping	
+									
+		Dye		40.0	150	350			
+		Dye							
+									
+								MEA	
+1.7									
+		Dye					20.0		21.0
+								Optical mapping	
+0.72								Patch clamp	
+									
+		Dye	0.18	60.0	2000			MEA	
+		Dye						Patch clamp; MEA	
+									
+		Dye						Patch clamp	
+									
+		Dye						Optical mapping	
+									
+		Dye		25.0				MEA	
+									
+								MEA	
+									
+		Genetically encoded sensor	0.6	30.0		220 (time to 50%)			
+								Patch clamp	
+		Dye						Optical mapping	14.1
+	17	Dye	2.3					Optical mapping	18.0
+		Dye	0.175		375			Patch clamp; MEA	5.0
+							8.3		
+	50	Dye			150			Patch clamp	
+								Patch clamp; MEA	
+		Genetically encoded sensor		40.0		310		Optical mapping	6.0
+								Patch clamp	
+								MEA	
+									
+	45	Genetically encoded sensor			150				
+				42.0			33.0		
+		Dye		19.0				MEA	
+									
+									
+		Dye	2.6		250 @ 1 HZ			Optical mapping	
+		Dye					44.0	Patch clamp; optical mapping	
+		Dye	0.15	45.0					
+									
+		Dye	1.25	50.0				Optical mapping	
+									
+		Genetically encoded sensor	1.5						
+								Optical mapping	
+	80	Genetically encoded sensor 						Patch clamp; MEA	
+4.0		Genetically encoded sensor		38.0					
+								Optical mapping	
+									
+		Dye	1.1		600				
+	11	Dye	1.12	35.0			15.0	MEA; Optical mapping	
+		Genetically encoded sensor			300				
+									
+								Patch clamp	
+									
+									
+0.8									
+		Dye		70.0			1.5		
+		Dye		32.0					
+0.54		Genetically encoded sensor							
+									
+									
+				27.0					
+									
+		Dye							
+			2.0		400			Patch clamp	
+		Genetically encoded sensor	1.9	25.0	160			Patch clamp	
+		Genetically encoded sensor	1.6		140				
+								Optical mapping	
+	3.5								
+		Dye						Patch clamp	
+								MEA	13.6
+		Dye		7.0				MEA	
+									
+								Optical mapping	6.0
+								Optical mapping	15.0
+									
+0.38	42	Dye		30.0					
+								MEA	
+								Patch clamp	
+								Patch clamp	
+								Patch clamp	
+0.4	42	Dye			200	220			
+		Dye	0.35	45.0	300				
+								MEA	11.0
+								MEA	
+	8	Dye						Optical mapping	
+									
+10.0								Optical mapping	37.0
+									
+		Dye		48.0					
+									
+		Genetically encoded sensor							
+	50								
+		Dye		90.0					
+									
+				61.0					
+									
+									
+	10							MCR	
+								Patch clamp	
+									
+									
+3.7									
+1.5								MCR	
+	8	Genetically encoded sensor						MEA	
+									
+		Dye					9.4		
+									
+25.0									
+									
+									
+0.25	0.14 mN/s								
+									
+									
+									
+0.55								MCR	
+									
+		Dye	0.2		230				
+		Dye							
+				96.0					15.0
+									
+								Optical mapping	4.0
+	45	Dye		24.0	500				
+3.2									
+5.0		Dye							
+		Dye							
+									
+									
+		Dye		33.0	190			Patch clamp; optical mapping	
+									
+									
+									
+	time to peak=0.16s								
+		Dye				790		Patch clamp	
+								Optical mapping	30.0
+									
+									
+									
+								Optical mapping	
+								Patch clamp	
+								MEA	41.0
+								Patch clamp	
+									
+									
+		Dye	0.3	42.0					
+		Dye			170	480 (50%)			
+									
+								Optical mapping	2.5
+2.1									
+3.8		Dye				250	25.0	Patch clamp	
+	15.25	Dye	0.8		315	145			
+1.0			0.037	60.0	127				
+0.18									
+0.15		Dye						Optical mapping	
+		Dye						Optical mapping	
+		Genetically encoded sensor		83.0	190				
+									
+									
+		Dye							
+3.3									
+									
+									
+		Dye						Patch clamp	
+22.4								Optical mapping	28.0
+									
+								Patch clamp	
+	time to peak=0.29s	Dye		12.0					
+		Genetically encoded sensor; Dye	3.0		250			Genetically encoded sensor; Optical mapping	
+		Genetically encoded sensor 	2.2	54.0				Patch clamp	
+		Dye			204			Patch clamp; MEA	26.0
+	6	Dye							
+									
+	1.2								
+									
+									
+		Dye						MEA	
+3.22	622	Genetically encoded sensor	0.18		210				
+			2.2						
+		Dye	1.5		800				
+				108.0				MEA	
+									
+									
+6.0								Patch clamp	
+									
+				40.0					
+									
+								MEA	
+	330	Dye	0.35		200			Patch clamp	35.0
+	34								
+									
+								Patch clamp	
+								Patch clamp	
+		Dye							
+								MCR	
+		Dye						MEA; Optical mapping	
+									
+	38								
+		Dye	1.69				5.6	Patch clamp	5.0
+								MEA	
+	5	Dye		27.0					
+		Genetically encoded sensor						Optical mapping	
+									
+									
+		Genetically encoded sensor		30.0			4.2		
+0.32									
+		Dye		45.0			18.0		
+	7	Dye							
+								Optical mapping	
+		Dye	4.5	70.0	250				
+		Dye	0.7	40.0				Patch clamp	
+	30	Dye		40.0					
+									
+									
+								MEA	
+									
+	16		1.04	40.0					
+									
+									
+0.95	1300	Dye	0.2		180				
+	40.5	Dye						MEA	
+	10			90.0					
+0.28								Genetically encoded sensor	
+		Dye							
+									
+				40.0					
+23.2		Dye	0.08		290			Optical mapping	32.0
+								Patch clamp	
+									
+									
