@@ -1,6 +1,6 @@
 Name	Age	Occupation
-Alice		Engineer
-Bob	25	Designer
-Charlie	35	Teacher
-David	28	Developer
-Eve	40	Manager
+True	True	True
+False	False	False
+False	True	False
+True	False	True
+True	False	False
