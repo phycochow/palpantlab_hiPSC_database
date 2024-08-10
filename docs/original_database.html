@@ -259,7 +259,7 @@
         <!-- ################# --> 
         <div class="fluid-row" id="header">
             <h1 class="title toc-ignore">Non-processed 314 hiPSC-CM Protocol Designs and Outcomes</h1>
-            <p>Originally 300 provided by the Chen lab, 14 added by the Palpant Group</p>
+            <p>300 originally compiled by the Chen lab, 14 added by the Palpant group</p>
         </div>
 
         <p><br></p> <!-- Line break -->
@@ -291,7 +291,7 @@
 
         async function loadTSV() {
             try {
-                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/data.tsv');
+                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/YCao_updated_dataset.tsv');
                 const tsvText = await response.text();
                 const rows = tsvText.split('\n').map(row => 
                     row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
