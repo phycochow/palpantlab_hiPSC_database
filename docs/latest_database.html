@@ -322,7 +322,7 @@
 
             function generateFormInputs(headers) {
                 const formInputs = headers
-                    .filter(header => header !== 'Similarity') // Exclude "Similarity" from form inputs
+                   .filter(header => header !== 'Similarity' && header !== 'Study') // Exclude "Similarity" and "Study" from form inputs
                     .map(header => {
                         const uniqueValues = [...new Set(tsvData.slice(1).map(row => row[headers.indexOf(header)]))];
                         return `
