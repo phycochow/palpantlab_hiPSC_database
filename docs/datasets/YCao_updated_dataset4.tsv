@@ -163,9 +163,7 @@ AP Amplitude (mV)	Resting Membrane Potential (mV)	Max Capture Rate (Hz)	Metaboli
 					
 					isoproterenol
 90	-65.0			PCR	flecainide, JTV519, E4031, ivabradine, SEA0400
-109	-78.0			"fluorometric quantitation with Qubit
-"	"ivabradine, E-4031, verapamil, moxifloxacin, HMR-1556, isoproterenol 
-"
+109	-78.0			fluorometric quantitation with Qubit	ivabradine, E-4031, verapamil, moxifloxacin, HMR-1556, isoproterenol 
 102	-74.0			PCR	Nifedipine, tetrodotoxin
 				PCR	
 				PCR	isoproterenol
@@ -270,8 +268,7 @@ AP Amplitude (mV)	Resting Membrane Potential (mV)	Max Capture Rate (Hz)	Metaboli
 					
 97	-57.0			RNA-seq	isoproterenol, carbachol, CGP-20712A, CI-118551
 			Seahorse		
-					"MYK-461, CK-1827452, verapamil, propanolol
-"
+					MYK-461, CK-1827452, verapamil, propanolol
 				RNA-seq	
 100				PCR	NS3623, E4031
 -50				RNA-seq, PCR	cisapride 
