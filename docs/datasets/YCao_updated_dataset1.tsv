@@ -1,11 +1,318 @@
-Reference	Year	Publication Category	hiPSC Line (Healthy Control)	Number of Healthy Control hiPSC-CM Lines	Confluency at Start of Differentiation (%)	WNT Activator	Time of Wnt Activator (Start Day - End Day)	WNT Inhibitor	Time of Wnt Inibitor (Start Day - End Day)	Day Insulin is Added (Until End Unless Noted)	Purification Protocol	Time of hiPSC-CM Purification (Start Day - End Day)	Method to Assess Differentiation Purity	Differentiation Purity (%)	Maturation Technique: Metabolic?	Metabolic components	Maturation Technique: Electrical Stimulation?	Maturation Technique: Passive Tension?	Maturation Technique: Other Cell Types?
-Bekhite, M. et al. The role of ceramide accumulation in human induced pluripotent stem cell-derived cardiomyocytes on mitochondrial oxidative stress and mitophagy. Free Radical Biology and Medicine, 167, (2021).	2021.0	Selected																	
-Geraets, I.M. et al. Human embryonic stem cell-derived cardiomyocytes as an in vitro model to study cardiac insulin resistance. Biochimica et Biophysica Acta (BBA)-Molecular Basis of Disease, 1864, (2018).	2018.0	Selected																	
-Granéli, C. et al. Diabetic cardiomyopathy modelling using induced pluripotent stem cell derived cardiomyocytes: recent advances and emerging models. Stem Cell Reviews and Reports, 15, (2019).	2019.0	Selected													Yes	L-carnitine, creatine, taurine, nonessential amino acids, insulin-transferrin-selenium, linoleic-oleic acid			
-Purnama, U. et al. Modelling diabetic cardiomyopathy: using human stem cell-derived cardiomyocytes to complement animal models. Metabolites, 12, (2022).	2022.0	Selected																	
-Miki, K. et al. ERR? enhances cardiac maturation with T-tubule formation in human iPSC-derived cardiomyocytes. Nat Commun 12, (2021).	2021.0	Selected	1390D4, 1390C1, 409B2	3	EB	Activin A, BMP4, bFGF	0-2	IWP3 - also SB431542, VEGF	2-5				Flow cytometry for cTnT+	99	Signal perturbation	ERR? agonist GSK4716, S-phase kinase-associated protein 2 inhibitor			
-Wickramasinghe, N. M. et al. PPARdelta activation induces metabolic and contractile maturation of human pluripotent stem cell-derived cardiomyocytes. Cell Stem Cell 29, 559-576.e7 (2022).	2022.0	Selected	ISMMSi005-B, WTC11	2	EBs	Activin A, BMP4, bFGF	0-2	XAV939	2-4		No glucose with lactate	24-28	Flow cytometry for SIRPA		Signal perturbation	LCFAs, T3, GW6471, GSK0660, GW9662		Yes	
-Birket, M. J. et al. A Human Stem Cell Model of Fabry Disease Implicates LIMP-2 Accumulation in Cardiomyocyte Pathology. Stem Cell Reports 13, 380393 (2019).	2019.0	Randomized	in-house (4)	4		CHIR99021, BMP4	0-2	Wnt-C59, bFGF	2-4	2	Cell sorting		Flow cytometry for SIRPA+	96	Yes	T3, dexamethasone, palmitic acid			
-Correia, C. et al. Distinct carbon sources affect structural and functional maturation of cardiomyocytes derived from human pluripotent stem cells. Sci Rep 7, (2017).	2017.0	Selected	DF19-9-11T.H	1	85	CHIR99021, Activin A	0-1	IWR1	1-6	1	No glucose with lactate	15-35	Flow cytometry for cTnT+	80	Yes	Glutamine, oleic acid, palmitic acid, galactose			
-Feyen, D. A. M. et al. Metabolic Maturation Media Improve Physiological Function of Human iPSC-Derived Cardiomyocytes. Cell Rep 32, (2020).	2020.0	Top 100	SCVI-273, SCVI-15S1, SCVI-113	3	100	CHIR99021	0-3	Wnt-C59	3-5	11	No glucose with lactate	13-16	Flow cytometry for cTnT+	95	Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR		Yes	
-Garbern, J. C. et al. Inhibition of mTOR Signaling Enhances Maturation of Cardiomyocytes Derived from Human-Induced Pluripotent Stem Cells via p53-Induced Quiescence. Circulation 285300 (2020) 	2020.0	Selected	BJ RiPS-A, UCSD142i-86-1PS, Gibco episomal	3	75	CHIR99021	0-2	IWP4	2-4	7			Flow cytometry for cTnT+	70	Yes	Torin1			
+hiPSC Line (Healthy Control)	Number of Healthy Control hiPSC-CM Lines	Confluency at Start of Differentiation (%)	WNT Activator	Time of Wnt Activator (Start Day - End Day)	WNT Inhibitor	Time of Wnt Inibitor (Start Day - End Day)	Day Insulin is Added (Until End Unless Noted)	Purification Protocol	Time of hiPSC-CM Purification (Start Day - End Day)	Method to Assess Differentiation Purity	Differentiation Purity (%)	Maturation Technique: Metabolic?	Metabolic components	Maturation Technique: Electrical Stimulation?	Maturation Technique: Passive Tension?	Maturation Technique: Other Cell Types?	Maturation Technique: Mechanical Stimulation?	Maturation Technique: Cell Alignment?	Maturation Technique: Elastomeric Surface?	Maturation Technique: Cell Derived ECM?	2D: Surface	3D: Platform Type	3D: Cell Types	3D: Type of Stromal Cell	3D: Types of Endothelial Cell 	3D: Cell Composition (CM-EC-SC)	3D: Estimated Tissue Cell Density (10^6 cells/mL)	3D:Estimated Tissue size (mm2)	Immunofluorescent Imaging?	SEM or TEM	Sarcomere/Cellular Alignment Analysis?	Sarcomere Length (um)	Cell Area (um2)	T-tubules Present?	Contractile Analyses Method	Force (mN)
+CDI-MRB	1									Flow cytometry for cTnT+	90	Yes	L-carnitine, creatine, taurine, nonessential amino acids, insulin-transferrin-selenium, linoleic-oleic acid								Fibronectin-coated plastic/glass								Yes	TEM	Yes	1.015	700		Impedance monitoring	
+DF 19-9-11, IPLZ3.13, IBO5.57, hc, 13FLVN0C1	5		Activin A, BMP4, bFGF, CHIR-99021	0-2, 0-3	IWP4,  IWR2	3-5, 3-7	5, 7					Yes	T3								Matrigel-coated plastic, poly-D-lysine or poly-Dlysine plus cardiac-matrix coated glass								Yes		Yes				Gene expression	
+IMR90C4	1		Activin A, BMP4	day -3 to 0	IWP4,  IWR2	3-5	1			Flow cytometry for cTnT+	87, 82										Matrigel-coated or  Synthemax-coated plastic								Yes	TEM	Yes					
+			CHIR99021		XAV939																								Yes				3000			
+IMR90	1		Activin A, BMP4								90	Yes	L-glutamine								Matrigel-coated plastic, PEI-gelatin coated plastic								Yes	TEM	Yes		2400			
+OX1-19	1		Activin A, CHIR-99021		IWP4, Wnt-C59		7														Matrigel-coated plastic	Collagen, Collagen+C4S, Collagen+elastin							Yes	SEM						
+BJ RiPS-A, UCSD142i-86-1	2	80	CHIR99021		IWP4		7			Flow cytometry for TNNT2+	70																									
+C32	1	100	CHIR99021		IWP4		3					Yes	Galactose, palmitic acid,  oleic acid								 Matrigel-coated plastic															
+IMR90	1		Activin A, BMP4,  CHIR 99021		XAV939					Flow cytometry for cTnT+	80	Yes	T3																			1.73	1000			10
+HES2, ESI-17	2		Activin A, BMP4, bFGF		IWP2		10					Yes	Palmitic acid, Dexamethazone, T3 hormone, GW7647 																	TEM	Yes	2.1				
+																																				
+																																				
+												Yes	L-carnitine, creatine, taurine, nonessential amino acids, insulin-transferrin-selenium, linoleic-oleic acid																							
+																																				
+1390D4, 1390C1, 409B2	3	EB	Activin A, BMP4, bFGF	0-2	IWP3 - also SB431542, VEGF	2-5				Flow cytometry for cTnT+	99	Signal perturbation	ERR? agonist GSK4716, S-phase kinase-associated protein 2 inhibitor								ECM-coated plastic/glass								Yes	TEM	Yes	2.1		Yes	Motion tracking analysis	
+ISMMSi005-B, WTC11	2	EBs	Activin A, BMP4, bFGF	0-2	XAV939	2-4		No glucose with lactate	24-28	Flow cytometry for SIRPA		Signal perturbation	LCFAs, T3, GW6471, GSK0660, GW9662		Yes							Fibrin	CM			100, 0, 0	6.45		Yes	TEM	Yes	1.6			Post deflection	
+in-house (4)	4		CHIR99021, BMP4	0-2	Wnt-C59, bFGF	2-4	2	Cell sorting		Flow cytometry for SIRPA+	96	Yes	T3, dexamethasone, palmitic acid								ECM-coated plastic/glass								Yes				1800			
+DF19-9-11T.H	1	85	CHIR99021, Activin A	0-1	IWR1	1-6	1	No glucose with lactate	15-35	Flow cytometry for cTnT+	80	Yes	Glutamine, oleic acid, palmitic acid, galactose								ECM-coated plastic/glass								Yes	TEM	Yes				Motion tracking analysis	
+SCVI-273, SCVI-15S1, SCVI-113	3	100	CHIR99021	0-3	Wnt-C59	3-5	11	No glucose with lactate	13-16	Flow cytometry for cTnT+	95	Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR		Yes						ECM-coated plastic/glass	Fibrin	CM			100, 0, 0	10.0	6	Yes	EM		1.9			TFM	
+BJ RiPS-A, UCSD142i-86-1PS, Gibco episomal	3	75	CHIR99021	0-2	IWP4	2-4	7			Flow cytometry for cTnT+	70	Yes	Torin1					Yes	Yes		Micropatterned gelatin								Yes			1.7			Motion tracking analysis	
+1013, H3083	2		CHIR99021	0-2	IWP4	3-5	5	No glucose with lactate	20-27	Flow cytometry for cTnT+	98	Yes	L-carnitine, creatine, taurine, nonessential amino acids, insulin-transferrin-selenium, linoleic-oleic acid								ECM-coated plastic/glass								Yes				6000			
+BJ RiPS-D	1	95	CHIR99021	0-1	IWP4	3-5	7	No glucose with lactate	10-16	Flow cytometry for cTnT+	90	Yes	Palmitic acid, oleic acid, HIF1? inhibitior chetomin, a selective and potent LDHA inhibitor GSK 2837808A								ECM-coated plastic/glass								Yes	TEM		2.1			Motion tracking analysis	0.0003
+in-house	1	85	CHIR99021	0-2	IWR1	3-5	9			Flow cytometry for cTnT+	92	Yes	Thyroid hormone T3, dexamethasone, IGF-1		Yes	Yes					ECM-coated plastic/glass	Collagen + fibrin	CM + EC + SC	hCF	HUVEC	75, 10, 15	0.019	0.062	Yes	TEM		1.9		Yes	Post deflection	
+WTC11, SCVI-20, SCVI-273, G15.AO	4	90	CHIR99021	0-1	IWP2	2-4	6	No glucose with lactate	16-18	Flow cytometry for cTnT+	98	Yes	Oleic acid, palmitic acid 		Yes	Yes			Yes			Scaffold free	CM + SC	hiPSC-SC		80, 0, 20	6.6	0.05	Yes						Post deflection	
+CUSO-1, CUSO-2	2		CHIR99021	0-1	IWP2	3-5	7, not 20-25	No glucose with lactate	20-25			Yes	Palmitic acid, oleic acid, galactose					Yes			Micropatterned plastic/glass								Yes	TEM	Yes	1.75	2000		Force transducer	
+BJ1, NCRM-1	2	85	CHIR99021	0-1	IWP2	3-5		No glucose with lactate	13-21	Flow cytometry for cTnT+	95	Yes	1× Linoleic Acid-Oleic Acid-Albumin, T3, lactate								ECM-coated plastic/glass								Yes		Yes	1.7				
+NCRM-1, BJ1	2		CHIR99021	0-1	IWP2	4-6		No glucose with lactate, fatty acid + T3	12-21	Flow cytometry for cTnT+	95	Yes	1× Linoleic Acid-Oleic Acid-Albumin, T3, lactate								ECM-coated plastic/glass								Yes		Yes	1.6				
+ATCC-BXS0116	1		Activin A, BMP4, CHIR99021, bFGF	0-3	IWP4	3-6	6			Flow cytometry for cTnT+, a-actinin	70	Yes	Palmitic acid, TGF?-1		Yes	Yes (not pure)						Collagen + matrigel	CM + SC	hiPSC-SC		70, 0, 30	14.0	0.8	Yes	TEM		2.3		Yes	Post deflection	0.37
+in-house	2	75	CHIR99021	0-2	IWR1	3-5	16	No glucose	10-16			Yes	T3 (triiodothyronine), Dex (dexamethasone)						Yes		Thick matrigel								Yes				2000	Yes	Motion track analysis	
+SCVI-273, UKKi032-C	2	95	CHIR99021	0-3	Wnt-C59	3-7	7	No glucose	9-16	Flow cytometry for ACTN1+		Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR			Yes					Micropatterned plastic/glass								Yes							
+SCVI-273, UKKi032-C	2	85	CHIR99021	0-3	Wnt-C59	3-7	7	No glucose	9-16	Flow cytometry for cTnT+; Flow cytometry for ACTN1+	94	Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR								ECM-coated plastic/glass								Yes						Motion tracking analysis	
+in-house	1	90	CHIR99021	0-1	IWP4	3-5						Yes	IGF-1, dexamethasone, T3		Yes			Yes		Yes		Decellularized tissue	CM			100, 0, 0	10.0	2.5	Yes						Force transducer 	0.3
+DF19-9-11T.H	1	85	CHIR99021, Activin A	0-1	IWR1	1-7	7			Flow cytometry for cTnT+	90	Yes	T3									Scaffold free	CM			100, 0, 0	0.13	0.03	Yes	TEM						
+MR18, MR30, MR48, WTC11, DF19-9-11T.H	5		CHIR99021	0-1	IWP4	3-10	6, not 12-16	No glucose with lactate	12-16	IHC a-actinin	95	Yes	T3, dexamethasone, Torin1					Yes	Yes		Micropatterned PDMS								Yes		Yes	2.1			Motion tracking analysis	
+IMR-90, WTC11	2		Activin A, BMP4, CHIR99021	0-3	XAV939	3-5	7			Flow cytometry for cTnT+	80	Yes	"Oleic acid-albumin and linoleic
+acid-albumin, Palmitate"						Yes		ECM-coated plastic/glass; micropost array								Yes		Yes	1.8	2000		Post deflection	0.013
+DF19-9-11T.H	1	90	CHIR99021	0-1	IWR1	3-6	7			Flow cytometry for cTnT+	97					Yes					ECM-coated plastic/glass								Yes		Yes	1.8				
+IMR-90	1	80	CHIR99021	0-2	IWR1	3-5	7			Flow cytometry for cTnT+	88				Yes	Yes						Collagen + matrigel	CM + SC	hLF		75, 0, 25	16.0	14	Yes						Force transducer 	0.5
+253G1, FF101-s04	2	100	Activin A, BMP4, CHIR99021, bFGF	0-5	XAV939, IWP4	5-7				Flow cytometry for cTnT+	37					Yes (not pure)	Flow					Scaffold free	CM + EC + SC	vascular mural cell	vascular endothelial cell	37, 15, 20			Yes						Motion tracking analysis	
+HVRDi007-A, Huv-iPS4F1	2		CHIR99021	0-1	IWP4	3-5	8			Flow cytometry for cTnT+	93										ECM-coated plastic/glass	GelMA, PEG, PEG/GelMA	CM						Yes			1.8	3116		Nanoindenter	0.471
+WTC11, HF-YK27, PBY4-48D	3	82.5	CHIR99021	0-2	IWR	4-5	10	No glucose with lactate	10-12	Flow cytometry for cTnT+	95							Yes	Yes		Nanotopography								Yes	TEM					TFM	
+BJFF	1	EB	CHIR99021	0-2	IWR1	3-5	7	No glucose with lactate	9-11	Flow cytometry for cTnT+	73				Yes	Yes						Collagen + fibrin + gelatin	CM + SC	hDF		90, 0, 10	150.0	20	Yes		Yes				Post deflection	0.3
+DF19-9-11T.H	1	85	CHIR99021, Activin A	0-1	IWR1	1-6	8			Flow cytometry for SIRPA+; Flow cytometry for cTnT+; Flow cytometry for VCAM-1+	80									Yes	ECM-coated plastic/glass	Scaffold free	CM			100, 0, 0		0.02	Yes	SEM, TEM	Yes	1.75			Motion tracking analysis	
+REB	1		Activin A, BMP4	0-2	KY02111, XAV939	2-6	6														CM-aggregates seeded on PLA-based microparticles		CM			100, 0, 0		2							Motion tracking analysis	
+253G1	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6				Flow cytometry for cTnT+	53					Yes						Gelatin 	CM + EC + SC	hCF	CMVEC	65, 10, 25	5.0		Yes						Motion tracking analysis	
+454E2	1	EB	Activin A, BMP4, bFGF	0-3	IWR1	3-5															ECM-coated plastic/glass								Yes						Motion tracking analysis	
+iCell	1															Yes						Scaffold free, 3D bioprinted to assemble cardiac spheroids	CM + EC + SC	hDF	HUVEC	50, 25, 25	0.3	10	Yes						Motion tracking analysis	
+iCell	1							Blasticidin	30-32	Flow cytometry for cTnT+	98										ECM-coated plastic/glass	Scaffold free	CM + EC + SC	hCF	CMVEC	57, 14, 29	0.0125	0.035	Yes							
+iCell2, Cor.4U	2															Yes						Scaffold free	CM + SC	heCF		80, 0, 20	0.0125	0.0078	Yes	TEM					Motion tracking analysis	
+iCell	1																					Scaffold free	CM			100, 0, 0	0.062	40	Yes						Motion tracking analysis	
+in-house	1		Activin A, BMP4, CHIR99021		BMP4, IWP-2			No glucose with lactate	21-26	Flow cytometry for a-actinin+	80										ECM-coated plastic/glass								Yes	TEM						
+Not listed	1		Activin A, BMP4	0-2	KY02111, XAV939	2-4	4			IHC a-actinin	90										ECM-coated plastic/glass								Yes							
+in-house	1	80	CHIR99021	0-2	IWR1	3-5	9			Flow cytometry for cTnT+	83									Yes		Decellularized tissue	CM			100, 0, 0		95	Yes		Yes				Motion tracking analysis	
+in-house	1		CHIR99021, Activin A	0-2	Wnt-C59	2-4		No glucose with lactate	17-21						Yes	Yes	Yes					Collagen + matrigel	CM + SC	hCF		90, 0, 10	18.75	12	Yes	TEM	Yes	2.0			Post deflection; Force transducer	
+iCell, Cor.4U	2																				MEA															
+iCell, Cor.4U	3																				ECM-coated plastic/glass															
+iCell	1																			Yes	ECM-coated plastic/glass								Yes		Yes					
+in-house	1		5-azacytydine	0-1																	ECM-coated plastic/glass															
+in-house	3	90	CHIR99021	0-2	IWP2	3-5	10	No glucose with lactate	30-33	Flow cytometry for cTnT+	90											Collagen	CM + SC	hFF		70, 0, 30	30.0		Yes							
+DF6-9-9T.B, F002.1A.13, Gibco episomal	3	92.5	CHIR99021	0-1	IWP4	3-5	7			Flow cytometry for cTnT+	90										ECM-coated plastic/glass	Scaffold free	CM			100, 0, 0	1.0	0.07	Yes		Yes		1500			
+LUMC0020iCTRL, LUMC0099iCTRL	2		CHIR99021	0-2	XAV939, IWP-L6	2-4				Flow cytometry for cTnT+	80										ECM-coated plastic/glass								Yes						Motion tracking analysis	
+SCVI-111, SCVI-113, SCVI-273, SCVI-202	4	100	CHIR99021	0-2	Wnt-C59	3-5	7			Flow cytometry for cTnT+	85				Yes						Micropatterned PAA	Fibrin + matrigel	CM			100, 0, 0	10.3	10.2	Yes		Yes				Post deflection	0.25
+iCell, CDI (42)	43																				ECM-coated plastic/glass															
+Not listed	1																		Yes		Nanotopography									SEM						
+IMR-90	1	100	Activin A, BMP4, CHIR 99021	0-5	XAV939	5-7	7			Flow cytometry for cTnT+	80							Yes			Nanotopography								Yes		Yes	1.8				
+in-house	1	EB	Activin A, BMP4	0-1 (BMP4), 2-4 (both)	IWR1	4-8		Cell sorting							Yes	Yes						Collagen + matrigel	CM + SC	hiPSC-SC		75, 0, 25	10.0	5							Post deflection	0.05
+in-house	2	80	CHIR99021	0-2	IWR1	3-5	9, not 15-19	No glucose with lactate	15-19												ECM-coated plastic/glass								Yes							
+in-house	1	85	CHIR99021	0-2	Wnt-C59	2-4		No glucose with lactate	8-12	IHC a-actinin	98							Yes				Scaffold free	CM			100, 0, 0	1.7		Yes						Motion tracking analysis	
+WTC11	1	92.5	CHIR99021	0-2	Wnt-C59	2-4	12								Yes							Collagen + fibrin	CM			100, 0, 0	25.0	14	Yes						Motion tracking analysis	
+in-house	1	EB	CHIR99021	0-1	IWP4	2-4	4			Flow cytometry for cTnT+	96										ECM-coated plastic/glass								Yes							
+iCell2	1																	Yes			Electrospun fibers								Yes	SEM	Yes		1250			
+iCell	1																				ECM-coated plastic/glass															
+PGP1	1		CHIR99021	0-1	IWP4	3-5	7	No glucose and lactate	9-11	Flow cytometry for cTnT+	90										Micropatterned PDMS, Micropatterned PAA	Collagen + fibrin	CM + SC	hMSC		70, 0, 30		0.01	Yes		Yes					
+CC2	1		Activin A, BMP4, bFGF	0-5			5			Flow cytometry for cTnT+	95							Yes			Electrospun fibers								Yes						TFM	0.0002
+DF19-9-11T.H, UKKi006-A	2	85	CHIR99021	0-1	IWR1	1-3	7			Flow cytometry for cTnT+	80										ECM-coated plastic/glass	Scaffold free	CM			100, 0, 0	0.36	0.06	Yes	TEM		1.5				
+in-house	1	85	CHIR99021	0-2	Wnt-C59	2-4		No glucose	10-14					Yes			Yes				ECM-coated plastic/glass								Yes		Yes	1.9				
+in-house	1		CHIR99021	0-2	KY02111, XAV939	3-8				IHC: cTnT, cTnI, NKX2-5											ECM-coated plastic/glass								Yes							
+in-house	1	85	CHIR99021	0-1	IWP2	2-5	7									Yes	Flow 	Yes				PEG + ECM	CM + EC + SC	hMSC	HUVEC	33, 33, 33		4	Yes							
+Cellapy	1	85	CHIR99021	0-2	Wnt-C59	2-4		No glucose	10-15	Flow cytometry for cTnT+	95										ECM-coated plastic/glass								Yes			2.5		Yes		
+UMGi001-A, UMGi005-A, UMGi014-A	3	85	CHIR99021	0-2	IWP2	2-4	8, not 15-20	No glucose with lactate	15-20	Flow cytometry for cTnT+	90			Yes	Yes	Yes					ECM-coated plastic/glass	Collagen + matrigel	CM + SC	hFF		70, 0, 30	15.0	4	Yes						Post deflection	1.2
+in-house	1	85	BIO, bFGF	0-2	Wnt-C59	2-7				Flow cytometry for cTnT+; Flow cytometry for NKX2-5+	85										ECM-coated plastic/glass								Yes						Motion tracking analysis	
+in-house	3	85	CHIR99021	0-2	IWP2	2-4	7			Flow cytometry for cTnT+	90				Yes		Yes				ECM-coated plastic/glass	Collagen	CM			100, 0, 0	2.5	39.5	Yes		Yes	1.75			Motion tracking analysis	1.1
+iCellA, iCellB	2										97					Yes						3D printing	CM + SC	hMSC		80, 0, 20	0.3	0.03							Motion tracking analysis	
+DF19-9-11T.H	1	100	CHIR99021	0-1	IWP4	3-5	7	No glucose with lactate	17-24	Visual Inspection	95				Yes	Yes						Fibrin	CM + SC	hiPSC-CF		91, 0, 9	11.0	24	Yes					Yes	Force transducer	
+in-house	1		StemCell Differentiation kit	0-4		6-8	8														ECM-coated plastic/glass								Yes							
+PGP1	1		CHIR99021	0-1	IWP4	3-5	9, not 11-15	No glucose with lactate	11-15									Yes			Electrospun fibers								Yes		Yes					
+DF6-9-9T.B	1	95	CHIR99021	0-1	IWP4	3-5	7														ECM-coated plastic/glass								Yes		Yes	1.12				
+iCell	1																				ECM-coated plastic/glass															
+Cor.4U	1																				MEA									SEM						
+iCell2	1																Yes		Yes		ECM-coated PDMS								Yes		Yes	1.9			TFM	
+iCell2	1																				ECM-coated plastic/glass								Yes						Motion tracking analysis	
+iCell	1																				ECM-coated plastic/glass															
+201B6	1		Activin A, Wnt3a	0-1	BMP4, bFGF	1-5								Optical pacing	Yes	Yes						Collagen + matrigel	CM + EC + SC	hiPSC-MC	hiPSC-EC	56, 11, 14	15.0	40	Yes		Yes				Force transducer 	
+in-house	1	100	CHIR99021	0-1	IWP2	4-5	8			Flow cytometry for cTnT+; Flow cytometry for NKX2-5	70											Decellularized tissue	CM			100, 0, 0			Yes							
+ATCC	1		CHIR99021	0-2	IWR1	3-5				Flow cytometry for cTnT+	90										MEA								Yes							
+ipWT1.3/UMGi014-B.3, LHpb-YaabC3, in-house	3		Yes, Not listed					Metabolic (not specified		Flow cytometry for cTnT+	85										ECM-coated plastic/glass								Yes							
+HVRDi007-A	1	95	CHIR99021	0-1	IWP4	4-6	9									Yes	Flow					Collagen	CM + EC		hiPSC-EC	83, 17, 0	120.0	0.6	Yes	TEM						
+C2A	1	EB	Activin A, BMP4, bFGF	0-3	XAV939	3-7				Flow cytometry for cTnT+	55			Yes								Scaffold free	CM			100, 0, 0		0.08	Yes	TEM					Motion tracking analysis	
+DF19-9-7T, WTC11	2	100	CHIR99021, BMP4	0-1	IWP2	2-4	7			Flow cytometry for cTnT+	82										ECM-coated plastic/glass	Scaffold free	CM				1.0	0.75	Yes	TEM		1.5		Yes	Motion tracking analysis	
+iCell	1													Calcium concentration					Yes		Thick matrigel								Yes						Motion tracking analysis	
+iCell	1																					Collagen + fibrin + matrigel	CM + SC	hCF		90, 0, 10	50.0	2							Post deflection	
+IMR-90, DF19-9-11T.H, SCV-I55, UA16F2	4		CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+; Flow cytometry for MF20	70						Flow				ECM-coated plastic/glass	PEG + ECM	CM			100, 0, 0	25.0		Yes	SEM						
+UKBi005-A, IBMT1	2	EB	CHIR99021, BMP4	0-1	IWP2	2-3				IHC a-actinin	95										ECM-coated plastic/glass								Yes							
+IMR-90	1	87.5	CHIR98014	0-1	IWP4	3-5				Flow cytometry for cTnT+	90											Scaffold free	CM			100, 0, 0	0.25	0.16	Yes			2.0			Motion tracking analysis	
+WTC11, WTC11, DF19-9-11T.H	3	85	CHIR99021	0-1	IWP2	3-5				Flow cytometry for cTnT+	85					Yes					ECM-coated plastic/glass								Yes			1.4				
+WTC11	1	82.5	CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	85									Yes		Decellularized tissue	CM			100, 0, 0	1.6		Yes							
+836B3, 253G1,1201C1	3	100	Activin A, BMP4, bFGF	0-5	XAV939, IWP4	5-9	7	Cell sorting		Flow cytometry for cTnT+	97										ECM-coated plastic/glass								Yes	TEM		1.91		like structures		
+in-house	1		CHIR99021	0-2	Unclear	3-5		No glucose with lactate	8-14	Flow cytometry for cTnT+	96				Yes	Yes	Flow 					Fibrin	CM + EC + SC	hiPSC-SMC	hiPSC-EC	50, 25, 25	1.0	800	Yes	TEM					Force transducer	1.8
+in-house	1		CHIR99021	0-1	Not listed	3-5	7, not 20-30	No glucose and lactate	20-30	IHC cTnI, cTnT, a-actinin, cx43, MLC-2v	95					Yes		Yes		Yes		Decellularized ECM, PEG, 3D printing	CM + EC + SC	hiPSC-SMC	hiPSC-EC	50, 25, 25		4	Yes		Yes				Motion tracking analysis	
+PLZ, MYL2-mEGFP, 19004	3	77.5	CHIR99021	0-2	IWP2	2-4	6	No glucose with lactate	16-20	Flow cytometry for cTnT+	99							Yes			ECM-coated plastic/glass and Micropatterned polyacrlyamide gels								Yes	TEM	Yes	2.0	4100	Yes	TFM	0.00042 (per cell)
+ESi048-A	1		CHIR99021	0-1	IWP4	3-5	5										Yes				Decellularized ECM								Yes							
+LUMCi004-A, LUMCi026-A, LUMCi028-A, NCRM-1	4		Activin A, BMP4, CHIR99021	0-3	XAV939	3-6				Flow cytometry for cTnT+	80					Yes						Scaffold free	CM + EC + SC	hiPSC-CF	hiPSC-EC	75, 15, 15	0.1	0.13	Yes	TEM	Yes	1.9		Yes	Motion tracking analysis	
+in-house	1		Activin A, BMP4, CHIR99021	0-3	XAV939	3-6		Cell sorting	14	Flow cytometry for VCAM1	79					Yes						Scaffold free	CM + EC		hiPSC-EC	85, 0, 15	0.1	0.07	Yes						Motion tracking analysis	
+in-house	1	85	CHIR99021	0-1	Wnt-C59	2-4				Flow cytometry for cTnT+	85						Yes			Yes		Decellularized tissue	CM			100, 0, 0	30.0	24	Yes	TEM						
+Cor.4U	1																				ECM-coated plastic/glass															
+ATCC	1		CHIR99021	0-2	Wnt-C59	2-4				Flow cytometry for CD31+	85									Yes		Decellularized ECM, 3D printing	CM + EC		hiPSC-EC	67, 33, 0	0.017	225	Yes	SEM, TEM	Yes					
+in-house	1		Activin A, BMP4, bFGF	0-4						Flow cytometry for cTnT+												PEG	CM + SC	hCF		75, 0, 25	10.0	0.012	Yes							
+WTC11	1		CHIR99021	0-2	IWP2	2-4	6, not 20-24	No glucose with lactate	20-24	Flow cytometry for cTnT+	86								Yes		ECM-coated PDMS								Yes		Yes	1.9			Motion tracking analysis	0.05
+BJ-RiPS-1.1	1		CHIR99021	0-2	IWP4	2-5	6			Flow cytometry for cTnT+; For cytometry for a-actinin	85						Yes			Yes		Decellularized tissue	CM			100, 0, 0		37.5	Yes	TEM					Force transducer 	0.125
+IMR-90	1	85	CHIR99021	0-2	Wnt-C59	3-5	5			Flow cytometry for cTnT+											Electrospun fibers								Yes			1.4	1000			
+iCell2	1																	Yes			MEA															
+201B7	1		BMP4	0-1	IWP3	4-8															ECM-coated plastic/glass								Yes	SEM, TEM				Yes		
+iCell	1																				ECM-coated plastic/glass								Yes						Motion tracking analysis	
+iCell	1																		Yes		ECM-coated PDMS								Yes				3500			
+in-house (3)	3	85	StemCell Differentiation kit	0-4		6-8	8			Flow cytometry for cTnT+	80										ECM-coated plastic/glass								Yes							
+in-house	1		CHIR99021	0-1	IWP2 or IWP4	2-5	7	No glucose with lactate	12-14												ECM-coated plastic/glass														Motion tracking analysis	
+WTC11, IMBAi001-A, IMBAi002-A, 178/5	4	EB	Activin A, BMP4, CHIR99021, bFGF	0-2	BMP4, bFGF, IWP2	2-6	7			Flow cytometry for cTnI+	90					Yes						Scaffold free	CM + EC + SC	hiPSC-SC	hiPSC-EC		0.08	2	Yes	TEM					Motion tracking analysis	
+201B7	1	EB	Activin A, BMP4, bFGF	0-3	IWR1	3-5		aMHC-Puromycin resistance selection		Flow cytometry for cTnT+	99								Yes			Scaffold free	CM			100, 0, 0	0.325	1225	Yes		Yes					
+WTC11	1	100	CHIR99021	0-1	IWP2	3-5	7, not 20-24	No glucose with lactate	20-24	Flow cytometry for cTnT+	85					Yes						Scaffold free	CM + SC	hCF, hDF, hMSC, hiPSC-CF		75, 0, 25	0.14	0.18	Yes							
+C25	1	EB	Activin A, BMP4, bFGF	0-3	DS07	3-7	3								Yes							Fibrin + matrigel	CM			100, 0, 0	10.0	100								
+WTC11	1		CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	70										ECM-coated plastic/glass														"Motion tracking analysis 
+"	
+WTC11	1		CHIR99021	0-1	IWP2	3-5	7, not 20-24	No glucose with lactate	20-24	Flow cytometry for cTnT+	91				Yes	Yes						Scaffold free	CM + SC	hiPSC-SC		50, 0, 50		0.5	Yes	SEM	Yes				Force transducer	
+Pluricyte	1																	Yes			Nanotopography								Yes						Motion tracking analysis	
+ATCC	1		CHIR99021	0-1	XAV939, IWP2	3-5	7			Flow cytometry for cTnT+	98										ECM-coated plastic/glass		CM			100, 0, 0			Yes							
+13FLVN0C1, CC2, DF19-9-11T.H	3	80	CHIR99021	0-1	IWP1	3-5	7			Flow cytometry for cTnT+	88										ECM-coated plastic/glass												2000			
+253G1	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6				Flow cytometry for cTnT+	92					Yes						Scaffold free	CM + SC	hiPSC-SC		70, 0, 30			Yes						Motion tracking analysis	
+IMR-90	1	85	CHIR99021	0-2	Wnt-C59	3-4	8	No glucose	11-15	Flow cytometry for cTnT+	97								Yes			Fibrin	CM			100, 0, 0	0.04	375	Yes		Yes			Yes	Motion tracking analysis	
+PGP1	1		CHIR99021	0-1	IWP4	3-5	7, not 9-13	No glucose with lactate	9-13								Yes					Collagen	CM + SC	hMSC		90, 0, 10		0.28	Yes						MEMS sensor	0.055
+in-house (4)	4	2D: 75, 3D: EB	Activin A, BMP4, CHIR99021	0-3	IWR1 or IWP2	3-5; 4-8				Flow cytometry for cTnT+	54										ECM-coated plastic/glass	Scaffold free	CM						Yes		Yes	1.9	2850			
+IMR-90, SCVI-273	2	85	CHIR99021	0-2	IWR1	3-5	5			Flow cytometry for cTnT+; Flow cytometry for a-actinin+	84, 79										ECM-coated plastic/glass								Yes							
+iCell	1																		Yes		Hydrogel								Yes							
+Not listed	1	90	CHIR99021, rapamycin	0-1	XAY939, KY02111, BMS493	3-7	8, not 10-14	No glucose with lactate	10-14	Flow cytometry for cTnT+	81				Yes	Yes						Collagen + matrigel	CM + SC	hFF, hMSC, hCF		75, 0, 25	10.0	2.9	Yes						Post deflection	
+KS1	1	75	CHIR99021	0-1	IWP2	4-6	8	No glucose with lactate	Unclear											Yes		Decellularized tissue	CM			100, 0, 0		100	Yes	TEM		1.35				
+in-house	3	90	CHIR99021	0-2	IWR1	3-4	7	No glucose	10-15												Microgrooves in PDMS								Yes		Yes					
+Gibco episomal	2		CHIR99021	0-3	IWP2		15, not 20-24	No glucose with lactate	20-24	Flow cytometry for cTnT+	45											Collagen + fibrin	CM			100, 0, 0	15.0	20	Yes						Force transducer 	
+Gibco episomal	1	100	CHIR99021	0-1	IWP4	3-5	7, not 9-12	No glucose and lactate	9-12												ECM-coated plastic/glass															
+253G4	1	EB	CHIR99021, BMP4		IWR1		7, not 13-17	No glucose with lactate	13-17	Flow cytometry for cTnT+	98											Scaffold free	CM			100, 0, 0	0.2	0.03	Yes						Motion tracking analysis	
+253G4	1	90	CHIR99021	0-1	IWR1	3-6		StemFit Media	12-14	Flow cytometry for cTnT+	99				Yes	Yes						Scaffold free	CM + EC + SC	hDF	HUVEC	50, 25, 25	0.6	2.9	Yes						Motion tracking analysis	
+836B3	1		Activin A, BMP4, bFGF	0-5	XAV939, IWP4	1-9	1			Flow cytometry for cTnT+	96										ECM-coated plastic/glass								Yes							
+IMR-90, DF19-9-11T.H	2		CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	74											PEG + ECM	CM			100, 0, 0		21	Yes	TEM	Yes	1.8	2163	Yes	Motion tracking analysis	
+iCell	1																	Yes			Electrospun fibers								Yes	SEM, TEM		1.7				
+WTC11	1	95	CHIR99021	0-2	Wnt-C59	3-5	9	No glucose	11-15							Yes	Flow					Fibrin	CM + EC + SC	hCF	CMVEC	47.6,47.6,4.8	100.0	6	Yes						Motion tracking analysis	
+Gibco episomal	1	85	CHIR99021	0-2	Wnt-C59	3-5	7	No glucose with lactate		Flow cytometry for cTnT+								Yes	Yes		Micropatterned PAA								Yes		Yes	1.75				
+Gibco episomal	1		CHIR99021	0-2	IWP2	2-?	7, not 13-17	No glucose with lactate	13-17	Flow cytometry for cTnT+	84			Yes		Yes						Scaffold free	CM + SC	hCF		95, 0, 5	0.06	0.4	Yes							
+iWT.D2.1/2.3, UMGi005-A	2	90	CHIR99021	0-2	IWP2	2-4	6			Flow cytometry for cTnT+	90						Flow				Silicon membrane, microfluidic device								Yes		Yes	1.9	3750		Motion tracking analysis	
+Cor.4U	1													Yes			Yes		Yes		ECM-coated PDMS								Yes			1.45				
+Cor.4U	1							Cell sorting										Yes			MEA, Microgrooves								Yes		Yes					
+iCell	1																	Yes			Electrospun fibers								Yes	SEM					Motion tracking analysis	
+WTC11	1	85	CHIR99021	0-2	IWP2	3-5	7, not 13-21	No glucose with lactate	13-21	Flow cytometry for cTnT+	95										ECM-coated plastic/glass								Yes							
+in-house	1		CHIR99021	0-1	IWR1	2-4	4	No glucose with lactate	10-12, 13-16					Yes			Yes					Scaffold free	CM			100, 0, 0	0.92	0.5	Yes	SEM, TEM						
+in-house (6)	6	EB	Activin A, BMP4	0-1	IWR1	3-7	14			Flow cytometry for cTnT+	60				Yes	Yes		Yes	Yes		Microgrooves	Collagen + matrigel	CM + SC	hFF		91, 0, 9	110.0	3.9	Yes						Post deflection	0.09
+BIONi010-C	1	EB	Activin A, BMP4, CHIR99021, bFGF	0-1	Wnt-C59	2-3																													Motion tracking analysis	
+in-house	1	85	CHIR99021	0-2	Wnt-C59	2-4		No glucose with lactate	8-12										Yes			PEG + ECM	CM			100, 0, 0	125.0	12.5	Yes						Motion tracking analysis	
+201B7	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6												Yes	Yes		Electrospun fibers														Motion tracking analysis	
+UKE-1	1	EB	Activin A, BMP4, bFGF	0-3	XAV939	3-10	6			Flow cytometry for cTnT+	92			Yes	Yes							Fibrin	CM			100, 0, 0	10.0	10	Yes						Post deflection	0.12
+C25, ERC018, iCell2	3		CHIR99021	0-2	IWR1	3-4	7, not 10-13	1-Thioglycerol	10-13						Yes							Fibrin	CM			100, 0, 0	10.0	16								
+C25	1	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	6								Yes							Fibrin + matrigel	CM			100, 0, 0	10.0	10	Yes							
+IMR-90	1		Activin A, BMP4, CHIR99021	0-3	XAV939	3-5	7			Flow cytometry for cTnT+	90				Yes	Yes						Fibrin	CM + SC	hMSC		91, 0, 9	5.5	0.5	Yes	TEM		1.8	350?		Post deflection; Force transducer	0.6
+SMiPSC 194	1	90; 70	CHIR99021, BMP4	0-3; 0-2	IWR1	3-7; 2-4	7, not 12-16	No glucose with lactate	12-16	Flow cytometry for cTnT+	71										ECM-coated plastic/glass								Yes		Yes	1.7	1752			
+IMR-90, iCell	2	EB	CHIR99021, BIO	0-3	KY02111, XAV939	3-9												Yes			Electrospun fibers								Yes	TEM						
+253G1, 201B7	2	EB	CHIR99021	0-2	KY02111	3-9															Electrospun fibers								Yes	SEM, TEM						
+201B7	1		StemCell Differentiation kit	0-4		6-8	7, not 14-22	No glucose with lactate	14-22									Yes			Electrospun fibers								Yes		Yes				Motion tracking analysis	
+in-house	2	EB	BMP4	0-1	BPM4, bFGF, Activin A	1-4				Flow cytometry for cTnT+												Scaffold free	CM			100, 0, 0		0.14	Yes							
+Cor.4U	1																	Yes	Yes		Microgrooves, hydrogel								Yes		Yes	1.8			Force transducer 	
+Cellapy	1	80	CHIR99021	0-2	IWP2	4-6	7			Flow cytometry for cTnT+	88										ECM-coated plastic/glass								Yes	TEM		1.4	2900		Motion tracking analysis	
+Gibco episomal	1	EB								Flow cytometry for a-actinin	79			Yes								Scaffold free	CM			100, 0, 0			Yes							
+BJ1	1	80		0-2		2-4	4, not 12-18	No glucose with lactate	12-18					Yes	Yes		Yes					Collagen + Fibrin + matrigel 	CM			100, 0, 0		0.0225	Yes		Yes	1.8			Post deflection	0.01
+WTC11	1		CHIR99021	0-1	IWP4	3-5	8	No glucose with lactate	17-19	Flow cytometry for cTnT+	80							Yes				3D filamentous matrices composed of three layers of micronscale parallel fibers	CM			100, 0, 0	3.0	0.1	Yes						Motion tracking analysis	
+WTC11	1		CHIR99021	0-1	IWP4	3-5	7											Yes			PEG + ECM	Scaffoldless	CM			100, 0, 0		0.13	Yes						Motion tracking analysis	
+Cor.4U, PGP1	6	100	CHIR99021	0-2	IWR1	2-4	6			Visual inspection								Yes				Ventricle scaffolds PCL/gelatin nanofibrous sheets, with human fibronectin	CM			100, 0, 0	6.0		Yes		Yes					
+UKEi003-C	1	EB	Activin A, BMP4, bFGF		XAV939					Flow cytometry for cTnT+	80				Yes							Fibrin	CM			100, 0, 0	10.0	16	Yes	TEM					Post deflection	0.2
+in-house, iCell, Cor.4U	3	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	7, not 10-13	1-Thioglycerol	10-23	Flow cytometry for cTnT+	85				Yes							Fibrin + matrigel	CM			100, 0, 0	10.0	10	Yes	TEM		1.6		Yes	Post deflection	0.152
+in-house	1	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	6								Yes		Yes					Fibrin	CM			100, 0, 0	10.0	10							Post deflection	0.6
+WTC11	1		CHIR99021	0-1	Wnt-C59	2-4	6			Flow cytometry for cTnT+	83				Yes	Yes					ECM-coated plastic/glass	Fibrin	CM + SC	SC		91, 0, 9	5.0	8.6	Yes	TEM					Post deflection	0.04
+iCell	1																Yes					Fibrin	CM			100, 0, 0	100.0	0.3	Yes	SEM, TEM					Motion tracking analysis	
+ax2505	1													Conductive material				Yes			Nanotopography										Yes		7000			
+ADHF	1	90	CHIR99021	0-2	IWP4	3-5	7														ECM-coated plastic/glass								Yes							
+in-house	1		CHIR99021	0-1	IWP4	3-5									Yes		Yes	Yes			ECM-coated plastic/glass								Yes						Stretching device	
+iCellA, iCellB	2														Yes	Yes						Fibrin + matrigel	CM + SC	hCF		75, 0, 25	35.0	1.25	Yes						Post deflection	
+201B6	1		Activin A, BMP4, bFGF, Wnt3a	0-5	Dkk1	5-7	5			Flow cytometry for cTnT+	62				Yes	Yes						Collagen + matrigel	CM + EC + SC	hiPSC-MC	hiPSC-EC	62, 19, 2	15.0	100	Yes	TEM					Force transducer	
+WTC11	1	85	CHIR99021	0-1	IWP4	2-5	7			Flow cytometry for cTnT+	90						Flow					Scaffold free, microfluidic device	CM			100, 0, 0	5.0	0.1	Yes						Motion tracking analysis	
+201B7	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6		Cell sorting													ECM-coated plastic/glass								Yes							
+GRiPS	1		CHIR99021	0-1	IWR1	3-5	5	No glucose with lactate	10-15	IHC: cTnT, Cx43, MLC2v, MLC2A											ECM-coated plastic/glass	Fibrin	CM			100, 0, 0	9.0	0.5	Yes							
+IMR-90	1		CHIR99021	0-1	IWP4	2-4	4														ECM-coated plastic/glass								Yes							
+DF19-9-11T.H	1	100	CHIR99021	0-1	IWP4	3-5	7, not 17-24	No glucose with lactate	17-24	Visual inspection	95				Yes	Yes						Fibrin	CM + SC	hiPSC-CF		91, 0, 9	11.0	60							Force transducer 	
+PGP1	1	90	CHIR99021	0-1	IWP4	3-5	10, not 12-16	No glucose with lactate	12-16							Yes	Flow	Yes				Fibrin + matrigel	CM + SC	hMSC		98, 0, 2	12.0	14	Yes						Motion tracking analysis	
+iCell	1																				ECM-coated plastic/glass															
+WTC11	1		CHIR99021	0-1	IWP2	3-5	10, not 14-21	No glucose with lactate	14-21	Flow cytometry for cTnT+	61			Yes	Yes							Collagen	CM			100, 0, 0	16.0	60	Yes						Force transducer	
+201B7, 253G1	2	EB	Activin A, BMP4, bFGF	0-4	IWP4	4-6				Flow cytometry for cTnT+	95											Scaffold free	CM			100, 0, 0		0.015	Yes							
+iCell	1																				ECM-coated plastic/glass														Motion tracking analysis	
+SKiPS-31.3	1		CHIR99021	0-1	IWR1	3-4									Yes	Yes						Collagen + matrigel	CM + cardiac stem cells (CSCs)			90, 0, 10		6	Yes						Post deflection	0.012
+201B6	1		Activin A, BMP4, bFGF, Wnt3a	0-5			5			Flow cytometry for VCAM1+					Yes	Yes		Yes				Collagen + matrigel	CM + EC + SC	hiPSC-MC	hiPSC-EC	45, 18, 15	15.0	150	Yes		Yes				Force transducer	
+in-house	1	EB	CHIR99021		IWP4																ECM-coated plastic/glass								Yes	SEM, TEM						
+PGP1	1	100	CHIR99021	0-1	IWP	3-5	9							Yes	Yes	Yes	Yes			Yes		Decellularized tissue	CM + SC	hCF		91, 0, 9	10.0	9.6							Force transducer	0.64
+in-house	1	100	CHIR99021	0-2	IWP2	4-6	8									Yes				Yes		Decellularized tissue	CM + EC + SC	hiPSC-CF	hiPSC-EC	85, 12.5, 2.5	118.0		Yes	SEM						
+iCell	1																Flow				MEA														Post deflection	
+iCell	1															Yes	Flow				ECM-coated plastic/glass								Yes						Post deflection	
+in-house	1		CHIR99021	0-1	IWR1	3-5	Not clear			Flow cytometry for VCAM1+	93					Yes		Yes				Scaffold free	CM + EC + SC	hCF	HUVEC	70, 15, 15	0.165	0.25	Yes						Motion tracking analysis	
+HVRDi007-A	1	90	CHIR99021	0-2	IWP4	4-6	9													Yes	ECM-coated plastic/glass								Yes						Motion tracking analysis	
+Y6	1	90	CHIR99021	0-1	IWP4	3-5	11	No glucose with lactate	12-14						Yes	Yes						Collagen, PGA mesh, decellularized porcine ECM	CM + SC	hCF		70, 0, 30	30.45	25	Yes						Force transducer	1.1
+in-house, Cor.4U	2		CHIR99021	0-1	IWR1	3-5		No glucose with lactate	15-18	Flow cytometry for cTnT+	92			Optical stimulation					Yes		Hydrogel		CM			100, 0, 0		2	Yes						Motion tracking analysis	
+in-house	1	EB	Activin A, BMP4, bFGF	0-4	BMP4, Activin A, bFGF, VEGF	4-8														Yes	Decellularized ECM								Yes							
+iCell	1																		Yes		Micropatterned PDMS, Micropatterned PAA								Yes							
+in-house (2)	2		CHIR99021, Activin A	0-3	XAV939	3-x	7			Flow cytometry for cTnT+	60							Yes			Micropatterned plastic/glass								Yes	TEM		1.8	7696	Yes		
+UC3-4 A1	1	70		0-2		2-4	12											Yes	Yes		Micropatterned plastic/glass															
+iCell	1																				ECM-coated plastic/glass															
+iCell	1																					Scaffold free	CM + EC + SC	hCF	CMVEC	67, 16.5, 16.5	0.0125	0.03	Yes						Motion tracking analysis	
+Cor.4U	1															Yes						Scaffold free	CM + EC + SC	hiPSC-CF	HCAEC	50, 25, 25	0.15	0.35	Yes	TEM						
+iCell	1														Yes	Yes		Yes: Magnetic guided anisotropy				Z-wires with Iron(III) oxide nanoparticles (magnetic)	CM + SC	hiPSC-CF		50, 0, 50	40.0	0.75	Yes		Yes				Motion tracking analysis	
+UTA.04602.WT, UTA.04511.WT	2	EB								IHC for cTnT and RyR2											ECM-coated plastic/glass								Yes							
+Not listed	Not listed		Yes, Not listed					No glucose with lactate	9-15	Flow cytometry for cTnT+	98					Yes						Fibrin + matrigel	CM + EC + SC	hiPSC-CF	hiPSC-EC	57, 29, 14	10.0	200	Yes						Motion tracking analysis	
+hiPSC5, lzhiPSC5	3	90	CHIR99021	0-1	IWR1	3-5	7	No glucose with lactate	9-15	Flow cytometry for cTnT+	96			Yes	Yes							Fibrin	CM			100, 0, 0	10.0	107	Yes	TEM		1.8				
+DF6-9-9T.B	1	85	CHIR99021	0-1	IWP2	2-5	7			Flow cytometry for cTnT+	33							Yes			Electrospun fibers								Yes							
+iCell	1													Yes							ECM-coated plastic/glass															
+iCell	1													Yes	Yes	Yes						Collagen + fibrin + matrigel	CM + SC	hCF		91, 0, 9	50.0	1							Post deflection	
+Cor.4U	1													Optical sitmulation							ECM-coated plastic/glass															
+UKEi1-A, TC-1133, C25	3	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	6-10			Flow cytometry for cTnT+	83				Yes			Yes				Fibrin	CM			100, 0, 0	10.0	3,500	Yes		Yes				Post deflection	4.6
+FIB-hiPSC, BT1-hiPSC	2		Activin A, BMP4	0-2	KY02111	2-4	4			Flow cytometry for cTnT+	91										ECM-coated plastic/glass								Yes							
+GM20089, GM20123, GM04912	3		CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	80			Yes								Fibrin	CM			100, 0, 0	6.0	141	Yes	TEM					Force transducer 	1.2
+Cor.4U	1													Optical stimulation							ECM-coated plastic/glass								Yes							
+iCell	2	EB																				Scaffold free	CM + EC + SC	hCF, hADSC	HUVEC	50, 14, 36	2.0	0.07	Yes						Motion tracking analysis	
+iCell	1																					Scaffold free	CM + EC + SC	hCF	HUVEC	50, 10, 40	2.0	0.13	Yes	SEM, TEM					Motion tracking analysis	
+iCell	1													Yes								Scaffold free							Yes	TEM						
+iCell	1																Flow		Yes		Micropatterned PDMS								Yes							
+WTC11	1	100	Activin A, BMP4	0-1	VEGF	1-3	3			Flow cytometry for cTnT+	85			Yes	Yes	Yes						Fibrin	CM + SC	hDF		75, 0, 25	10.0	7	Yes						Motion tracking analysis	
+BS2, C2A, IMR-90, WTC11	4	100	Activin A, BMP4	0-3			3			Flow cytometry for cTnT+	85			Yes	Yes	Yes						Fibrin	CM + SC	hDF		75, 0, 25	10.0	6	Yes	TEM		2.2	1500	Yes	Post deflection	0.8
+F1	1	90	CHIR99021	0-2	IWR1	3-5	7							Conductive material						Yes	Decellularized ECM, Electrically conductive hydrogel		CM			100, 0, 0	40.0		Yes		Yes	1.7			Motion tracking analysis	
+IBJ, IMR-90	2	80	Activin A, BMP4, CHIR99021, bFGF	0-2	XAV939, IWP2	2-3				Flow cytometry for cTnT+	63				Yes	Yes	Yes					Collagen + Geltrex	CM + EC + SC	hiPSC-SMC	hiPSC-EC	58, 9, 15	20.0	60	Yes						Force transducer 	
+Gibco episomal, NCRM-5, WTC11	3		CHIR99021	0-1	IWP2	3-5	9, not 13-17	No glucose with lactate	13-17	Flow cytometry for cTnT+	82				Yes	Yes						Collagen	CM + SC	hCF		95, 0, 5	1.0								Force transducer	
+Gibco episomal	1	70	CHIR99021	Not listed	IWP2	Not listed	7			Flow cytometry for cTnT+	52				Yes	Yes						Collagen	CM + SC	hCF		95, 0, 5	16.0	10	Yes						Force transducer	
+in-house, iCell2, Pluricyte	3		Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	6								Yes							Fibrin + matrigel	CM			100, 0, 0	10.0	10							Post deflection	
+in-house	1	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	7, not 10-13	1-Thioglycerol	10-13	Flow cytometry for cTnT+					Yes							Fibrin	CM			100, 0, 0	10.0	16	Yes						Post deflection	0.25
+Gibco episomal	1	85	CHIR99021	0-1	WntC-59	3-5	7	No glucose with lactate	9-12	Flow cytometry for cTnT+	90								Biodegradable and biomimetic microparticles		ECM-coated microparticles								Yes							
+IPSL1	1		CHIR99021	0-1	Wnt-C59	3-5	0	No glucose with lactate	15-25	Flow cytometry for cTnT+											ECM-coated plastic/glass															
+SCVI-273, IMR-90	2	85	CHIR99021	0-2	IWR1	2-4	5			IHC for a-actinin	85										ECM-coated plastic/glass								Yes						Motion tracking analysis	
+201B7	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6				Flow cytometry for cTnT+	95											Fibrin	CM			100, 0, 0		144	Yes						Force transducer	0.85
+DF19-9-11T.H	1		CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	85					Yes		Yes				Fibrin	CM + EC + SC	hPC	BOEC	65, 29, 6		5							Force transducer	1
+Cor.4U	1																	Yes	Yes		ECM-coated plastic/glass														Motion tracking analysis	
+in-house	1	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-10	7, not 10-13	1-Thioglycerol	10-13	Flow cytometry for cTnT+	86											Scaffold free	CM			100, 0, 0		0.37	Yes							
+ATCC, BJ1	2		CHIR99021	0-1	IWP4	3-5	7, not 10-12	No glucose with lactate	10-12	Flow cytometry for cTnT+	86				Yes		Yes					Fibrin + matrigel	CM			100, 0, 0	17.2	49-1681	Yes	TEM				Yes	Force transducer	20
+iPS-GM942-SeV3, iPS-GM942-SeV5	2									Flow cytometry for cTnT+											ECM-coated plastic/glass															
+in-house(2), iCell	11	85	CHIR99021	0-2	Wnt-C59	2-5		No glucose with lactate													ECM-coated plastic/glass								Yes						Motion tracking analysis	
+PGP1, in-house	2		CHIR99021	0-1	IWP4	3-5	6, not 12-16	No glucose with lactate	12-16					Yes	Yes	Yes			Yes	Yes		Decellularized tissue	CM + SC	hCF		90, 0, 10	10.0	2.5							Force transducer	0.17
+TRDSi002-A-1	1	85	CHIR99021	0-2	IWR1	3-5	11	No glucose	11-15	Flow cytometry for cTnI+	88										ECM-coated plastic/glass								Yes							
+WTC11	1	100	CHIR99021	0-1	IWP2	3-5	7									Yes						Scaffold free		"Mesendoderm progenitor cels 
+"				0.05	Yes	TEM	Yes	1.75	2000			
+iCell	1									IHC a-actinin	90							Yes			MEA								Yes			1.95				
+in-house WTC	1	85	CHIR99021	0-2	IWR1	3-5	7	No glucose	12-14	Flow cytometry for cTnT+	90							Yes	Yes		Micropatterned PAA								Yes			1.9		Yes	Motion tracking analysis	
+in-house	19	85	CHIR99021	0-1	Wnt-C59	3-5				Flow cytometry for cTnT+	40.4										ECM-coated plastic/glass								Yes		Yes					
+WTC11	1	100	CHIR99021	0-2	IWP4	2-4	6, not 22-28	No glucose with lactate	22-28									Yes	Yes		Nanotopography (Shape memory polymers (SMP) Poly(tBA-co-BA) PEM coated with wrinkles)								Yes	SEM	Yes	2.0	1500		Motion tracking analysis	
+454E2, in-house (3)	4	85	CHIR99021	0-2	IWR1	4-6	7														ECM-coated plastic/glass								Yes							
+201B7	1	EB	Activin A, BMP4, bFGF	0-4	IWR1	4-6		Puromycin		Flow cytometry for cTnT+	89							Yes			Microgrooves								Yes		Yes				Motion tracking analysis, force transducer	0.9
+253G1	1		Activin A, BMP4, bFGF	0-4	IWR1	4-6																Fibronectin/gelatin nano films	CM			100, 0, 0	0.5		Yes						Motion tracking analysis	
+WTC11, BS2	2	85	CHIR99021	0-2	Wnt-C59	2-4	10	No glucose	10-13	Flow cytometry for cTnT+	85			Yes	Yes	Yes						Fibrin or collagen	CM + SC	hCF;hDF		75, 0, 25	37.0	2	Yes		Yes				Post deflection	
+iCell	1																				ECM-coated plastic/glass	Scaffold free	CM			100, 0, 0	0.21	0.03	Yes	TEM						
+iCell	1																					Scaffold free	CM + NRCM			100, 0, 0	3.0	0.09	Yes	TEM	Yes	1.8				
+253G1	1		CHIR99021	0-1	IWP2	3-5	8			Flow cytometry for cTnT+	75							Yes			Electrospun fibers								Yes							
+iPSCTF	1	90	CHIR99021	0-1	IWP2 and proprietary tankyrase inhibitor	3-5	5			Flow cytometry for cTnT+					Yes	Yes						Collagen	CM + SC	hCF		100, 0, 10		2	Yes						Post deflection	
+PGP1	1	85	CHIR99021	0-3	IWP4	3-4	9			Not listed	90							Yes				3D printed silicone macroporous silicone scaffold	CM			100, 0, 0		100	Yes							
+BJ1, hiPS-G1	2		Activin A, BMP4, CHIR99021, bFGF	0-3	IWP4	4-13	17	No glucose and lactate	13-17	Flow cytometry for a-actinin+	94				Yes	Yes						Collagen + matrigel	CM + SC	hCF		70, 0, 30	30.0	1	Yes	EM		1.95			Post deflection	1.3
+PGP1	1	90	CHIR99021	0-1	Wnt-C59	3-5	7	No glucose	9-11												ECM-coated plastic/glass								Yes				2000			
+PGP1	1		CHIR99021	0-1	IWP4	3-5	7	No glucose with lactate	10-12												ECM-coated plastic/glass								Yes			1.93			Motion tracking analysis; TFM	
+in-house	1		CHIR99021	0-1	IWP2	3-5												Yes			Micropatterned PDMS								Yes							
+WiCell	1		CHIR99021	0-2	IWP2, KY0211	2-6	8	No glucose with lactate	12-14												MEA															
+UC3-4 A1	1		CHIR99021	0-1	IWP4	3-5	7			Flow cytometry for cTnT+	90			Conductive		Yes				Yes		Decellularized tissue	CM + SC	hMSC		80, 0, 20	25.0	40	Yes			2.1			Post deflection	0.045
+253G1	1	EB	Activin A, BMP4, bFGF	0-2	IWR1, IWP2	2-4				IHC cTnT	90					Yes						3D printing, cell spheroids coated in fibronectin and gelatin solution	CM + EC + SC	hCF	CMVEC	37.5, 50, 12.5	2.75	4.5	Yes		Yes				Motion tracking analysis	
+C25, UKEi003-C	2	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	3-6	6, not 9-12			Flow cytometry for cTnT+	77				Yes							Fibrin	CM			100, 0, 0	10.0	5		TEM					Motion tracking analysis	0.2
+in-house	1	EB	Activin A, BMP4, bFGF	0-3	DS07																ECM-coated plastic/glass	Fibrin + matrigel	CM			100, 0, 0	5.0	100								
+iCell	1													Adenoviral transfection to enhance IK1 in hiPSC-CMs							ECM-coated plastic/glass								Yes				1900			
+iCell	1																					Collagen	CM + EC + SC	hMSC	hiPSC-EC	65, 32, 3			Yes	SEM, TEM						
+ESi044-A	1	100	CHIR99021	0-1	IWP4	3-5	7			Flow cytometry for cTnI	72			Yes		Yes	Yes					Collagen + elastin 	CM + SC	hFF		90, 0, 10	5.0	78.5	Yes	TEM					Motion tracking analysis	
+Pluricyte	1																				ECM-coated plastic/glass															
+Cor.4U	1																Yes		Yes			PEG							Yes						Motion tracking analysis	
+WTC11	1		CHIR99021	0-1	IWP2	3-5	7, not 20-24	No glucose with lactate	20-24									Yes				3D filamentous matrices composed of three layers of micronscale parallel fibers	CM			100, 0, 0	3.0	0.039	Yes						Motion tracking analysis	0.000175
+KB3, NC5	2	87.5	CHIR99021	0-1	IWR1	3-4								Conductive material							ECM-coated plastic/glass								Yes	SEM, TEM		1.8				
+in-house	2	90	CHIR99021	0-1	IWR1	1-5	7			Flow cytometry for cTnT+	90											Decellularized tissue	CM + EC + SC	hiPSC-SC		75, 0, 25			Yes	TEM						
+P356	1		CHIR99021	0-2	IWR1	2-4	7	No glucose with lactate	9-15	IHC cTnT	80					Yes		Yes			Electrospun fibers								Yes		Yes	1.6			Motion tracking analysis	
+iCell	1													Optical stimulation			Flow				ECM-coated plastic/glass								Yes							
+C25	1	EB	Activin A, BMP4, bFGF	0-3	DS-I-7	4-11	7			Flow cytometry for cTnT+, Flow cytometry for a-actinin+	83				Yes	Yes						Fibrin	CM + EC		hiPSC-EC	71, 29, 0	9.7	27	Yes							
+DF19-9-11T.H	1		CHIR99021	0-1	IWP2	3-5	8, not 19-23	No glucose with lactate	10-23	Flow cytometry for cTnT+	94					Yes						Fibrin	CM + SC	hPC		86, 0, 14	2.03	22.6	Yes						Motion tracking analysis	0.45
+in-house	1		CHIR99021	0-2	IWP2	3-5	7, not 13-21	No glucose with lactate	13-21					Yes		Yes						Fibrin	CM + EC (+ tumor)	colon adenocarcinoma (SW620)	hiPSC-EC	77, 23, 0	130.0	2	Yes							
+DF19-9-11T.H	1	90	CHIR99021	0-1	IWP4	3-5	7							Calcium concentration				Yes	Yes		Micropatterned PAA gel 								Yes				1200		TFM	0.00024
+iCell, iPSC-CM Lonza	2														Yes	Yes						Fibrin + matrigel	CM + SC	hCF		75, 0, 25	0.025	1.8	Yes						Rod deflection	
+in-house	3	85	CHIR99021	0-2	IWR1	3-5	7	No glucose	9-12												ECM-coated plastic/glass								Yes		Yes	1.75			Motion tracking analysis	
+PB02	1	EB	Activin A, BMP4	0-3	IWR1	4-7				Flow cytometry for cTnT+	77				Yes	Yes					Microgrooves	Collagen + matrigel	CM + SC	hFF		91, 0, 9	1.43	1.75							Post deflection	0.05
+in-house	3		CHIR99021	0-2	IWR1	3-5	7	No glucose	9-11	Flow cytometry for cTnT+	90										ECM-coated plastic/glass								Yes							
+in-house	1	100	Activin A	0-1	BMP4, bFGF	1-5	5			IHC a-actinin and cTnT	80										ECM-coated plastic/glass								Yes							
+in-house	1	85	CHIR99021	0-1	IWP2	3-5	7											Yes			Micropatterned PDMS								Yes	SEM	Yes				Motion tracking analysis	
+Cellapy	1	85	CHIR99021	0-1	IWP2	3-5	7	No glucose													ECM-coated plastic/glass								Yes							
+in-house	1		CHIR99021		IWR1											Yes		Yes				Collagen	CM + EC + SC	hCF	HUVEC	70, 15, 15	2.5		Yes			2.2				
+UKKi011-A	1	85	Activin A, BMP4	0-3	IWP2	3-5		No glucose with lactate	13-16	Flow cytometry for cTnT+	92										MEA								Yes							
+in-house	1		Activin A, BMP4, bFGF	0-5	DKK-1	6-12															ECM-coated plastic/glass								Yes						Motion tracking analysis	
+253G1	1	EB	Activin A, BMP4, bFGF	0-3	IWP3	3-7				Flow cytometry for cTnT+	78					Yes					ECM-coated plastic/glass								Yes		Yes		3000		Motion tracking analysis	
+ReproCardio2	1													Yes								Scaffold free	CM			100, 0, 0	0.015	0.0625	Yes						Motion tracking analysis	
+HDF-Cat-106-K-05a-CellApplications , BJ1	2	85		0-2		2-4	4, not 12-18	No glucose with lactate	12-18									Yes		Yes		Decellularized tissue	CM			100, 0, 0	50.0	9	Yes							
+WTC11	1		Activin A, BMP4, CHIR99021	0-3	XAV939	3-5	7, not 18-22	No glucose with lactate	18-22	Flow cytometry for cTnT+	96				yes	Yes					Micropatterned plastic/glass	Fibrin	CM + SC	hMSC		91, 0, 9	4.4	16	Yes			1.7	9000		Post deflection 	0.21
+Cellapy	1	70		0-2		2-4	4			Visual inspection	80			Yes			Flow					Gelatin	CM			100, 0, 0		49	Yes						Motion tracking analysis	
+SCVI	2	85	CHIR99021	0-1	IWR1	3-5	7	No glucose	11-14	Flow cytometry for cTnT+											ECM-coated plastic/glass								Yes						Motion tracking analysis	
+PGP1, WTC11	2		CHIR99021	0-1	IWP4	3-5	13	No glucose with lactate	9-13						Yes	Yes		Yes	Yes		ECM-coated plastic/glass	Fibrin + matrigel	CM + SC	hMSC		90, 0, 10	8.0	7.5	Yes		Yes				TFM; Post deflection	0.08
+in-house	3		Activin A	0-1	BMP4, bFGF	1-5	5			Flow cytometry for cTnT+	90										ECM-coated plastic/glass								Yes							
+in-house	3	100	CHIR99021, BMP4	0-1	IWP2	2-3															ECM-coated plastic/glass	Scaffold free	CM			100, 0, 0		0.28	Yes	TEM						
+Stem Cell Theranostics CMs	1															Yes	Flow	Yes				gelMA+alginate, 3D printing	CM + EC		HUVEC	9, 91, 0	11.0	19.25	Yes		Yes				Motion tracking analysis	
+BJ1, C2A, iCell, iCell2, CDI(3)	7	100; EB	Activin A, BMP4; CHIR99021	0-1	IWP2 or IWP4	3-5	7			Flow cytometry for cTnT+	75			Yes	Yes	Yes						Collagen + matrigel	CM + SC	hCF		91, 0, 9	50.0	1.7	Yes	TEM					Post deflection	2.6
+BJ1	1	85	CHIR99021	0-1	IWP2	3-5	7			Flow cytometry for cTnT+	75			Yes	Yes	Yes						Collagen + fibrin + matrigel	CM + SC	hCF		91, 0, 9	50.0	2.5	Yes		Yes				Post deflection	
+ASE-9202	1		StemCell Differentiation kit	0-4		6-8	8	No glucose with lactate	10-12	Western blot for cTnT	30										ECM-coated plastic/glass								Yes							
+ax2505	1																				ECM-coated plastic/glass								Yes			1.7				

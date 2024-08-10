@@ -1,11 +1,315 @@
-Reference	Year	Publication Category	hiPSC Line (Healthy Control)	Number of Healthy Control hiPSC-CM Lines	Confluency at Start of Differentiation (%)	WNT Activator	Time of Wnt Activator (Start Day - End Day)	WNT Inhibitor	Time of Wnt Inibitor (Start Day - End Day)	Day Insulin is Added (Until End Unless Noted)	Purification Protocol	Time of hiPSC-CM Purification (Start Day - End Day)	Method to Assess Differentiation Purity	Differentiation Purity (%)	Maturation Technique: Metabolic?	Metabolic components	Maturation Technique: Electrical Stimulation?	Maturation Technique: Passive Tension?	Maturation Technique: Other Cell Types?
-Horikoshi, Y. et al. Fatty acid-treated induced pluripotent stem cell-derived human cardiomyocytes exhibit adult cardiomyocyte-like energy metabolism phenotypes. Cells 8, (2019).	2019.0	Top 100	1013, H3083	2		CHIR99021	0-2	IWP4	3-5	5	No glucose with lactate	20-27	Flow cytometry for cTnT+	98	Yes	L-carnitine, creatine, taurine, nonessential amino acids, insulin-transferrin-selenium, linoleic-oleic acid			
-Hu, D. et al. Metabolic maturation of human pluripotent stem cellderived cardiomyocytes by inhibition of HIF1? and LDHA. Circ Res 123, 10661079 (2018).	2018.0	Top 100	BJ RiPS-D	1	95	CHIR99021	0-1	IWP4	3-5	7	No glucose with lactate	10-16	Flow cytometry for cTnT+	90	Yes	Palmitic acid, oleic acid, HIF1? inhibitior chetomin, a selective and potent LDHA inhibitor GSK 2837808A			
-Huang, C. Y. et al. Enhancement of human iPSC-derived cardiomyocyte maturation by chemical conditioning in a 3D environment. J Mol Cell Cardiol 138, 111 (2020).	2020.0	Randomized	in-house	1	85	CHIR99021	0-2	IWR1	3-5	9			Flow cytometry for cTnT+	92	Yes	Thyroid hormone T3, dexamethasone, IGF-1		Yes	Yes
-Huebsch, N. et al. Metabolically driven maturation of human-induced-pluripotent-stem-cell-derived cardiac microtissues on microfluidic chips. Nat Biomed Eng 6, 372388 (2022).	2022.0	Randomized	WTC11, SCVI-20, SCVI-273, G15.AO	4	90	CHIR99021	0-1	IWP2	2-4	6	No glucose with lactate	16-18	Flow cytometry for cTnT+	98	Yes	Oleic acid, palmitic acid 		Yes	Yes
-Knight, W. E. et al. Maturation of Pluripotent Stem Cell-Derived Cardiomyocytes Enables Modeling of Human Hypertrophic Cardiomyopathy. Stem Cell Reports 16, 519533 (2021).	2021.0	Selected	CUSO-1, CUSO-2	2		CHIR99021	0-1	IWP2	3-5	7, not 20-25	No glucose with lactate	20-25			Yes	Palmitic acid, oleic acid, galactose			
-Lin, B. et al. Culture in glucose-depleted medium supplemented with fatty acid and 3,3,5-Triiodo-L-thyronine facilitates purification and maturation of human pluripotent stem cell-derived cardiomyocytes. Front Endocrinol (Lausanne) 8, (2017).	2017.0	Selected	BJ1, NCRM-1	2	85	CHIR99021	0-1	IWP2	3-5		No glucose with lactate	13-21	Flow cytometry for cTnT+	95	Yes	1× Linoleic Acid-Oleic Acid-Albumin, T3, lactate			
-Lin, B. et al. Culture in glucose-depleted medium supplemented with fatty acid and 3,3,5-Triiodo-L-thyronine facilitates purification and maturation of human pluripotent stem cell-derived cardiomyocytes. Front Endocrinol (Lausanne) 8, (2017).	2017.0	Selected	NCRM-1, BJ1	2		CHIR99021	0-1	IWP2	4-6		No glucose with lactate, fatty acid + T3	12-21	Flow cytometry for cTnT+	95	Yes	1× Linoleic Acid-Oleic Acid-Albumin, T3, lactate			
-Mills, R. J. et al. Functional screening in human cardiac organoids reveals a metabolic mechanism for cardiomyocyte cell cycle arrest. Proc Natl Acad Sci U S A 114, E8372E8381 (2017).	2017.0	Selected	ATCC-BXS0116	1		Activin A, BMP4, CHIR99021, bFGF	0-3	IWP4	3-6	6			Flow cytometry for cTnT+, a-actinin	70	Yes	Palmitic acid, TGF?-1		Yes	Yes (not pure)
-Parikh, S. S. et al. Thyroid and Glucocorticoid Hormones Promote Functional T-Tubule Development in Human-Induced Pluripotent Stem Cell-Derived Cardiomyocytes. Circ Res 121, 13231330 (2017).	2017.0	Top 100	in-house	2	75	CHIR99021	0-2	IWR1	3-5	16	No glucose	10-16			Yes	T3 (triiodothyronine), Dex (dexamethasone)			
-Peters, M. C. et al. Follistatin-like 1 promotes proliferation of matured human hypoxic iPSC-cardiomyocytes and is secreted by cardiac fibroblasts. Mol Ther Methods Clin Dev 25, 316 (2022).	2022.0	Selected	SCVI-273, UKKi032-C	2	95	CHIR99021	0-3	Wnt-C59	3-7	7	No glucose	9-16	Flow cytometry for ACTN1+		Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR			Yes
+Stress (mN/mm2)	Upstroke Velocity (um/s)	Calcium Handling Analyses Method	Amplitude (F/F0)	Beat Rate (BPM)	Time to Peak (ms)	Time to Relaxation (ms)	Conduction Velocity (cm/s)	Electrical Physiology Analyses Method	AP Conduction Velocity (cm/s)
+		Calcium 5 kit						Patch clamp	14.0
+									
+									
+								Patch clamp	
+									
+									
+									
+								Patch clamping	
+			0.2						
+		 Fluo-4 	0.06						
+									
+									
+									
+									
+	33							Patch clamp	41.0
+		Dye						MEA; Optical mapping	10.0
+		Dye						Patch clamp	16.0
+0.5	70	Dye	4.0		99				
+		Dye						Patch clamp; optical mapping	
+		Dye		35.0	190			Optical mapping	
+									
+	200	Dye	8.0					Patch clamp	
+2.7	60 mN/mm2/s	Dye	0.6					Optical mapping	20.0
+3.0		Genetically encoded sensor	0.03	60.0				Optical mapping	
+50.0									
+		Dye	3.0					Patch clamp	
+		Dye	3.2					Patch clamp	
+		Dye	2.5		200	500		Patch clamp	
+	time to peak=0.71s	Dye	0.88		490				
+									
+									
+2.2		Dye			181				
+									
+	1.2	Dye	1.8	33.0				Patch clamp	
+		Dye	0.25					Patch clamp	
+		Dye	0.8		270				
+		Dye	0.9	50.0	500				
+		Genetically encoded sensor 		101.0					
+	18	Dye							
+		Genetically encoded sensor	1.1	25.0				Patch clamp	
+0.07		Dye					4.3		
+		Dye	2.0	48.0	400				
+									
+	70								
+		Dye							
+									
+									
+								Patch clamp	
+		Dye		20.0					
+		Dye							
+		Genetically encoded sensor							
+								Optical mapping	19.0
+0.6	150	Dye					9.0	Patch clamp	
+									
+								MEA	
+								Patch clamp	34.9
+									
+		Dye	5.0	40.0	250	1000 (time to 50%)			
+								Patch clamp	
+	time to peak=0.22s							Patch clamp	
+	20		4.0					Patch clamp; optical mapping	
+		Dye		21.0					
+									
+									
+	500 uN/s								
+									
+0.225									
+									
+								Patch clamp	
+		Dye		15.0			11.0		
+								Patch clamp	
+									
+									
+				50.0				Optical mapping	
+									
+		Dye						MEA	
+		Dye	2.0						
+		Dye							
+		Dye			300			Optical mapping	
+		Dye							
+									
+		Dye	1.0	36.0	100				
+12.0		Dye		36.0	100			Optical mapping	
+									
+		Dye		40.0	150	350			
+		Dye							
+									
+								MEA	
+1.7									
+		Dye					20.0		21.0
+								Optical mapping	
+0.72								Patch clamp	
+									
+		Dye	0.18	60.0	2000			MEA	
+		Dye						Patch clamp; MEA	
+									
+		Dye						Patch clamp	
+									
+		Dye						Optical mapping	
+									
+		Dye		25.0				MEA	
+									
+								MEA	
+									
+		Genetically encoded sensor	0.6	30.0		220 (time to 50%)			
+								Patch clamp	
+		Dye						Optical mapping	14.1
+	17	Dye	2.3					Optical mapping	18.0
+		Dye	0.175		375			Patch clamp; MEA	5.0
+							8.3		
+	50	Dye			150			Patch clamp	
+								Patch clamp; MEA	
+		Genetically encoded sensor		40.0		310		Optical mapping	6.0
+								Patch clamp	
+								MEA	
+									
+	45	Genetically encoded sensor			150				
+				42.0			33.0		
+		Dye		19.0				MEA	
+									
+									
+		Dye	2.6		250 @ 1 HZ			Optical mapping	
+		Dye					44.0	Patch clamp; optical mapping	
+		Dye	0.15	45.0					
+									
+		Dye	1.25	50.0				Optical mapping	
+									
+		Genetically encoded sensor	1.5						
+								Optical mapping	
+	80	Genetically encoded sensor 						Patch clamp; MEA	
+4.0		Genetically encoded sensor		38.0					
+								Optical mapping	
+									
+		Dye	1.1		600				
+	11	Dye	1.12	35.0			15.0	MEA; Optical mapping	
+		Genetically encoded sensor			300				
+									
+								Patch clamp	
+									
+									
+0.8									
+		Dye		70.0			1.5		
+		Dye		32.0					
+0.54		Genetically encoded sensor							
+									
+									
+				27.0					
+									
+		Dye							
+			2.0		400			Patch clamp	
+		Genetically encoded sensor	1.9	25.0	160			Patch clamp	
+		Genetically encoded sensor	1.6		140				
+								Optical mapping	
+	3.5								
+		Dye						Patch clamp	
+								MEA	13.6
+		Dye		7.0				MEA	
+									
+								Optical mapping	6.0
+								Optical mapping	15.0
+									
+0.38	42	Dye		30.0					
+								MEA	
+								Patch clamp	
+								Patch clamp	
+								Patch clamp	
+0.4	42	Dye			200	220			
+		Dye	0.35	45.0	300				
+								MEA	11.0
+								MEA	
+	8	Dye						Optical mapping	
+									
+10.0								Optical mapping	37.0
+									
+		Dye		48.0					
+									
+		Genetically encoded sensor							
+	50								
+		Dye		90.0					
+									
+				61.0					
+									
+									
+	10							MCR	
+								Patch clamp	
+									
+									
+3.7									
+1.5								MCR	
+	8	Genetically encoded sensor						MEA	
+									
+		Dye					9.4		
+									
+25.0									
+									
+									
+0.25	0.14 mN/s								
+									
+									
+									
+0.55								MCR	
+									
+		Dye	0.2		230				
+		Dye							
+				96.0					15.0
+									
+								Optical mapping	4.0
+	45	Dye		24.0	500				
+3.2									
+5.0		Dye							
+		Dye							
+									
+									
+		Dye		33.0	190			Patch clamp; optical mapping	
+									
+									
+									
+	time to peak=0.16s								
+		Dye				790		Patch clamp	
+								Optical mapping	30.0
+									
+									
+									
+								Optical mapping	
+								Patch clamp	
+								MEA	41.0
+								Patch clamp	
+									
+									
+		Dye	0.3	42.0					
+		Dye			170	480 (50%)			
+									
+								Optical mapping	2.5
+2.1									
+3.8		Dye				250	25.0	Patch clamp	
+	15.25	Dye	0.8		315	145			
+1.0			0.037	60.0	127				
+0.18									
+0.15		Dye						Optical mapping	
+		Dye						Optical mapping	
+		Genetically encoded sensor		83.0	190				
+									
+									
+		Dye							
+3.3									
+									
+									
+		Dye						Patch clamp	
+22.4								Optical mapping	28.0
+									
+								Patch clamp	
+	time to peak=0.29s	Dye		12.0					
+		Genetically encoded sensor; Dye	3.0		250			Genetically encoded sensor; Optical mapping	
+		Genetically encoded sensor 	2.2	54.0				Patch clamp	
+		Dye			204			Patch clamp; MEA	26.0
+	6	Dye							
+									
+	1.2								
+									
+									
+		Dye						MEA	
+3.22	622	Genetically encoded sensor	0.18		210				
+			2.2						
+		Dye	1.5		800				
+				108.0				MEA	
+									
+									
+6.0								Patch clamp	
+									
+				40.0					
+									
+								MEA	
+	330	Dye	0.35		200			Patch clamp	35.0
+	34								
+									
+								Patch clamp	
+								Patch clamp	
+		Dye							
+								MCR	
+		Dye						MEA; Optical mapping	
+									
+	38								
+		Dye	1.69				5.6	Patch clamp	5.0
+								MEA	
+	5	Dye		27.0					
+		Genetically encoded sensor						Optical mapping	
+									
+									
+		Genetically encoded sensor		30.0			4.2		
+0.32									
+		Dye		45.0			18.0		
+	7	Dye							
+								Optical mapping	
+		Dye	4.5	70.0	250				
+		Dye	0.7	40.0				Patch clamp	
+	30	Dye		40.0					
+									
+									
+								MEA	
+									
+	16		1.04	40.0					
+									
+									
+0.95	1300	Dye	0.2		180				
+	40.5	Dye						MEA	
+	10			90.0					
+0.28								Genetically encoded sensor	
+		Dye							
+									
+				40.0					
+23.2		Dye	0.08		290			Optical mapping	32.0
+								Patch clamp	
+									
+									

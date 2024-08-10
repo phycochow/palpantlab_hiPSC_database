@@ -1,12 +1,318 @@
-Reference	Year	Publication Category	hiPSC Line (Healthy Control)	Number of Healthy Control hiPSC-CM Lines	Confluency at Start of Differentiation (%)	WNT Activator	Time of Wnt Activator (Start Day - End Day)	WNT Inhibitor	Time of Wnt Inibitor (Start Day - End Day)	Day Insulin is Added (Until End Unless Noted)	Purification Protocol	Time of hiPSC-CM Purification (Start Day - End Day)	Method to Assess Differentiation Purity	Differentiation Purity (%)	Maturation Technique: Metabolic?	Metabolic components	Maturation Technique: Electrical Stimulation?	Maturation Technique: Passive Tension?	Maturation Technique: Other Cell Types?
-Peters, M. C. et al. Metabolic Maturation Increases Susceptibility to Hypoxia-induced Damage in Human iPSC-derived Cardiomyocytes. Stem Cells Transl Med 11, 10401051 (2022).	2022.0	Selected	SCVI-273, UKKi032-C	2	85	CHIR99021	0-3	Wnt-C59	3-7	7	No glucose	9-16	Flow cytometry for cTnT+; Flow cytometry for ACTN1+	94	Yes	L-lactate, Vitamin B12, Biotin, Creatine monohydrate, Taurine, L-carnitine, Ascorbic acid, 1x NEAA, Albumax, 1x B27, 1% KOSR			
-Schwan, J. et al. Anisotropic engineered heart tissue made from laser-cut decellularized myocardium. Sci Rep 6, (2016).	2016.0	Top 100	in-house	1	90	CHIR99021	0-1	IWP4	3-5						Yes	IGF-1, dexamethasone, T3		Yes	
-Sebastião, M. J. et al. Bioreactor-based 3D human myocardial ischemia/reperfusion in vitro model: a novel tool to unveil key paracrine factors upon acute myocardial infarction. Translational Research 215, 5774 (2020).	2020.0	Selected	DF19-9-11T.H	1	85	CHIR99021, Activin A	0-1	IWR1	1-7	7			Flow cytometry for cTnT+	90	Yes	T3			
-Tsan, Y. C. et al. Physiologic biomechanics enhance reproducible contractile development in a stem cell derived cardiac muscle platform. Nat Commun 12, (2021).	2021.0	Selected	MR18, MR30, MR48, WTC11, DF19-9-11T.H	5		CHIR99021	0-1	IWP4	3-10	6, not 12-16	No glucose with lactate	12-16	IHC a-actinin	95	Yes	T3, dexamethasone, Torin1			
-Yang, X. et al. Fatty Acids Enhance the Maturation of Cardiomyocytes Derived from Human Pluripotent Stem Cells. Stem Cell Reports 13, 657668 (2019).	2019.0	Top 100	IMR-90, WTC11	2		Activin A, BMP4, CHIR99021	0-3	XAV939	3-5	7			Flow cytometry for cTnT+	80	Yes	"Oleic acid-albumin and linoleic
-acid-albumin, Palmitate"			
-Abecasis, B. et al. Unveiling the molecular crosstalk in a human induced pluripotent stem cell-derived cardiac model. Biotechnol Bioeng 116, 12451252 (2019).	2019.0	Randomized	DF19-9-11T.H	1	90	CHIR99021	0-1	IWR1	3-6	7			Flow cytometry for cTnT+	97					Yes
-Abilez, O. J. et al. Passive Stretch Induces Structural and Functional Maturation of Engineered Heart Muscle as Predicted by Computational Modeling. Stem Cells 36, 265277 (2018).	2017.0	Top 100	IMR-90	1	80	CHIR99021	0-2	IWR1	3-5	7			Flow cytometry for cTnT+	88				Yes	Yes
-Abulaiti, M. et al. Establishment of a heart-on-a-chip microdevice based on human iPS cells for the evaluation of human heart tissue function. Sci Rep 10, (2020).	2020.0	Selected	253G1, FF101-s04	2	100	Activin A, BMP4, CHIR99021, bFGF	0-5	XAV939, IWP4	5-7				Flow cytometry for cTnT+	37					Yes (not pure)
-Acun, A., Nguyen, T. D. & Zorlutuna, P. In vitro aged, hiPSC-origin engineered heart tissue models with age-dependent functional deterioration to study myocardial infarction. Acta Biomater 94, 372391 (2019).	2019.0	Randomized	HVRDi007-A, Huv-iPS4F1	2		CHIR99021	0-1	IWP4	3-5	8			Flow cytometry for cTnT+	93					
-Afzal, J. et al. Cardiac ultrastructure inspired matrix induces advanced metabolic and functional maturation of differentiated human cardiomyocytes. Cell Rep 40, (2022).	2022.0	Selected	WTC11, HF-YK27, PBY4-48D	3	82.5	CHIR99021	0-2	IWR	4-5	10	No glucose with lactate	10-12	Flow cytometry for cTnT+	95					
+AP Amplitude (mV)	Resting Membrane Potential (mV)	Max Capture Rate (Hz)	Metabolic Analyses Method	Gene Analyses Method	Pharmacological Interventions
+			Gene expression	PCR, RNA-seq	
+				PCR	Thyroid hormone (T3)
+					
+125					
+			Mitochondria staining, mitochondrial respiratory complex activity		
+			Clark-type oxygen electrode, MitoTracker staining	PCR	
+			Seahorse, metabolic assays	PCR, ATAC-Seq	AICAR, compound C, nicotinamide (NAM), trichostatin A (TSA)
+			Gene expression	PCR	
+			Seahorse		Hormone stimulation, T3
+			Seahorse	RNA-seq, PCR	 T3 hormone, GW7647 
+					
+					
+					
+					
+122	-67.0		Seahorse	RNA-seq, PCR	
+			Seahorse; metabolic flux	RNA-seq, PCR	
+100	-70.0			Proteomics	caffeine
+			Seahorse	Microarray	
+110	-80.0		Seahorse	RNA-seq, PCR	isoproterenol, tetrodotoxin
+			Seahorse	PCR	isoproterenol
+			Seahorse	PCR	
+114	-74.0		Seahorse	PCR	
+		4.0		PCR	isoproterenol
+			Seahorse	PCR	verapamil, flecainide, alfuzosin, isoproterenol
+			Metabolomics	RNA-seq	phenylephrine
+97	-85.0			PCR	isoproterenol
+95	-85.0			PCR	isoproterenol, caffeine
+102	-59.0		Metabolomics, Seahorse	RNA-seq, PCR	
+					caffeine (for calcium content & SR)
+				RNA-seq, PCR	
+			Seahorse		
+					isoproterenol
+					
+121	-81.0			RNA-seq	isoproterenol, verapamil, mavacamten
+91	-59.0		Seahorse	RNA-seq, PCR	
+					
+				PCR	
+					isoproterenol
+				PCR	isoproterenol
+170	-65.0		Seahorse	RNA-seq, PCR	lidocaine, dofetilide, nifedipine, caffiene
+				Nanostring	isoproterenol
+				PCR	norepinephine
+					
+					doxorubicin
+				PCR	
+					
+					sunitinib, doxorubicin
+66	-41.0			PCR	
+					phenylephrine, isoproterenol, blebbistatin, doxorubicin
+			Seahorse	PCR	propranolol, epinephrine, atenolol, dobutamine
+				PCR	dantrolene, ranolazine
+				PCR	isoproterenol, BaCl2, E4031, chromanol 293B, nifedipine, bay-k 8644, cromakalim
+	-60.0			PCR	
+				PCR	dofetilide, quinidine, moxifloxacin, ranolazine, verapamil, quinine, propafenone, chloroquine, terfenadine, cisapride, amiodarone, azithromycin, ritonavir, amitriptyline, nilotinib, toremifene, lidocaine, mexiletine, mibefradil, diltiazem, licarbazepine, cibenzoline, sertindole
+					verapamil, diltiazem, loratadine, metoprolol, mexiletine, nifedipine, nitrendipine, ranolazine, tamoxifen, terfenadine, astemizole, chlorpromazine, cisapride, clarithromycin, clozapine, domperidone, droperidol, ondansetron, pimozide, risperidone, dofetilide, azimilide, bepridil, DL-sotalol, disopyramide, ibutilide, quinidine, vandetanib
+	-79.0				tamoxifen, nifedipine, nitrendipine, ranolazine, diltiazem, metoprolol, verapamil, domperidone, droperidol, clozapine, terfenadine, astemizole, cisapride, pimozide, risperidone, ondansetron, disopyramide, quinidine, DI sotalol, bepridil, dofetilide, azimilide, ibutilide, vandetanib
+				RNA-seq, PCR	
+					
+			Glucose consumption and Lactate production rate analysis	RNA-seq, PCR	
+100	-78.0			PCR	
+				RNA-seq	
+					minobispropanenirtile, hexanedioic acid, titanocene dichloride, 2-amino-4-chlorophenol, 1-4-benzoquinone, di(2-ethylhexyl)phthalate, 3-4-dichlorophenyl isocyanate, isodecyl diphenyl phosphate, azobenzene, bisophenol A, tris(2-chloroethyl)phosphate, 2-ethylhexyl diphenyl phosphate, 3-3-5-5-tetrabromobisphenol A, tert-butyl phosphates isopropylated, triphenyl phosphate, tris(methylphenyl)phosphate, thiabendazole, aldicarb, captan, endosultan, 8-hydroxyquinoline, aldrin, myclobutanil, dichlorodiphenyltrichloroethane, dieldrin, heptachlor, parathion, chlorpyrifos, carbaryl, 2-phenylphenol, dazomet, acetochlor, deltamethrin, permethrin, tebuconazole, 3-iodo-2-propynyl-n-butylcarbamate, hexachlorophene, gentian violet, rotenone, manganese(2)acetate, (CH3-cyclopentadienyl)tricarbonyl Mn, methylmercuric(2)chloride, hydroxyurea, acetylsalicylic acid, atenolol, acetaminophen, sodium valproate, 6-propyl-2-thiouracil, phenobarbital sodium, thalidomide, rantidine, 6-thioquanine, 5-fluotouracil, citalopram hydrobromide, disulfiram, pyrimethamine, rantidine hydrochloride, colchicine, lidocaine, progesterone, lamotrigine, flutamide, lindane, mexiletine hydrochloride, moxifloxacin hydrochloride, nifedipine, n-acetylprocainamide, triameterene, vernacalant, cabazitaxel, ranolazine, loratadine, propafenone, quinidine sulfate, tamoxifen, bepridil hydrochloride, chlorpromazine hydrochloride, reserpine, ditiazem, diethylstilbestrol, mifepristone, mifepristone2, sotalol hydrochloride, amitriptyline hydrochloride, sotalol, mitrendipine, terfenadine, verapamil hydrochloride, sematilide, azithromycin, ibutilide fumarate, cisapride monohydrate, dofetilide
+				PCR	
+					
+		2.5		PCR	isoproterenol
+					
+			Reduction assay 		
+					
+118	-61.3			RNA-seq	
+					
+					
+					
+			TMRM staining	RNA-seq, PCR	
+			Metabolic flux	Transcriptomics	
+				PCR	
+				PCR	isoproterenol, nifedipine
+				PCR	
+				PCR	doxorubicin, caffeine
+				RNA-seq, PCR	isoproterenol, carbamylcholine
+					
+					
+					
+				PCR	isoproterenol
+					
+					
+					
+				RNA-seq	
+					dofetilide, ATX-II, tetrodotoxin
+					
+					
+					carbenoxolone
+	-35.0	6.0		PCR	
+					
+					E4031
+100 @ 1 Hz	-80.0				quinidine, amiodarone, DL-sotalol
+				PCR	
+	-70.0			PCR	isoproterenol, E4031
+			Seahorse	RNA-seq	isoproterenol, verapamil, doxorubicin
+					metoprolol
+					isoproterenol, dobutamine, milrinone, PACAP27, nifedipine, FPL64176, digoxin, thapsigargin, omecamtiv mecarbil, mavacamten, levosimendan
+				PCR	isoproterenol, propranolol
+				PCR	
+				PCR	acetaminophen, isoprotereol, E4031
+				RNA-seq	
+				PCR	isoproterenol, propanolol
+115	-64.0			PCR	E4031, chromanol
+					isoproterenol
+				PCR	
+112	-75.0		Seahorse	RNA-seq, PCR	
+				PCR	verapamil, flecainide
+105	-70.0		Seahorse	RNA-seq, PCR	verapamil, Bay K-8644, dbcAMP
+100	-52.0			PCR	isoproterenol, verapamil
+					isoproterenol, carbamylcholine, E4031, ATX-II, ouabain, quinidine, lidocaine, carbenoxolone
+		1.0			
+				Proteomics	
+					
+					
+				PCR	
+					isoproterenol, phenylephrine, carbamylcholine, heptanol
+					norepinephrine
+					
+			Seahorse	Proteomics	isoproterenol
+115	-80.0			PCR	
+					
+					alfuzosin, flecainide, isoproterenol
+				RNA-seq	
+					
+				RNA-seq	
+	-75.0			PCR	carbamylcholine
+	-60.0				isoproterenol
+					isoproterenol, verapamil
+					
+86				PCR	
+					
+		2.0		PCR	
+					
+					
+98	-76.0			PCR	
+				RNA-seq, PCR	
+					
+					isoproterenol, nifedipine
+				RNA-seq, PCR	isoproterenol
+				PCR	isoproterenol
+					
+					
+					
+					
+					E4031
+				PCR	isoproterenol, propranolol
+100	-74.0			PCR	
+	-60.0				
+				PCR	
+					E4031, ranolazine, isoproterenol,bispanol-A, 4-AP Bay K-8644
+				PCR	
+					
+					isoproterenol, fexofenadine, terfenadine
+					isoproterenol, verapamil, E4031
+				PCR	doxorubicin, trastuzumab
+				PCR	
+				RNA-seq, PCR	
+				PCR	thiolidamide, valproic acid
+					
+					isoproterenol
+90	-65.0			PCR	flecainide, JTV519, E4031, ivabradine, SEA0400
+109	-78.0			"fluorometric quantitation with Qubit
+"	"ivabradine, E-4031, verapamil, moxifloxacin, HMR-1556, isoproterenol 
+"
+102	-74.0			PCR	Nifedipine, tetrodotoxin
+				PCR	
+				PCR	isoproterenol
+					
+				PCR	E4031, verapamil
+				RNA-seq, PCR	
+				PCR	
+					verapamil, isoproterenol
+				PCR	isoproterenol, verapamil, nifedipine, nisoldipine
+				RNA-seq, PCR	ionomycin
+				PCR	isoproterenol, omecamtiv mecarbil, levosimendan
+				PCR	
+				PCR	thalidomide
+					isoproterenol
+			Seahorse	RNA-seq	GW9662
+				PCR	isoproterenol, verapamil, SEA-0400, E4031, NS-1643, ATX-II, tetrodotoxin, ouabain, rolipram, EMD-57033, Bay K-8644
+					ivabradine, isoproterenol, 4-aminopyridin
+				RNA-seq	
+		1.5		PCR	isoproterenol
+120	-80.0				
+					
+				RNA-seq	
+				RNA-seq	carvedilol, losartan, pirfenidone
+		4.5		RNA-seq	
+					isoproterenol, verapamil, metoprolol, E4031
+					
+					
+				PCR	
+				PCR	
+					
+					aspirin, doxorubicin, sunitinib, erlotinib
+				PCR	
+				PCR	
+					
+				Nanostring	
+		6.9		PCR	
+				RNA-seq	
+					blebbistatin
+					
+					cyclophosphamide, acrolein, terfenadine, fexofenadine
+					doxorubicin, atorvastatin, valproic acid, acetaminophen, n-acetyl-m-aminophenol
+					
+					isoproterenol
+					
+					isoproterenol
+				PCR	
+					
+				PCR	
+100	-75.0				isoproterenol, forskolin
+					
+				PCR	amitriptyline, amoxicillin, acetylsalicylic acid, atenolol, AZ1-9, bepridil, captopril, chloroquine, cibenzoline, cimetidine, digoxin, diltiazem, disopyramide, dobutamine, doxorubicin, enalapril, epinephrine, flecainide, furosemide, haloperidol, isoproterenol, lapatinib, levosimendan, lisinopril, milrinone, nifedipine, paracetamol, pravastatin, quinidine, ramipril, sunitinib, tolbutamide, verapamil
+					doxorubicin, L-NIO
+					bepridil, cisapride, carbenoxolone
+					E-4031, nimodipine, chromanol 293B
+				PCR	
+				PCR	
+				PCR	
+					norepinephrine
+					isoproterenol, dobutamine, milrpinone, pimobendan, levosimendan, omecamtiv mecarbil, AMG1, AMG2, pyrethrin-apelin-13
+110	-78.0				E4031
+110	-82.0				isoproterenol
+105	-39.0				tetrodotoxin, nifedipine, E4031
+					
+					lidocaine, nifedipine, E4031
+			Seahorse	RNA-seq	norepinephrine
+				PCR	verapamil, ryanodine, E4031, isoproterenol
+					
+					
+		5.6		RNA-seq	doxorubicin, doxorubicinol
+115	-70.0		Seahorse	PCR	isoproterenol, nifedipine, verapamil, thapsigargin
+					isoproterenol, epinephrine, nifedipine, verapamil
+				PCR	
+			Seahorse		
+		2.9		PCR	
+					epinephrine, forskolin, levosimendan, pimobendan, dobutamine, milrinone, omecamtiv mecarbil, terbutaline, verapamil, doxorubicin, sunitinib, citalopram, itraconazole, sorafenib, ivabradine, flecainide, phentolamine, zimelidine, atenolol, acetylsalicylic acid, captopril, glibenclamide, enalaprilat, clonidine, paracetamol, tolbutamide, pravastatin, sildenafil
+					isoproterenol, nifedipine, Bay K-8644, digoxin, EMD-57033, omecamtiv mecarbil
+				PCR	
+				RNA-seq, PCR	doxorubicin
+				RNA-seq	
+					adrenaline
+					
+					
+90	-62.0			PCR	Ivabradine
+				PCR	
+			Seahorse		
+90				RNA-seq	doxorubicin, dabrafenib, dasatinib, lapatinib, pazopanib, sorafenib, sunitinib, trametinib, nilotinib, crizotinib, vandetanib, vemurafenib
+				RNA-seq	isoproterenol
+				PCR	cisapride, erythromycin, sotalol, nilotinib, oubain
+104	-66.0	4.0		RNA-seq	
+	-45.0				bepridil, cisapride, carbenoxolone, verapamil
+				PCR	
+					
+					blebbistatin
+					
+			Metabolic flux	PCR	isoproterenol
+				PCR	E4031, isoproterenol
+		2.7			
+			OCR chamber equipped with fiber optic sensors		
+				PCR	
+				PCR	E-4031, isoproterenol, propranolol
+					blebbistatin, isoproterenol, nifedipine
+					
+97	-57.0			RNA-seq	isoproterenol, carbachol, CGP-20712A, CI-118551
+			Seahorse		
+					"MYK-461, CK-1827452, verapamil, propanolol
+"
+				RNA-seq	
+100				PCR	NS3623, E4031
+-50				RNA-seq, PCR	cisapride 
+					
+			Metabolic flux	PCR	blebbistatin, N-benzyl-p-toluene sulfonamide
+					nimodipine, E4031, norepinephrine, epinephrine, serotonin, ICI118,551, CP 20712A, nifedipine, mibefradil 
+	-75.0				
+				PCR	isoproterenol, clenbuterol, diltiazem
+		2.5		PCR	isoproterenol, carbachol, sotalol
+					epinephrine, pimobendan, forskolin, acetylsalicylic acid, levosimendan, atenolol, verapamil, captopril, doxorubicin, omecamtiv mecarbil, sunitinib, ouabain
+					
+					
+75	-42.0			PCR	
+				PCR	epinephrine, nifedipine, E4031, metoprolol
+				PCR	
+					
+					
+					
+					doxorubicin, oxaliplatin
+				PCR	
+				RNA-seq	lidocaine, isoproterenol, flecainide, propranolol, amiodarone
+				RNA-seq	
+		2.6			
+				RNA-seq	isoproterenol
+				PCR	isoproterenol, carbamylcholine
+				PCR	
+				PCR	
+					
+93				PCR	
+			Seahorse		
+			Seahorse	PCR	
+					
+				PCR	
+				PCR	
+					verapamil, isoproterenol
+			Seahorse	RNA-seq	ivabradine, carbamylcholine, vernakalant
+				PCR	
+				PCR	
+				PCR	
+					doxorubicin
+100	-65.0				E4031, isoproterenol, milrinone, diltiazem, lidocaine, nifedipine, thapsigargin
+		5.0			
+			Metabolic flux	RNA-seq, PCR	
+					
