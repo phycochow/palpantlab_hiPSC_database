@@ -291,7 +291,7 @@
 
         async function loadTSV() {
             try {
-                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/YCao_updated_dataset3.tsv');
+                const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/minimal_YCao_updated_dataset.tsv');
                 const tsvText = await response.text();
                 const rows = tsvText.split('\n').map(row => 
                     row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
