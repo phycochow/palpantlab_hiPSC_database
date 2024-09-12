@@ -1,120 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- ############## -->
+<!-- Header Content -->
+<!-- ############## -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist with Submission</title>
-    <style>
-        .hidden {
-            display: none;
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="generator" content="pandoc"/>
+
+    <title>Latest hiPSC-CM Protocols</title>
+    <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+    <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+    <script src="site_libs/navigation-1.1/tabsets.js"></script>
+    <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+
+    <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="site_libs/datatables-binding-0.24/datatables.js"></script>
+    <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="site_libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="site_libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+    <link href="site_libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js"></script>
+    <script src="site_libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js"></script>
+    <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+    <!-- Favicons for Apple and Windows users -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
+
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
+
+    <style type="text/css">
+        h1 {
+            font-size: 34px;
         }
-        .section-button {
-            display: block;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: none;
-            cursor: pointer;
-            text-align: left;
+
+        h1.title {
+            font-size: 38px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h5 {
             font-size: 16px;
-            width: 100%;
         }
-        .section-button:focus {
+
+        h6 {
+            font-size: 12px;
+        }
+
+        .table th:not([align]) {
+            text-align: left;
+        }
+
+    </style>
+        
+    <link rel="stylesheet" href="sandflat.min.css" type="text/css"/>
+    <link rel="stylesheet" href="dt_style.css" type="text/css"/>
+</head>
+
+<!-- ############ -->
+<!-- Body content -->
+<!-- ############ -->
+<body>
+
+    <style type="text/css">
+        .main-container {
+            max-width: 940px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        code {
+            color: inherit;
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tabbed-pane {
+            padding-top: 12px;
+        }
+
+        button.code-folding-btn:focus {
             outline: none;
-            background-color: #e0e0e0;
-        }
-        .item-label {
-            margin-right: 10px;
-        }
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
         }
     </style>
-    <script>
-        let resultList = [];
 
-        function handleCheckboxChange(event, index, boxNumber) {
-            if (boxNumber === 1) {
-                resultList[index] = event.target.checked ? 'True' : 'NaN';
-                document.getElementById(`item${index + 1}-box2`).checked = false;
-            } else if (boxNumber === 2) {
-                resultList[index] = event.target.checked ? 'False' : 'NaN';
-                document.getElementById(`item${index + 1}-box1`).checked = false;
-            }
+    <style type="text/css">
+        /* Padding for bootstrap navbar */
+        body {
+            padding-top: 51px;
+            padding-bottom: 40px;
         }
 
-        function handleSubmit(event) {
-            event.preventDefault();
-            for (let i = 0; i < resultList.length; i++) {
-                if (resultList[i] === undefined) {
-                    resultList[i] = 'NaN';
+        /* Offset scroll position for anchor links (for fixed navbar) */
+        .section h1, 
+        .section h2, 
+        .section h3, 
+        .section h4, 
+        .section h5, 
+        .section h6 {
+            padding-top: 56px;
+            margin-top: -56px;
+        }
+    </style>
+
+    <!-- Manages active state of menu based on current page -->
+    <script>
+        $(document).ready(function () {
+            // active menu anchor
+            href = window.location.pathname
+            href = href.substr(href.lastIndexOf('/') + 1)
+            if (href === "")
+                href = "index.html";
+            var menuAnchor = $('a[href="' + href + '"]');
+
+            // mark it active
+            menuAnchor.parent().addClass('active');
+
+            // if it's got a parent navbar menu mark it active as well
+            menuAnchor.closest('li.dropdown').addClass('active');
+        });
+    </script>
+
+    <div class="container-fluid main-container">
+        <!-- Navbar code here -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Navbar Header: Includes the brand name and the toggle button for collapsing the navbar -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Brand name -->
+                    <a class="navbar-brand" href="homepage.html">hiPSC-CM Protocol Mining</a>
+                </div> <!-- navbar-header -->
+
+                <!-- Navbar links and dropdowns -->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Study Database<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="latest_database.html">Latest Version</a></li>
+                                <li><a href="original_database.html">Original Version</a></li>
+                            </ul> <!-- dropdown-menu -->
+                        </li> <!-- dropdown -->
+
+                        <li><a href="result_plots.html">Enriched Protocols</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Methods<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="methods_overview.html">Overview</a></li>
+                                <li><a href="standard_terms.html">Standardising Terminologies</a></li>
+                                <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
+                                <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
+                            </ul> <!-- dropdown-menu -->
+                        </li> <!-- dropdown -->
+                    </ul> <!-- nav navbar-nav -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                About<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="credits.html">Credits & Citations</a></li>
+                                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
+                                <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
+                            </ul> <!-- dropdown-menu -->
+                        </li> <!-- dropdown -->
+                    </ul> <!-- nav navbar-nav navbar-right -->
+
+                </div> <!-- navbar-collapse -->
+
+            </div> <!-- container -->
+        </div> <!-- navbar navbar-default navbar-fixed-top-->
+
+        <!-- ################# -->
+        <!-- Start of database -->
+        <!-- ################# --> 
+        <div class="fluid-row" id="header">
+            <h1 class="title toc-ignore">314 hiPSC-CM Protocol Designs and Outcomes</h1>
+            <p>QC'ed and Processed from the <a href="original_database.html">Original Database</a>. Install this dataset <a href="https://phycochow.github.io/palpantlab_hiPSC_database/datasets/1_Processed_hiPSC_12Sep24.tsv">here</a></p>
+            <p>Last Updated: 10th August, 2024</p>
+        </div>
+
+        <p><br></p> <!-- Line break -->
+
+        <div class="well">
+            <div id="tsv-data"></div> 
+        </div> <!-- well -->
+
+        <p><br></p> <!-- Line break -->
+
+
+        <!-- Add New Row Form with Collapsible Sections -->
+        <div class="well">
+            <div id="addRowForm" class="mt-3">
+                <h3><strong>Select Protocol Parameters Here</strong></h3>
+                <p>See what studies have similar design to your hiPSC protocol by selecting the protocol parameters. The server will temporarily add your hiPSC protocol as the first row in the table, and the best matching studies in following rows. You can leave irrelevant protocol parameters empty.<p>
+
+                <form id="newRowForm" class="form-inline">
+                    <!-- Dynamically generated collapsible sections based on Dictionary D -->
+                    <div id="collapsibleSections" class="mb-2"></div>
+                    <button type="submit" class="btn btn-primary ml-2">Add Row and Refresh Table</button>
+                </form>
+            </div> <!-- addRowForm -->
+        </div> <!-- well -->
+
+        <!-- JavaScript for dynamic form generation and checkbox handling -->
+        <!-- Dictionary D -->
+        <script> 
+            const D = {
+                "hiPSC Line": 19,
+                "Number of hiPSC Lines": 6,
+                "hiPSC Backbone Media": 10,
+                "hiPSC-CM Backbone Media": 8,
+                "Wnt Inhibitor": 11,
+                "Wnt Inhibition Duration": 8,
+                "Induction Conditions": 8,
+                "Induction Duration": 6,
+                "Insulin Addition": 4,
+                "Maturation Strategy": 8,
+                "Metabolic Maturation Strategy (Broad)": 17,
+                "Metabolic Maturation Strategy": 20,
+                "Purification Strategy": 5,
+                "Purification Duration": 9,
+                "2D % Confluency": 8,
+                "2D Surface": 9,
+                "Ancestry of hiPSC Lines": 4,
+                "Sex of hiPSC Lines": 4,
+                "hiPSC-CM Maintenance/Maturation Media (if different)": 6,
+                "hiPSC-CM Media Supplement": 20,
+                "hiPSC-CM Matrix Coating if Replated": 8,
+                "Disease Modelling": 14,
+                "Pharmacological Interventions": 19,
+                "3D Platform": 11,
+                "3D % Confluency": 8,
+                "3D Cell Types": 5,
+                "3D EC % Composition": 3,
+                "3D Endothelial Cell Type": 5,
+                "3D SC % Composition": 3,
+                "3D Stromal Cell Type": 10,
+                "3D CM % Composition": 3,
+                "3D Estimated Tissue Cell Density": 4,
+                "3D Estimated Tissue Size": 5,
+                "3D Tissue Media": 12,
+                "Amplitude (F/F0)": 6,
+                "Beat Rate (beats per minute)": 6,
+                "Calcium Handling Analysis Method": 4,
+                "Force (mN)": 6,
+                "Sarcomere Length (um)": 4,
+                "Upstroke Velocity (um/s)": 6,
+                "AP Amplitude (mV)": 6,
+                "AP Conduction Velocity (cm/s)": 6,
+                "Conduction Velocity (cm/s)": 4,
+                "Resting Membrane Potential (mV)": 6,
+                "Time to Peak (ms)": 6,
+                "Time to Relaxation (ms)": 4,
+                "Stress (mN/mm2)": 6,
+                "Max Capture Rate (Hz)": 4,
+                "Metabolic Analysis Method": 5,
+                "Contractile Analysis Method": 6,
+                "Electrophysiology Analysis Method": 6,
+                "Gene Analysis Method": 4,
+                "Differentiation Purity %": 9,
+                "Differentiation Purity Assessment": 10,
+                "Visual Analysis": 4,
+                "Sarcomere/Cellular Alignment Analysis": 1
+                }
+
+            const tsvData = []; // Assuming this will be your TSV dataset
+
+            // Function to create collapsible sections
+            function generateCollapsibleForm() {
+                const collapsibleSections = document.getElementById('collapsibleSections');
+                collapsibleSections.innerHTML = ''; // Clear any existing content
+
+                for (const [section, count] of Object.entries(D)) {
+                    let sectionHTML = `
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapse-${section.replace(/\s+/g, '-')}" aria-expanded="false">
+                                        ${section}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-${section.replace(/\s+/g, '-')}" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    ${generateCheckboxes(section, count)}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    collapsibleSections.innerHTML += sectionHTML;
                 }
             }
-            alert('Result List: ' + resultList.join(', '));
-        }
 
-        function initializeList(numItems) {
-            resultList = new Array(numItems).fill('NaN');
-        }
-    </script>
-</head>
-<body onload="initializeList(4)">
+            // Function to generate checkboxes for each section
+            function generateCheckboxes(section, count) {
+                let checkboxesHTML = '';
+                for (let i = 1; i <= count; i++) {
+                    checkboxesHTML += `
+                        <div class="form-group">
+                            <label>${section} ${i}</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="${section}_${i}" value="Yes" class="yes-checkbox"> Yes</label>
+                                <label><input type="checkbox" name="${section}_${i}" value="No" class="no-checkbox"> No</label>
+                            </div>
+                        </div>
+                    `;
+                }
+                return checkboxesHTML;
+            }
 
-    <h1>Checklist with Submission</h1>
+            // Event listener to handle checkbox exclusivity (Yes/No)
+            document.addEventListener('change', function(event) {
+                if (event.target.classList.contains('yes-checkbox')) {
+                    const noCheckbox = event.target.closest('.checkbox').querySelector('.no-checkbox');
+                    if (noCheckbox) noCheckbox.checked = false;
+                } else if (event.target.classList.contains('no-checkbox')) {
+                    const yesCheckbox = event.target.closest('.checkbox').querySelector('.yes-checkbox');
+                    if (yesCheckbox) yesCheckbox.checked = false;
+                }
+            });
 
-    <form onsubmit="handleSubmit(event)">
-        <!-- Section A -->
-        <button type="button" class="section-button" onclick="document.getElementById('sectionA').classList.toggle('hidden');">
-            Section A (Items 1-3)
-        </button>
-        <div id="sectionA" class="hidden">
-            <div class="checkbox-group">
-                <span class="item-label">Item 1:</span>
-                <label for="item1-box1">Yes</label>
-                <input type="checkbox" id="item1-box1" name="item1-box1" onclick="handleCheckboxChange(event, 0, 1)">
-                <label for="item1-box2">No</label>
-                <input type="checkbox" id="item1-box2" name="item1-box2" onclick="handleCheckboxChange(event, 0, 2)">
-            </div>
+            // Form submission logic
+            document.getElementById('newRowForm').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-            <div class="checkbox-group">
-                <span class="item-label">Item 2:</span>
-                <label for="item2-box1">Yes</label>
-                <input type="checkbox" id="item2-box1" name="item2-box1" onclick="handleCheckboxChange(event, 1, 1)">
-                <label for="item2-box2">No</label>
-                <input type="checkbox" id="item2-box2" name="item2-box2" onclick="handleCheckboxChange(event, 1, 2)">
-            </div>
+                const newRow = [];
+                for (const [section, count] of Object.entries(D)) {
+                    for (let i = 1; i <= count; i++) {
+                        const yesChecked = document.querySelector(`input[name="${section}_${i}"][value="Yes"]`).checked;
+                        const noChecked = document.querySelector(`input[name="${section}_${i}"][value="No"]`).checked;
 
-            <div class="checkbox-group">
-                <span class="item-label">Item 3:</span>
-                <label for="item3-box1">Yes</label>
-                <input type="checkbox" id="item3-box1" name="item3-box1" onclick="handleCheckboxChange(event, 2, 1)">
-                <label for="item3-box2">No</label>
-                <input type="checkbox" id="item3-box2" name="item3-box2" onclick="handleCheckboxChange(event, 2, 2)">
-            </div>
-        </div>
+                        // If neither is checked, store 'NaN'
+                        if (!yesChecked && !noChecked) {
+                            newRow.push('NaN');
+                        } else if (yesChecked) {
+                            newRow.push('Yes');
+                        } else {
+                            newRow.push('No');
+                        }
+                    }
+                }
 
-        <!-- Section B -->
-        <button type="button" class="section-button" onclick="document.getElementById('sectionB').classList.toggle('hidden');">
-            Section B (Item 4)
-        </button>
-        <div id="sectionB" class="hidden">
-            <div class="checkbox-group">
-                <span class="item-label">Item 4:</span>
-                <label for="item4-box1">Yes</label>
-                <input type="checkbox" id="item4-box1" name="item4-box1" onclick="handleCheckboxChange(event, 3, 1)">
-                <label for="item4-box2">No</label>
-                <input type="checkbox" id="item4-box2" name="item4-box2" onclick="handleCheckboxChange(event, 3, 2)">
-            </div>
-        </div>
+                // Add the new row to tsvData (update similarity logic as needed)
+                tsvData.push(newRow);
 
-        <button type="submit">Submit</button>
-    </form>
+                // Reset the form for the next submission
+                this.reset();
+            });
 
-</body>
-</html>
+            // Generate the form on page load
+            generateCollapsibleForm();
+        </script>
+
+        <!-- CSS for collapsible section styling -->
+        <style>
+            .panel-default {
+                margin-bottom: 10px;
+            }
+            .panel-title a {
+                display: block;
+                padding: 10px;
+                background-color: #f5f5f5;
+                text-decoration: none;
+            }
+            .panel-title a:hover {
+                background-color: #e9e9e9;
+            }
+            .panel-body {
+                padding: 15px;
+            }
+        </style>
+
+        <!-- Ensure Bootstrap's JS is included for the toggle functionality -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <div class="well">
+            <h3 id="faq"><strong>FAQ</strong></h3>
+            <p></p> <!-- Small line break -->
+
+            <h4 id="where-can-i-install-the-data"><strong>Where can I install the data?</strong></h4>
+            <p>All datasets are publicly available on Github. Click <a href="https://phycochow.github.io/palpantlab_hiPSC_database/datasets/1_Processed_hiPSC_12Sep24.tsv">here</a> to install the preprocessed dataset.</p>
+
+        </div> <!-- well -->
 
 
-</body>
+    </div> <!-- container-fluid main-container -->
+
+  </body>
 </html>
