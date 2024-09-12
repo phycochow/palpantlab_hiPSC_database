@@ -4,60 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklist with Submission</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .section-button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            width: 100%;
+        }
+        .section-button:focus {
+            outline: none;
+            background-color: #e0e0e0;
+        }
+        .item-label {
+            margin-right: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
     <script>
-        // Initialize an empty list to store the results
         let resultList = [];
 
-        // Function to handle checkbox changes
         function handleCheckboxChange(event, index, boxNumber) {
             if (boxNumber === 1) {
                 resultList[index] = event.target.checked ? 'True' : 'NaN';
-                document.getElementById(`item${index + 1}-box2`).checked = false; // Uncheck the other box
+                document.getElementById(`item${index + 1}-box2`).checked = false;
             } else if (boxNumber === 2) {
                 resultList[index] = event.target.checked ? 'False' : 'NaN';
-                document.getElementById(`item${index + 1}-box1`).checked = false; // Uncheck the other box
+                document.getElementById(`item${index + 1}-box1`).checked = false;
             }
         }
 
-        // Function to handle form submission
         function handleSubmit(event) {
-            event.preventDefault(); // Prevent form submission
-            // Fill NaN for unchecked items
+            event.preventDefault();
             for (let i = 0; i < resultList.length; i++) {
                 if (resultList[i] === undefined) {
                     resultList[i] = 'NaN';
                 }
             }
-            // Display the result list
             alert('Result List: ' + resultList.join(', '));
         }
 
-        // Function to initialize the resultList with NaN values
         function initializeList(numItems) {
             resultList = new Array(numItems).fill('NaN');
         }
     </script>
 </head>
-<body onload="initializeList(2)">
+<body onload="initializeList(4)">
 
     <h1>Checklist with Submission</h1>
+
     <form onsubmit="handleSubmit(event)">
-        <div>
-            <label for="item1-box1">Item 1</label>
-            <input type="checkbox" id="item1-box1" name="item1-box1" onclick="handleCheckboxChange(event, 0, 1)">
-            <input type="checkbox" id="item1-box2" name="item1-box2" onclick="handleCheckboxChange(event, 0, 2)">
+        <!-- Section A -->
+        <button type="button" class="section-button" onclick="document.getElementById('sectionA').classList.toggle('hidden');">
+            Section A (Items 1-3)
+        </button>
+        <div id="sectionA" class="hidden">
+            <div class="checkbox-group">
+                <span class="item-label">Item 1:</span>
+                <label for="item1-box1">Yes</label>
+                <input type="checkbox" id="item1-box1" name="item1-box1" onclick="handleCheckboxChange(event, 0, 1)">
+                <label for="item1-box2">No</label>
+                <input type="checkbox" id="item1-box2" name="item1-box2" onclick="handleCheckboxChange(event, 0, 2)">
+            </div>
+
+            <div class="checkbox-group">
+                <span class="item-label">Item 2:</span>
+                <label for="item2-box1">Yes</label>
+                <input type="checkbox" id="item2-box1" name="item2-box1" onclick="handleCheckboxChange(event, 1, 1)">
+                <label for="item2-box2">No</label>
+                <input type="checkbox" id="item2-box2" name="item2-box2" onclick="handleCheckboxChange(event, 1, 2)">
+            </div>
+
+            <div class="checkbox-group">
+                <span class="item-label">Item 3:</span>
+                <label for="item3-box1">Yes</label>
+                <input type="checkbox" id="item3-box1" name="item3-box1" onclick="handleCheckboxChange(event, 2, 1)">
+                <label for="item3-box2">No</label>
+                <input type="checkbox" id="item3-box2" name="item3-box2" onclick="handleCheckboxChange(event, 2, 2)">
+            </div>
         </div>
-        
-        <div>
-            <label for="item2-box1">Item 2</label>
-            <input type="checkbox" id="item2-box1" name="item2-box1" onclick="handleCheckboxChange(event, 1, 1)">
-            <input type="checkbox" id="item2-box2" name="item2-box2" onclick="handleCheckboxChange(event, 1, 2)">
+
+        <!-- Section B -->
+        <button type="button" class="section-button" onclick="document.getElementById('sectionB').classList.toggle('hidden');">
+            Section B (Item 4)
+        </button>
+        <div id="sectionB" class="hidden">
+            <div class="checkbox-group">
+                <span class="item-label">Item 4:</span>
+                <label for="item4-box1">Yes</label>
+                <input type="checkbox" id="item4-box1" name="item4-box1" onclick="handleCheckboxChange(event, 3, 1)">
+                <label for="item4-box2">No</label>
+                <input type="checkbox" id="item4-box2" name="item4-box2" onclick="handleCheckboxChange(event, 3, 2)">
+            </div>
         </div>
-        
-        <!-- Add more items as needed, and update the numItems in initializeList -->
 
         <button type="submit">Submit</button>
     </form>
+
+</body>
+</html>
+
 
 </body>
 </html>
