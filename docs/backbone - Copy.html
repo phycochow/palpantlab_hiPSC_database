@@ -236,199 +236,302 @@
 
         <p><br></p> <!-- Line break -->
 
-        <div class="well">
-            <div id="tsv-data"></div> 
-        </div> <!-- well -->
-
-        <p><br></p> <!-- Line break -->
-
-
-        <!-- Add New Row Form with Collapsible Sections -->
+        <!-- Add New Row Form (compact version after the DataTable) -->
         <div class="well">
             <div id="addRowForm" class="mt-3">
-                <h3><strong>Select Protocol Parameters Here</strong></h3>
-                <p>See what studies have similar design to your hiPSC protocol by selecting the protocol parameters. The server will temporarily add your hiPSC protocol as the first row in the table, and the best matching studies in following rows. You can leave irrelevant protocol parameters empty.<p>
+                <h3><strong>Benchmark Your Results</strong></h3>
+                <p>Find studies with similar hiPSC-CM protocol design by selecting the parameters below. The server will temporarily add your protocol as the first row in the table, and the best matching studies will be shown in following rows. Check relevant protocol parameters as if it were a variable of interest.<p>
 
                 <form id="newRowForm" class="form-inline">
-                    <!-- Dynamically generated collapsible sections based on Dictionary D -->
-                    <div id="collapsibleSections" class="mb-2"></div>
+                    <!-- Dynamically generated inputs based on the CSV headers -->
+                    <div id="formInputs" class="mb-2"></div>
+                    <p></p> <!-- Small line break -->
                     <button type="submit" class="btn btn-primary ml-2">Add Row and Refresh Table</button>
                 </form>
             </div> <!-- addRowForm -->
         </div> <!-- well -->
 
-        <!-- JavaScript for dynamic form generation and checkbox handling -->
-        <!-- Dictionary D -->
-        <script> 
-            const D = {
-                "hiPSC Line": 19,
-                "Number of hiPSC Lines": 6,
-                "hiPSC Backbone Media": 10,
-                "hiPSC-CM Backbone Media": 8,
-                "Wnt Inhibitor": 11,
-                "Wnt Inhibition Duration": 8,
-                "Induction Conditions": 8,
-                "Induction Duration": 6,
-                "Insulin Addition": 4,
-                "Maturation Strategy": 8,
-                "Metabolic Maturation Strategy (Broad)": 17,
-                "Metabolic Maturation Strategy": 20,
-                "Purification Strategy": 5,
-                "Purification Duration": 9,
-                "2D % Confluency": 8,
-                "2D Surface": 9,
-                "Ancestry of hiPSC Lines": 4,
-                "Sex of hiPSC Lines": 4,
-                "hiPSC-CM Maintenance/Maturation Media (if different)": 6,
-                "hiPSC-CM Media Supplement": 20,
-                "hiPSC-CM Matrix Coating if Replated": 8,
-                "Disease Modelling": 14,
-                "Pharmacological Interventions": 19,
-                "3D Platform": 11,
-                "3D % Confluency": 8,
-                "3D Cell Types": 5,
-                "3D EC % Composition": 3,
-                "3D Endothelial Cell Type": 5,
-                "3D SC % Composition": 3,
-                "3D Stromal Cell Type": 10,
-                "3D CM % Composition": 3,
-                "3D Estimated Tissue Cell Density": 4,
-                "3D Estimated Tissue Size": 5,
-                "3D Tissue Media": 12,
-                "Amplitude (F/F0)": 6,
-                "Beat Rate (beats per minute)": 6,
-                "Calcium Handling Analysis Method": 4,
-                "Force (mN)": 6,
-                "Sarcomere Length (um)": 4,
-                "Upstroke Velocity (um/s)": 6,
-                "AP Amplitude (mV)": 6,
-                "AP Conduction Velocity (cm/s)": 6,
-                "Conduction Velocity (cm/s)": 4,
-                "Resting Membrane Potential (mV)": 6,
-                "Time to Peak (ms)": 6,
-                "Time to Relaxation (ms)": 4,
-                "Stress (mN/mm2)": 6,
-                "Max Capture Rate (Hz)": 4,
-                "Metabolic Analysis Method": 5,
-                "Contractile Analysis Method": 6,
-                "Electrophysiology Analysis Method": 6,
-                "Gene Analysis Method": 4,
-                "Differentiation Purity %": 9,
-                "Differentiation Purity Assessment": 10,
-                "Visual Analysis": 4,
-                "Sarcomere/Cellular Alignment Analysis": 1
-                }
+        <p><br></p> <!-- Line break -->
 
-            const tsvData = []; // Assuming this will be your TSV dataset
+        <div class="well">
+            <div id="tsv-data"></div> 
+        </div> <!-- well -->
 
-            // Function to create collapsible sections
-            function generateCollapsibleForm() {
-                const collapsibleSections = document.getElementById('collapsibleSections');
-                collapsibleSections.innerHTML = ''; // Clear any existing content
 
-                for (const [section, count] of Object.entries(D)) {
-                    let sectionHTML = `
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-${section.replace(/\s+/g, '-')}" aria-expanded="false">
-                                        ${section}
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-${section.replace(/\s+/g, '-')}" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    ${generateCheckboxes(section, count)}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    collapsibleSections.innerHTML += sectionHTML;
-                }
-            }
+        <!-- Include jQuery and DataTables CSS/JS -->
+        <!-- [Your existing DataTables and jQuery includes] -->
 
-            // Function to generate checkboxes for each section
-            function generateCheckboxes(section, count) {
-                let checkboxesHTML = '';
-                for (let i = 1; i <= count; i++) {
-                    checkboxesHTML += `
-                        <div class="form-group">
-                            <label>${section} ${i}</label>
-                            <div class="checkbox">
-                                <label><input type="checkbox" name="${section}_${i}" value="Yes" class="yes-checkbox"> Yes</label>
-                                <label><input type="checkbox" name="${section}_${i}" value="No" class="no-checkbox"> No</label>
-                            </div>
-                        </div>
-                    `;
-                }
-                return checkboxesHTML;
-            }
+        <script>
+            let iterationNumber = 0;
+            let tsvData = [];
+            let MaxSimilarity = 0; // Initialize MaxSimilarity as a global variable
 
-            // Event listener to handle checkbox exclusivity (Yes/No)
-            document.addEventListener('change', function(event) {
-                if (event.target.classList.contains('yes-checkbox')) {
-                    const noCheckbox = event.target.closest('.checkbox').querySelector('.no-checkbox');
-                    if (noCheckbox) noCheckbox.checked = false;
-                } else if (event.target.classList.contains('no-checkbox')) {
-                    const yesCheckbox = event.target.closest('.checkbox').querySelector('.yes-checkbox');
-                    if (yesCheckbox) yesCheckbox.checked = false;
-                }
-            });
-
-            // Form submission logic
-            document.getElementById('newRowForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const newRow = [];
-                for (const [section, count] of Object.entries(D)) {
-                    for (let i = 1; i <= count; i++) {
-                        const yesChecked = document.querySelector(`input[name="${section}_${i}"][value="Yes"]`).checked;
-                        const noChecked = document.querySelector(`input[name="${section}_${i}"][value="No"]`).checked;
-
-                        // If neither is checked, store 'NaN'
-                        if (!yesChecked && !noChecked) {
-                            newRow.push('NaN');
-                        } else if (yesChecked) {
-                            newRow.push('Yes');
+            async function loadTSV() {
+                try {
+                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/1_Processed_hiPSC_12Sep24.tsv');
+                    const tsvText = await response.text();
+                    const rows = tsvText.split('\n').map((row, index) => {
+                        const cells = row.split('\t').map(cell => cell === '' ? 'NaN' : cell);
+                        if (index === 0) {
+                            // Add "Similarity" as the header for the new column
+                            cells.push('Similarity');
                         } else {
-                            newRow.push('No');
+                            // Add the iteration number as the "Similarity" value for each data row
+                            cells.push(index.toString());
                         }
+                        return cells;
+                    });
+
+                    tsvData = rows;
+                    iterationNumber = tsvData.length - 1; // Initialize iterationNumber with the number of data rows
+
+                    constructDataTable(tsvData);
+                } catch (error) {
+                    console.error('Error loading TSV:', error);
+                    document.getElementById('tsv-data').innerHTML = 'Error loading TSV file. See console for details.';
+                }
+            }
+
+            function generateFormInputs(headers) {
+                const sectionDict = {
+                    "Key Variables Regarding Differentiation and Maturation": {
+                        "hiPSC Line": 19,
+                        "Number of hiPSC Lines": 6,
+                        "hiPSC Backbone Media": 10,
+                        "hiPSC-CM Backbone Media": 8,
+                        "Wnt Inhibitor": 11,
+                        "Wnt Inhibition Duration": 8,
+                        "Induction Conditions": 8,
+                        "Induction Duration": 6,
+                        "Insulin Addition": 4,
+                        "Maturation Strategy": 8,
+                        "Metabolic Maturation Strategy (Broad)": 17,
+                        "Metabolic Maturation Strategy": 20,
+                        "Purification Strategy": 5,
+                        "Purification Duration": 9,
+                        "2D % Confluency": 8,
+                        "2D Surface": 9,
+                        "Ancestry of hiPSC Lines": 4,
+                        "Sex of hiPSC Lines": 4
+                    },
+                    "Functional Maturation and Disease Modelling": {
+                        "hiPSC-CM Maintenance/Maturation Media (if different)": 6,
+                        "hiPSC-CM Media Supplement": 20,
+                        "hiPSC-CM Matrix Coating if Replated": 8,
+                        "Disease Modelling": 14,
+                        "Pharmacological Interventions": 19
+                    },
+                    "3D Tissue Engineering and Complex Systems": {
+                        "3D Platform": 11,
+                        "3D % Confluency": 8,
+                        "3D Cell Types": 5,
+                        "3D EC % Composition": 3,
+                        "3D Endothelial Cell Type": 5,
+                        "3D SC % Composition": 3,
+                        "3D Stromal Cell Type": 10,
+                        "3D CM % Composition": 3,
+                        "3D Estimated Tissue Cell Density": 4,
+                        "3D Estimated Tissue Size": 5,
+                        "3D Tissue Media": 12
+                    },
+                    "Functional Parameters": {
+                        "Amplitude (F/F0)": 6,
+                        "Beat Rate (beats per minute)": 6,
+                        "Calcium Handling Analysis Method": 4,
+                        "Force (mN)": 6,
+                        "Sarcomere Length (um)": 4,
+                        "Upstroke Velocity (um/s)": 6,
+                        "AP Amplitude (mV)": 6,
+                        "AP Conduction Velocity (cm/s)": 6,
+                        "Conduction Velocity (cm/s)": 4,
+                        "Resting Membrane Potential (mV)": 6,
+                        "Time to Peak (ms)": 6,
+                        "Time to Relaxation (ms)": 4,
+                        "Stress (mN/mm2)": 6,
+                        "Max Capture Rate (Hz)": 4
+                    },
+                    "Analytical Methods": {
+                        "Metabolic Analysis Method": 5,
+                        "Contractile Analysis Method": 6,
+                        "Electrophysiology Analysis Method": 6,
+                        "Gene Analysis Method": 4,
+                        "Differentiation Purity %": 9,
+                        "Differentiation Purity Assessment": 10,
+                        "Visual Analysis": 4,
+                        "Sarcomere/Cellular Alignment Analysis": 1
+                    }
+                };
+
+                let currentHeaderIndex = 0;
+                let formHTML = '';
+
+                // Iterate through each top-level section in sectionDict
+                Object.keys(sectionDict).forEach(category => {
+                    formHTML += `
+                        <div class="well">
+                            <h3>
+                                <a data-toggle="collapse" href="#collapse-${category.replace(/\s+/g, '')}" aria-expanded="false" aria-controls="collapse-${category.replace(/\s+/g, '')}">
+                                    <strong>${category}</strong>
+                                </a>
+                            </h3>
+                            <div id="collapse-${category.replace(/\s+/g, '')}" class="collapse">
+                    `;
+
+                    // For each item in the current category, generate the collapsible sections and form inputs
+                    const items = sectionDict[category];
+                    Object.keys(items).forEach(item => {
+                        const itemCount = items[item];
+
+                        // Create the collapsible section with a button and a hidden div
+                        formHTML += `
+                            <div class="section">
+                                <button type="button" class="collapsible" onclick="toggleSection('${item.replace(/\s+/g, '')}')">${item}</button>
+                                <div id="${item.replace(/\s+/g, '')}" class="content" style="display:none;">
+                        `;
+
+                        // Add the form inputs under this collapsible section
+                        for (let i = 0; i < itemCount; i++) {
+                            const header = headers[currentHeaderIndex];
+                            formHTML += `
+                                <div class="form-group" style="display: block; margin-bottom: 10px;">
+                                    <label>${header}:</label>
+                                    <label for="${header}Yes" style="margin-left:20px;">Yes</label>
+                                    <input type="checkbox" id="${header}Yes" name="${header}" value="True" onchange="ensureExclusive('${header}', 'Yes')">
+                                    <label for="${header}No" style="margin-left:10px;">No</label>
+                                    <input type="checkbox" id="${header}No" name="${header}" value="False" onchange="ensureExclusive('${header}', 'No')">
+                                </div>
+                            `;
+                            currentHeaderIndex++;
+                        }
+
+                        // Close the collapsible section div
+                        formHTML += `
+                                </div> <!-- End of content for item -->
+                            </div> <!-- End of section for item -->
+                        `;
+                    });
+
+                    formHTML += `
+                            </div> <!-- End of collapse for category -->
+                        </div> <!-- End of well for category -->
+                    `;
+                });
+
+                document.getElementById('formInputs').innerHTML = formHTML;
+            }
+
+
+
+            function ensureExclusive(header, selectedValue) {
+                const yesCheckbox = document.getElementById(`${header}Yes`);
+                const noCheckbox = document.getElementById(`${header}No`);
+
+                if (selectedValue === 'Yes' && yesCheckbox.checked) {
+                    noCheckbox.checked = false; // Uncheck No if Yes is selected
+                } else if (selectedValue === 'No' && noCheckbox.checked) {
+                    yesCheckbox.checked = false; // Uncheck Yes if No is selected
+                }
+            }
+
+            function toggleSection(sectionId) {
+                const content = document.getElementById(sectionId);
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+
+
+            // Function to calculate similarity between rows
+            function calculateSimilarity(row1, row2) {
+                let matchCount = 0;
+                for (let i = 0; i < row1.length; i++) {
+                    if (row1[i] === row2[i] && row1[i] !== 'NaN') {
+                        matchCount++;
                     }
                 }
+                return matchCount;
+            }
 
-                // Add the new row to tsvData (update similarity logic as needed)
-                tsvData.push(newRow);
+            document.getElementById('newRowForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
 
-                // Reset the form for the next submission
-                this.reset();
+                const newRow = [];
+                const headers = tsvData[0].filter(header => header !== 'Similarity'); // Exclude "Similarity" from headers
+
+                headers.forEach(header => {
+                    const yesSelected = document.getElementById(`${header}Yes`).checked;
+                    const noSelected = document.getElementById(`${header}No`).checked;
+
+                    if (yesSelected) {
+                        newRow.push('True');
+                    } else if (noSelected) {
+                        newRow.push('False');
+                    } else {
+                        newRow.push('NaN');
+                    }
+                });
+
+                newRow.push((MaxSimilarity + 1).toString()); // Update the similarity index
+
+                tsvData.push(newRow); // Add new row to data
+
+                // Update similarities and refresh data table
+                tsvData.slice(1).forEach(row => {
+                    const similarity = calculateSimilarity(row, newRow);
+                    row[row.length - 1] = similarity.toString();
+                });
+
+                MaxSimilarity++;
+
+                $('#tsvTable').DataTable().destroy();
+                constructDataTable(tsvData);
+                
+                this.reset(); // Reset the form after submission
             });
+            
+            function constructDataTable(data) {
+                generateFormInputs(data[0]); // Generate form inputs excluding "Similarity"
 
-            // Generate the form on page load
-            generateCollapsibleForm();
+                const tableHTML = `
+                    <table id="tsvTable" class="display" style="width:100%">
+                        <thead>
+                            <tr>${data[0].map(header => `<th>${header}</th>`).join('')}</tr>
+                        </thead>
+                        <tbody>
+                            ${data.slice(1).map(row => 
+                                `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+                            ).join('')}
+                        </tbody>
+                    </table>
+                `;
+
+                document.getElementById('tsv-data').innerHTML = tableHTML;
+
+                $(document).ready(function() {
+                    $('#tsvTable').DataTable({
+                        "scrollX": true,
+                        "pageLength": 5,
+                        "autoWidth": false,
+                        "dom": "Bfrtip",
+                        "columnDefs": [
+                            { "visible": false, "targets": data[0].length - 1 } // Hide the "Similarity" column
+                        ],
+                        "order": [[data[0].length - 1, 'desc']], // Sort by the "Similarity" column (ascending order)
+                        "buttons": [
+                            {
+                                "extend": "colvis",
+                                "className": "btn btn-primary",
+                                "text": "Select Protocol Features"
+                            }
+                        ]
+                    });
+                });
+            }
+
+            loadTSV();
         </script>
-
-        <!-- CSS for collapsible section styling -->
-        <style>
-            .panel-default {
-                margin-bottom: 10px;
-            }
-            .panel-title a {
-                display: block;
-                padding: 10px;
-                background-color: #f5f5f5;
-                text-decoration: none;
-            }
-            .panel-title a:hover {
-                background-color: #e9e9e9;
-            }
-            .panel-body {
-                padding: 15px;
-            }
-        </style>
-
-        <!-- Ensure Bootstrap's JS is included for the toggle functionality -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <div class="well">
             <h3 id="faq"><strong>FAQ</strong></h3>
@@ -439,8 +542,13 @@
 
         </div> <!-- well -->
 
+        
+
 
     </div> <!-- container-fluid main-container -->
+
+
+
 
   </body>
 </html>
