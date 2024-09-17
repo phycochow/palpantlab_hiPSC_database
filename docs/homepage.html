@@ -231,10 +231,13 @@
 
       <div class="well">
         <p>
-          With modern advancements in cutting-edge stem cell technology, it is now possible to generate human stem cell derived cardiomyocytes (hiPSC-CMs) for the development of cardioprotective interventions. hiPSC-CMs can be used for regenerative medicine or to model ischaemic-reperfusion injury responses (oxygen deprivation) commonly found in heart diseases.
+          Over the years, researchers have developed 2D and 3D protocols to promote the cardiac differentiation and maturation of human stem cells (hiPSC-CMs). However, there has been a lack of method benchmarking and knowledge consolidation as the methods are often exclusive to a few research groups and the results are not directly comparable. Our study addresses these gaps by augmenting a robust feature selection approach for protocol optimisation. Through comprehensive statistical analyses and functional validation studies, we find common themes that influence the physiological performance of hiPSC-CMs. 
         </p>
         <p>
-          We performed data mining on 314 hiPSC-CM studies to find common themes that influence physiological performance and establish a series of protocol parameters, including the cell's genetic background, that are enriched to impact downstream hiPSC-CM function. The <a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a> has been working to provide comprehensive analyses of that data through machine learning, epigenetics and statistical genetics. If you’re interested in additional findings, you can read more about the overall effort <a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">here</a>.
+          First, we performed data mining on 314 hiPSC-CM studies to make data-driven recommendations to enhance the physiological maturation of hiPSC-derived cardiomyocytes. For each maturation parameters, we established 15 series of protocol combinations, like the cell's genetic background, that are enriched to impact downstream hiPSC-CM function. Then, we used the database to guide <i>in vitro</i> validation, demonstrating the roles of enriched media and supplements in promoting the functional maturation of hiPSC-CM. 
+        </p>
+        <p>
+          Our preprint is publicly available at <a href="https://www.biorxiv.org/content/10.1101/2024.09.04.611313v1" target="_blank">https://www.biorxiv.org/content/10.1101/2024.09.04.611313v1</a>.
         </p>
 
         <p></p> <!-- Small line break -->
@@ -246,15 +249,15 @@
         </p>
         
         <p></p> <!-- Small line break -->
-    
-        <p>
-          We view these results as preliminary and subject to change. They rely only on reported protocols from successful, published study designs. We encourage users to upload their own protocols to compare against similar studies.
-        </p>
-        
-        <p></p>
 
         <p>
-          If you want more information, please contact us at: <strong><a href="mailto:n.palpant@uq.edu.au">n.palpant@uq.edu.au</a>.</strong> Please see <a href="credits.html">Credits</a> for complete acknowledgements.
+          The <a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a> has been working on providing <strong>actionable outcomes</strong> of experimental data combining expertise in stem cell biology, bioinformatics, statistical genetics, regulatory epigenetics and machine learning. If you’re interested in similar findings, you can read more about an expert-independent data analytic tool <a href="http://cellfateexplorer.d24h.hk/" target="_blank">here</a> which prioritises biological data based on epigenetic signal.
+        </p>
+  
+        <p></p> <!-- Small line break -->
+
+        <p>
+          If you want more information, please contact us at: <a href="mailto:n.palpant@uq.edu.au">n.palpant@uq.edu.au</a>. See <a href="credits.html">Credits</a> for complete acknowledgements.
         </p>
 
       </div> <!-- well -->
@@ -266,9 +269,18 @@
         <p></p> <!-- Small line break -->
 
         <h4 id="what-does-the-current-dataset-contain"><strong>What does the current dataset contain?</strong></h4>
-        <p>Ewoldt et al. systematically analysed 300 studies focusing on maturation benchmarking for ventricular cardiomyocytes, which aims to improve hiPSC-CMs’ embryonic characteristics to model adult cardiac diseases (cite). In section V, the authors determined that most protocols are exclusive to research groups and not appropriately compared to other existing ones. There is insufficient data to identify protocol parameters that yield the best functional outcomes, which in turn hinders the progression of the field. They provide a dataset with 56 (study characteristics) x 300 (hiPSC studies) and urge researchers to continue adding to the starting database.</p>
+        <p>Ewoldt et al. systematically analysed 300 studies focusing on maturation benchmarking for ventricular cardiomyocytes, which aims to improve hiPSC-CMs’ embryonic characteristics for the suitability of modeling adult cardiac diseases. In section V, the authors determined that most protocols are exclusive to research groups and not appropriately compared to other existing ones. The authors conclude there is insufficient data to identify protocol parameters that yield the best functional outcomes, which in turn hinders the progression of the field. They provide a dataset with 56 (study characteristics) x 300 (hiPSC studies) and urge researchers to continue adding to the starting database.</p>
 
         <p>In our ongoing study, we compiled systematic evidence that glycaemic variability in diabetes is a significant risk factor for heart muscle dysfunction and ischemia. We included 14 metabolic maturation studies to Ewoldt et al.’s dataset and performed a quantitative analysis on hiPSC-CM functional outcomes to enrich for protocol parameters. We applied <a href="methods_overview.html">feature importance analysis</a> on 12 ventricular cardiomyocyte functionality measurements, shown and discussed in <a href="result_plots.html">Enriched Protocols</a>.</p>
+
+        <p></p> <!-- Small line break -->
+
+        <h4 id="what-are-the-limitations"><strong>What are the limitations?</strong></h4>
+        <p>Ewoldt et al. systematically analysed 300 studies focusing on maturation benchmarking for ventricular cardiomyocytes, which aims to improve hiPSC-CMs’ embryonic characteristics for the suitability of modeling adult cardiac diseases. In section V, the authors determined that most protocols are exclusive to research groups and not appropriately compared to other existing ones. The authors conclude there is insufficient data to identify protocol parameters that yield the best functional outcomes, which in turn hinders the progression of the field. They provide a dataset with 56 (study characteristics) x 300 (hiPSC studies) and urge researchers to continue adding to the starting database.</p>
+
+        <p>In our ongoing study, we compiled systematic evidence that glycaemic variability in diabetes is a significant risk factor for heart muscle dysfunction and ischemia. We included 14 metabolic maturation studies to Ewoldt et al.’s dataset and performed a quantitative analysis on hiPSC-CM functional outcomes to enrich for protocol parameters. We applied <a href="methods_overview.html">feature importance analysis</a> on 12 ventricular cardiomyocyte functionality measurements, shown and discussed in <a href="result_plots.html">Enriched Protocols</a>.</p>
+
+
 
       </div> <!-- well -->
 
@@ -282,6 +294,10 @@
         <p>We encourage all users to upload and QC existing data regardless of whether it is published. On this server, we offer a similarity check through the <a href="latest_database.html">Study Database</a> with user-defined protocol parameters to identify similar study designs and their resulting hiPSC-CM functional outcomes. This aims to help users benchmark and estimate the impact of new changes in their protocol designs.</p>
 
       </div> <!-- well -->
+
+             <p>
+          We view these results as preliminary and subject to change. They rely only on reported protocols from successful, published study designs. We encourage users to upload their own protocols to compare against similar studies.
+        </p>
 
       <p><br></p> <!-- Line break -->
 
