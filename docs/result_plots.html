@@ -1,92 +1,93 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-  <!-- ############## -->
-  <!-- Header Content -->
-  <!-- ############## -->
-  <head>
+<!-- ############## -->
+<!-- Header Content -->
+<!-- ############## -->
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="generator" content="pandoc"/>
 
-
     <title>hiPSC-CM Protocol Server</title>
-      
+    
     <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-    <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-    <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-    <script src="site_libs/navigation-1.1/tabsets.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+  <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+  <script src="site_libs/navigation-1.1/tabsets.js"></script>
 
-    <!-- Favicons for Apple and Windows users -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
+  <!-- Favicons for Apple and Windows users -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="icon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="icon/favicon-128.png" sizes="128x128" />
 
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="icon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="icon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="icon/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="icon/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="icon/mstile-310x310.png" />
 
-    <style type="text/css">
-        h1 {
-            font-size: 34px;
-        }
+  <style type="text/css">
+      h1 {
+          font-size: 34px;
+      }
 
-        h1.title {
-            font-size: 38px;
-        }
+      h1.title {
+          font-size: 38px;
+      }
 
-        h2 {
-            font-size: 30px;
-        }
+      h2 {
+          font-size: 30px;
+      }
 
-        h3 {
-            font-size: 24px;
-        }
+      h3 {
+          font-size: 24px;
+      }
 
-        h4 {
-            font-size: 18px;
-        }
+      h4 {
+          font-size: 18px;
+      }
 
-        h5 {
-            font-size: 16px;
-        }
+      h5 {
+          font-size: 16px;
+      }
 
-        h6 {
-            font-size: 12px;
-        }
+      h6 {
+          font-size: 12px;
+      }
 
-        .table th:not([align]) {
-            text-align: left;
-        }
-    </style>
-        
-    <link rel="stylesheet" href="choco.css" type="text/css"/>
-    <link rel="stylesheet" href="dt_style.css" type="text/css"/>
+      .table th:not([align]) {
+          text-align: left;
+      }
+  </style>
+      
+  <link rel="stylesheet" href="choco.css" type="text/css"/>
+  <link rel="stylesheet" href="dt_style.css" type="text/css"/>
 
-  </head>
+</head>
 
   <!-- ############ -->
   <!-- Body content -->
   <!-- ############ -->
-  <body>
+
+
+<body>
 
     <style type="text/css">
         .main-container {
@@ -101,8 +102,12 @@
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 680px;
+            max-width: 850px;
+            width: auto; /* Keep aspect ratio */
         }
 
         .tabbed-pane {
@@ -160,7 +165,7 @@
         });
       </script>
 
-        <!-- The backbone of the server. Nagivation bar -->
+        <!-- The backbone of the server. Navigation bar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
 
@@ -221,108 +226,92 @@
           </div> <!-- container -->
         </div> <!-- navbar navbar-default navbar-fixed-top-->
 
+        <p><br></p> <!-- Short line break -->
      
-        <p>Coming Soon!</p>
-
+        <!-- Image Tabs -->
         <div class="well">
-            <ul class="nav nav-tabs" id="pdfTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Max Capture Rate Hz Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Resting Membrane Potential mV Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Sarcomere Length um Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="false">Stress Nmm Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab" aria-controls="tab5" aria-selected="false">Time to Peak ms Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab" aria-controls="tab6" aria-selected="false">Time to Relaxation ms Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab7-tab" data-bs-toggle="tab" data-bs-target="#tab7" type="button" role="tab" aria-controls="tab7" aria-selected="false">Upstroke Velocity cms Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab8-tab" data-bs-toggle="tab" data-bs-target="#tab8" type="button" role="tab" aria-controls="tab8" aria-selected="false">Amplitude FF Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab9-tab" data-bs-toggle="tab" data-bs-target="#tab9" type="button" role="tab" aria-controls="tab9" aria-selected="false">AP Amplitude V Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab10-tab" data-bs-toggle="tab" data-bs-target="#tab10" type="button" role="tab" aria-controls="tab10" aria-selected="false">AP Conduction Velocity cms Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab11-tab" data-bs-toggle="tab" data-bs-target="#tab11" type="button" role="tab" aria-controls="tab11" aria-selected="false">Beat Rate bpm Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab12-tab" data-bs-toggle="tab" data-bs-target="#tab12" type="button" role="tab" aria-controls="tab12" aria-selected="false">Conduction Velocity cms Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab13-tab" data-bs-toggle="tab" data-bs-target="#tab13" type="button" role="tab" aria-controls="tab13" aria-selected="false">Estimated Tissue Cell Density Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab14-tab" data-bs-toggle="tab" data-bs-target="#tab14" type="button" role="tab" aria-controls="tab14" aria-selected="false">Estimated Tissue Size mm Quantiles</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="tab15-tab" data-bs-toggle="tab" data-bs-target="#tab15" type="button" role="tab" aria-controls="tab15" aria-selected="false">Force mN Quantiles</button>
-                </li>
+            <ul class="nav nav-tabs" id="imageTabs">
+                <li class="active"><a data-toggle="tab" href="#tab1">Calcium Flux Amplitude</a></li>
+                <li><a data-toggle="tab" href="#tab2">Action Potential Amplitude</a></li>
+                <li><a data-toggle="tab" href="#tab3">Action Potential Conduction Velocity</a></li>
+                <li><a data-toggle="tab" href="#tab4">Beat Rate</a></li>
+                <li><a data-toggle="tab" href="#tab5">Conduction Velocity from Calcium Imaging</a></li>
+                <li><a data-toggle="tab" href="#tab6">3D Estimated Tissue Density</a></li>
+                <li><a data-toggle="tab" href="#tab7">3D Estimated Tissue Size</a></li>
+                <li><a data-toggle="tab" href="#tab8">Contractile Force</a></li>
+                <li><a data-toggle="tab" href="#tab9">Max Capture Rate of Paced Cardiomyocytes</a></li>
+                <li><a data-toggle="tab" href="#tab10">Resting Membrane Potential</a></li>
+                <li><a data-toggle="tab" href="#tab11">Sarcomere Length</a></li>
+                <li><a data-toggle="tab" href="#tab12">Contractile Stress</a></li>
+                <li><a data-toggle="tab" href="#tab13">Time to Calcium Flux Peak</a></li>
+                <li><a data-toggle="tab" href="#tab14">Time from Calcium Peak to Relaxation</a></li>
+                <li><a data-toggle="tab" href="#tab15">Upstroke Velocity</a></li>
             </ul>
-            <div class="tab-content" id="pdfTabContent">
-                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_MaxCaptureRateHzQuantiles-1.png" alt="Max Capture Rate Hz Quantiles" width="100%" height="600px" />
+
+            <p><br></p> <!-- Short line break -->
+            <h4><strong>Overview of Significantly Enriched Protocols Variables</strong></h4>
+            <p>
+                Bar chart of significantly enriched protocol annotations by functional outcome. Statistical significance (p-value) measures the confidence that the enrichment is not a technical artifact. A small dissimilarity fold-change means the enriched protocol variables are highly unique, reflecting minimal unintended bias in protocol sampling that would dilute the confidence of biological interpretation. Details for statistical analyses are in the <a href="https://www.biorxiv.org/content/10.1101/2024.09.04.611313v1" target="_blank">Preprint</a> and <a href="methods_overview.html">Methods</a>. In brackets are the number of studies matching the variable description.
+            </p>
+
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane fade in active">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_AmplitudeFFQuantiles-1.png" alt="Calcium Flux Amplitude">
                 </div>
-                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_RestingMembranePotentialmVQuantiles-1.png" alt="Resting Membrane Potential mV Quantiles" width="100%" height="600px" />
+                <div id="tab2" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_APAmplitudemVQuantiles-1.png" alt="Action Potential Amplitude">
                 </div>
-                <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_SarcomereLengthumQuantiles-1.png" alt="Sarcomere Length um Quantiles" width="100%" height="600px" />
+                <div id="tab3" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_APConductionVelocitycmsQuantiles-1.png" alt="Action Potential Conduction Velocity">
                 </div>
-                <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_StressmNmmQuantiles-1.png" alt="Stress Nmm Quantiles" width="100%" height="600px" />
+                <div id="tab4" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_BeatRatebeatsperminuteQuantiles-1.png" alt="Beat Rate">
                 </div>
-                <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_TimetoPeakmsQuantiles-1.png" alt="Time to Peak ms Quantiles" width="100%" height="600px" />
+                <div id="tab5" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_ConductionVelocitycmsQuantiles-1.png" alt="Conduction Velocity from Calcium Imaging">
                 </div>
-                <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_TimetoRelaxationmsQuantiles-1.png" alt="Time to Relaxation ms Quantiles" width="100%" height="600px" />
+                <div id="tab6" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_DEstimatedTissueCellDensitycellsmLQuantiles-1.png" alt="3D Estimated Tissue Density">
                 </div>
-                <div class="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_UpstrokeVelocitycmsQuantiles-1.png" alt="Upstroke Velocity cms Quantiles" width="100%" height="600px" />
+                <div id="tab7" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_DEstimatedTissueSizemmQuantiles-1.png" alt="3D Estimated Tissue Size">
                 </div>
-                <div class="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_AmplitudeFFQuantiles-1.png" alt="Amplitude FF Quantiles" width="100%" height="600px" />
+                <div id="tab8" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_ForcemNQuantiles-1.png" alt="Contractile Force">
                 </div>
-                <div class="tab-pane fade" id="tab9" role="tabpanel" aria-labelledby="tab9-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_APAmplitudeVQuantiles-1.png" alt="AP Amplitude V Quantiles" width="100%" height="600px" />
+                <div id="tab9" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_MaxCaptureRateHzQuantiles-1.png" alt="Max Capture Rate of Paced Cardiomyocytes">
                 </div>
-                <div class="tab-pane fade" id="tab10" role="tabpanel" aria-labelledby="tab10-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_APConductionVelocitycmsQuantiles-1.png" alt="AP Conduction Velocity cms Quantiles" width="100%" height="600px" />
+                <div id="tab10" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_RestingMembranePotentialmVQuantiles-1.png" alt="Resting Membrane Potential">
                 </div>
-                <div class="tab-pane fade" id="tab11" role="tabpanel" aria-labelledby="tab11-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_BeatRatebeatsperminuteQuantiles-1.png" alt="Beat Rate bpm Quantiles" width="100%" height="600px" />
+                <div id="tab11" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_SarcomereLengthumQuantiles-1.png" alt="Sarcomere Length">
                 </div>
-                <div class="tab-pane fade" id="tab12" role="tabpanel" aria-labelledby="tab12-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_ConductionVelocitycmsQuantiles-1.png" alt="Conduction Velocity cms Quantiles" width="100%" height="600px" />
+                <div id="tab12" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_StressmNmmQuantiles-1.png" alt="Contractile Stress">
                 </div>
-                <div class="tab-pane fade" id="tab13" role="tabpanel" aria-labelledby="tab13-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_DEstimatedTissueCellDensitycellsmLQuantiles-1.png" alt="Estimated Tissue Cell Density Quantiles" width="100%" height="600px" />
+                <div id="tab13" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_TimetoPeakmsQuantiles-1.png" alt="Time to Calcium Flux Peak">
                 </div>
-                <div class="tab-pane fade" id="tab14" role="tabpanel" aria-labelledby="tab14-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_DEstimatedTissueSizemmQuantiles-1.png" alt="Estimated Tissue Size mm Quantiles" width="100%" height="600px" />
+                <div id="tab14" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_TimetoRelaxationmsQuantiles-1.png" alt="Time from Calcium Peak to Relaxation">
                 </div>
-                <div class="tab-pane fade" id="tab15" role="tabpanel" aria-labelledby="tab15-tab">
-                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_ForcemNQuantiles-1.png" alt="Force mN Quantiles" width="100%" height="600px" />
+                <div id="tab15" class="tab-pane fade">
+                    <img src="https://phycochow.github.io/palpantlab_hiPSC_database/images/ALL_significant_UpstrokeVelocityumsQuantiles-1.png" alt="Upstroke Velocity">
                 </div>
             </div>
-        </div>
+        </div> <!-- Well -->
 
+        <script>
+            $(document).ready(function () {
+                $('.nav-tabs a').click(function () {
+                    $(this).tab('show');
+                });
+            });
+        </script>
 
     </div> <!-- container-fluid main-container -->
+    
   </body>
 </html>
-
