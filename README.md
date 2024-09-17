@@ -1,40 +1,40 @@
-# hiPSC CM Protocol Database
+# Data Server for hiPSC-CM Differentiation and Maturation Protocols
 
-Scripts used for generating the [results site](https://nealelab.github.io/UKBB_ldsc/) for LD score regression ([LDSC](https://github.com/bulik/ldsc)) analysis of the [UK Biobank GWAS](https://github.com/Nealelab/UK_Biobank_GWAS) produced by the [Neale Lab](http://www.nealelab.is/uk-biobank). You can read more about that GWAS effort [here](http://www.nealelab.is/blog/2017/7/19/rapid-gwas-of-thousands-of-phenotypes-for-337000-samples-in-the-uk-biobank) and read the [hertiabililty analysis post](http://www.nealelab.is/blog/2017/9/15/heritability-of-2000-traits-and-disorders-in-the-uk-biobank) for our initial thoughts on these results.
+**Last Updated:** 17th September, 2024
 
-[![DOI](https://zenodo.org/badge/99861592.svg)](https://zenodo.org/badge/latestdoi/99861592)
+## Overview
+This data server compiles and analyzes over 300 published protocols for the differentiation and maturation of human induced pluripotent stem cells (hiPSC) into cardiomyocytes (hiPSC-CMs). The goal of this server is to consolidate knowledge and benchmark various methods that have historically been difficult to compare due to exclusivity to certain research groups and varying experimental designs.
 
-Contents of the site include:
+Our study utilizes a robust feature selection approach to optimize protocols and identify factors that influence the physiological performance of hiPSC-CMs. Through comprehensive statistical analyses and validation studies, we have uncovered common themes that enhance cardiomyocyte function.
 
-* [Results browser](https://nealelab.github.io/UKBB_ldsc/h2_browser.html)
-* [Interactive plots](https://nealelab.github.io/UKBB_ldsc/viz_h2.html)
-* [Extended methods descriptions](https://nealelab.github.io/UKBB_ldsc/confidence.html)
-* [Detailed results pages per phenotype](https://nealelab.github.io/UKBB_ldsc/h2_summary_50_irnt.html)
-* [Downloads page](https://nealelab.github.io/UKBB_ldsc/downloads.html)
+The preprint of our study is available at [DOI: 10.1101/2024.09.04.611313](https://doi.org/10.1101/2024.09.04.611313).
 
-Scripts used for the LD Score regression analysis itself are in the [UKBB_ldsc_scripts](https://github.com/Nealelab/UKBB_ldsc_scripts) dependency. They've been separated to make it easier for you to pull//fork/otherwise use those scripts without ending up with a download of the whole results site.
+## Features
+- **Browse Protocols**: [Explore the protocol database](benchmark_tool.html)
+- **Explore Findings**: [View statistical findings and enriched protocols](result_plots.html)
+- **Download Datasets**: [Access the full dataset](credits.html)
+  
+### Contact
+For more information, please contact: [n.palpant@uq.edu.au](mailto:n.palpant@uq.edu.au).
 
-## Version History
+## About This Server
 
-* **September 2017:** first release
-* **October 2019:** round2 release
-* **October 2022:** minor formatting fixes and link updates (AWS, Pan-UK Biobank)
-* **May 2023:** fix typo in description of effective N on sample size plots page
+### What analyses were done?
+We mined 314 hiPSC-CM studies to derive data-driven recommendations for enhancing hiPSC-CM maturation. Each maturation parameter has been evaluated across 15 series of protocol combinations, including genetic background, media, and supplements, to provide guidance for optimizing functional outcomes. 
 
-## Main contents of this repo
+### What does the current dataset contain?
+Ewoldt et al. systematically analyzed 300 studies focused on cardiomyocyte maturation, primarily targeting protocols designed to model adult cardiac disease. We expanded on this dataset with additional metabolic maturation studies and annotated variables like cell sex and ancestry.
 
-* `./site_build/build_site.R`: main driver script to build the static website using [R Markdown](https://rmarkdown.rstudio.com/). Copies the necessary source files into this directory and updates `_site.yml` to allow a clean build. Includes options to only generate a subset of the site for easier testing.
-* `./docs/`: The full contents of the [results site](https://nealelab.github.io/UKBB_ldsc/) hosted on Github Pages.
-* `./UKBB_ldsc_scripts/`: code for the LDSR analysis, including the Rmd files for results processing that are included in the methods section of this site. See the [UKBB_ldsc_scripts repo](https://github.com/Nealelab/UKBB_ldsc_scripts) for full description.
-* `./site_source/`: source code for building the site, including:
- * `./rmd_source/`: R markdown source for each page of the site. `_h2_part_template.html` is used to generate each of the individual phenotype pages, adapting to the results for that phenotype.
- * `./yml_source/`: yaml code for the structure of the site and the pass parameters for rendering each page. Split into pieces to allow testing rendering subsets of the site. Full site yaml is stitched together by `./site_build/build_site.R` at run time.
- * `analytics_header.html`: page header code to count hits and downloads
- * `./sandflat` and `dt_styles.css`: custom CSS based on [Bootswatch themes](https://bootswatch.com/3/) and styling options for [Datatables](https://datatables.net/)
- * `make_favicon.R` and `./icon/`: favicon images for browser tabs on various platforms
+### What are the limitations?
+This study addresses the challenges of benchmarking highly variable protocols. However, limitations include:
+- **Ascertainment Bias**: Limited representation may obscure emerging protocol modifications.
+- **Generalization Challenges**: Molecular variables may not directly correlate to functional outcomes.
+- **Ordinal Relationships**: Data encoding methods may introduce technical artifacts.
+- **Assay Design Differences**: Variations in 2D vs. 3D culture models may lead to contradictory findings.
 
-## Credits
+Despite these challenges, we encourage users to submit their own protocols for benchmarking against the dataset.
 
-Site generated by Raymond Walters (i.e. all mistakes are his), with helpful improvements from Duncan Palmer and support from the full Neale Lab UKB team. See the site for [full credits](https://nealelab.github.io/UKBB_ldsc/credits.html) for this project.
+## FAQ
 
-For any questions/comments/feedback, email **nealelab.ukb@gmail.com**.
+### How do I commit my experimental data?
+We welcome user-submitted protocols, even unpublished data. Our server allows you to perform similarity checks by comparing your protocol with existing studies. Once submitted, we will manually process and integrate your data into the database.

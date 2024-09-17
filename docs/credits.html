@@ -196,17 +196,7 @@
 
                 <li><a href="result_plots.html">Enriched Variables</a></li>
 
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Methods<span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="methods_overview.html">Overview</a></li>
-                    <li><a href="standard_terms.html">Standardising Terminologies</a></li>
-                    <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
-                    <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
-                  </ul> <!-- dropdown-menu -->
-                </li> <!-- dropdown -->
+                <li><a href="methods_overview.html">Methods</a></li>
               </ul> <!-- nav navbar-nav -->
 
               <ul class="nav navbar-nav navbar-right">
@@ -215,7 +205,7 @@
                     About<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="credits.html">Credits & Citations</a></li>
+                    <li><a href="credits.html">Data & Credits</a></li>
                     <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
                     <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
                   </ul> <!-- dropdown-menu -->
@@ -227,21 +217,72 @@
           </div> <!-- container -->
         </div> <!-- navbar navbar-default navbar-fixed-top-->
 
-        <p><br></p> <!-- Short line break -->
+        <div class="fluid-row" id="header">
+            <h3 class="title toc-ignore">Data Installation and Credits</h3>
+            <p>Last Updated: 17th September, 2024</p>
+        </div>
+
+        <hr/> <!-- horizontal line -->
+     
+        <div class="well">
+            <h3 id="install-datasets"><strong>All Datasets</strong></h3>
+
+            <h4>Source database: Non-processed 314 hiPSC-CM Protocol Information</h4>
+            <ul>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/0_Summary_CSYChow_21Aug24.tsv" target="_blank">0_Summary_CSYChow_21Aug24 (tab-seperated file)</a></li>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/Modified_Summary_CSYChow_FINAL.xlsx" target="_blank">Modified_Summary_CSYChow_FINAL (Excel worksheet)</a></li>
+            </ul>
+
+            <h4>Processed 314 hiPSC-CM Protocol Information</h4>
+            <ul>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/1_Processed_hiPSC_12Sep24.tsv" target="_blank">1_Processed_hiPSC_12Sep24 (tab-seperated file)</a></li>
+                <li>All columns are boolean without NaN values except for 15 functional outcomes.</li>
+            </ul>
+
+            <h4>Supplementary Table 2</h4>
+            <ul>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/Supplemental Table 2.xlsx" target="_blank">Supplemental Table 2 (Excel worksheet)</a></li>
+                <li>(Sheet 1) All Gini and Entropy enrichment values and their bootstrapping-based statistical significance between protocol variable and 15 functional outcomes.</li>
+                <li>(Sheet 2) Non-enriched protocol parameters by functional outcome.</li>
+            </ul>
+
+            <h4>Supplementary Table 3</h4>
+            <ul>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/Supplemental Table 3.xlsx" target="_blank">Supplemental Table 3 (Excel worksheet)</a></li>
+                <li>(Sheet 1) Pairwise Jaccard Similarity matrix for all protocol parameters.</li>
+                <li>(Sheet 2) 2000 bootstrapping-based averaged Jaccard distances for protocol variable panel of N items.</li>
+                <li>(Sheet 3) Fold-change in empirical Jaccard Distances for significantly enriched protocol variables.</li>
+            </ul>
+
+            <h4>Supplementary Table 4</h4>
+            <ul>
+                <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database/blob/master/docs/datasets/Supplemental Table 4.xlsx" target="_blank">Supplemental Table 4 (Excel worksheet)</a></li>
+                <li>Studies from the source data that investigate T3 as a metabolic maturation strategy, with a comparative analysis of backbone media compositions.</li>
+            </ul>
+
+        </div> <!-- well -->
+     
+        <div class="well">
+            <h3 id="cite-this"><strong>Cite this Study</strong></h3>
+
+            <h4>A community-oriented, data-driven resource to improve protocol design for cardiac modelling from human pluripotent stem cells</h4>
+
+            <p>
+              Chris Siu Yeung Chow, Sumedha Negi, Shaine Chenxin Bao, Chen Fang, James E. Hudson, Woo Jun Shim, Yuanzhao Cao, Nathan J. Palpant
+            </p>
+            <p><i>bioRxiv</i> 2024.09.04.611313; doi: <a href="https://doi.org/10.1101/2024.09.04.611313" target="_blank">https://doi.org/10.1101/2024.09.04.611313</a></p>
+
+        </div> <!-- well -->
 
         <div class="well">
             <h3 id="special-acknowledgements"><strong>Special Acknowledgements</strong></h3>
 
-            <p>This website is hugely inspired by Raymond Walters' <a href="https://nealelab.github.io/UKBB_ldsc/index.html" target="_blank">UK Biobank trait heritabilty browser</a> Benjamin Neale's lab.</p>
+            <p>While we have updated the hiPSC-CM protocol database to include more studies and biological annotations, the dataset is originally compiled in a study (in press) by Christopher Chen's lab. The older version of the database is publicly available at <a href="https://doi.org//10.5061/dryad.ksn02v7bh">https://doi.org//10.5061/dryad.ksn02v7bh</a>.</p>
 
-            <p>While we have updated the hiPSC-CM protocol database to include more studies and biological annotations, the dataset is originally compiled in a study (in press) by Christopher Chen's lab. The older version of the database is publicly available at <a href="https://doi.org//10.5061/dryad.ksn02v7bh">https://doi.org//10.5061/dryad.ksn02v7bh</a>, </p>
-
-            <p>We would also like to thank Qiongyi Zhao and Miao Xu for their consultations and recommendation throughout the development and analyses of the database.</p>
+            <p>We would like to thank Madhura Mukhopadhyay for the inital interest in this study. We would also like to thank Qiongyi Zhao and Miao Xu for their consultations and recommendations throughout the development and analyses of the database. This website is inspired by Raymond Walters' <a href="https://nealelab.github.io/UKBB_ldsc/index.html" target="_blank">UK Biobank trait heritabilty browser</a>. It would not have been quickly made without the generous free service provided by GitHub.</p>
 
         </div> <!-- well -->
      
-        
-
 
     </div> <!-- container-fluid main-container -->
     

@@ -194,17 +194,7 @@
 
                 <li><a href="result_plots.html">Enriched Variables</a></li>
 
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    Methods<span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="methods_overview.html">Overview</a></li>
-                    <li><a href="standard_terms.html">Standardising Terminologies</a></li>
-                    <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
-                    <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
-                  </ul> <!-- dropdown-menu -->
-                </li> <!-- dropdown -->
+                <li><a href="methods_overview.html">Methods</a></li>
               </ul> <!-- nav navbar-nav -->
 
               <ul class="nav navbar-nav navbar-right">
@@ -213,7 +203,7 @@
                     About<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="credits.html">Credits & Citations</a></li>
+                    <li><a href="credits.html">Data & Credits</a></li>
                     <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
                     <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
                   </ul> <!-- dropdown-menu -->
@@ -234,7 +224,7 @@
             <p>Last Updated: 17th September, 2024</p>
         </div>
 
-        <p></p> <!-- Short line break -->
+        <hr/> <!-- horizontal line -->
 
         <div class="well">
             <div id="tsv-data"></div> 
@@ -303,11 +293,13 @@
 
 
         <div class="well">
-            <h3 id="faq"><strong>FAQ</strong></h3>
+            <h3 id="faq"><strong>Important FAQ</strong></h3>
             <p></p> <!-- Small line break -->
 
-            <h4 id="where-can-i-install-the-data"><strong>Where can I install the data?</strong></h4>
-            <p>All datasets are publicly available on Github. Click <a href="https://phycochow.github.io/palpantlab_hiPSC_database/datasets/0_Modified_Summary_CSYChow.tsv">here</a> to install the preprocessed dataset shown above.</p>
+            <h4 id="data-inconsistencies"><strong>Are there inconsistencies in the database?</strong></h4>
+            <p>Yes. There are exisiting inconsistencies in this source database. These arise from typos from manual input when it was originally compiled, as well as protocol variables that were perhaps not most appropriately reported in published studies. For example, the typo 'BPM4' for the Wnt inhibitor 'BMP4'. Another example is <a href="https://doi.org/10.1038/s41467-021-23329-z" target="_blank">Funakoshi, S. et al.</a>'s' use of differentiation media 'StemPro-34' as backbone media for hiPSC cells.</p>
+
+            <p>These problems highlight the significant challenge in comparing protocols. We are cautious about these issues and developed the downstream analyses in a biologically sensible manner. One technique is to group entries by their broader biological function and nature. More are discussed in <a href="methods_overview.html">Methods</a> and the <a href="https://doi.org/10.1101/2024.09.04.611313" target="_blank">Preprint</a>.
 
         </div> <!-- well -->
 

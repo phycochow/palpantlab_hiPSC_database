@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-  <!-- ############## -->
-  <!-- Header Content -->
-  <!-- ############## -->
-  <head>
+<!-- ############## -->
+<!-- Header Content -->
+<!-- ############## -->
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="generator" content="pandoc"/>
 
-
     <title>hiPSC-CM Protocol Server</title>
-      
+    
     <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -77,16 +76,17 @@
             text-align: left;
         }
     </style>
-        
+      
     <link rel="stylesheet" href="choco.css" type="text/css"/>
     <link rel="stylesheet" href="dt_style.css" type="text/css"/>
 
-  </head>
+</head>
 
-  <!-- ############ -->
-  <!-- Body content -->
-  <!-- ############ -->
-  <body>
+<!-- ############ -->
+<!-- Body content -->
+<!-- ############ -->
+
+<body>
 
     <style type="text/css">
         .main-container {
@@ -101,8 +101,13 @@
         }
 
         img {
-            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 800px;
             height: auto;
+            max-width: 850px;
+            width: auto; /* Keep aspect ratio */
         }
 
         .tabbed-pane {
@@ -139,8 +144,7 @@
         // active menu anchor
         href = window.location.pathname
         href = href.substr(href.lastIndexOf('/') + 1)
-        if (href === "")
-          href = "index.html";
+
         var menuAnchor = $('a[href="' + href + '"]');
 
         // mark it active
@@ -161,72 +165,116 @@
         });
       </script>
 
-      <!-- The backbone of the server. Nagivation bar -->
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+        <!-- The backbone of the server. Navigation bar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
 
-          <!-- Navbar Header: Includes the brand name and the toggle button for collapsing the navbar -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Brand name -->
-            <a class="navbar-brand" href="homepage.html">hiPSC-CM Protocol Mining</a>
-          </div> <!-- navbar-header -->
+            <!-- Navbar Header: Includes the brand name and the toggle button for collapsing the navbar -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- Brand name -->
+              <a class="navbar-brand" href="homepage.html">hiPSC-CM Protocol Mining</a>
+            </div> <!-- navbar-header -->
 
-          <!-- Navbar links and dropdowns -->
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  Study Database<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="latest_database.html">Latest Version</a></li>
-                  <li><a href="original_database.html">Original Version</a></li>
-                </ul> <!-- dropdown-menu -->
-              </li> <!-- dropdown -->
+            <!-- Navbar links and dropdowns -->
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Study Database<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="benchmark_tool.html">Comparision Tool</a></li>
+                    <li><a href="original_database.html">Source Database</a></li>
+                  </ul> <!-- dropdown-menu -->
+                </li> <!-- dropdown -->
 
-              <li><a href="result_plots.html">Enriched Protocols</a></li>
+                <li><a href="result_plots.html">Enriched Variables</a></li>
 
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  Methods<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="methods_overview.html">Overview</a></li>
-                  <li><a href="standard_terms.html">Standardising Terminologies</a></li>
-                  <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
-                  <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
-                </ul> <!-- dropdown-menu -->
-              </li> <!-- dropdown -->
-            </ul> <!-- nav navbar-nav -->
+                <li><a href="methods_overview.html">Methods</a></li>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  About<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="credits.html">Credits & Citations</a></li>
-                  <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
-                  <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
-                </ul> <!-- dropdown-menu -->
-              </li> <!-- dropdown -->
-            </ul> <!-- nav navbar-nav navbar-right -->
+              </ul> <!-- nav navbar-nav -->
 
-          </div> <!-- navbar-collapse -->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    About<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="credits.html">Data & Credits</a></li>
+                    <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
+                    <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
+                  </ul> <!-- dropdown-menu -->
+                </li> <!-- dropdown -->
+              </ul> <!-- nav navbar-nav navbar-right -->
 
-        </div> <!-- container -->
-      </div> <!-- navbar navbar-default navbar-fixed-top-->
+            </div> <!-- navbar-collapse -->
 
-     
-      <p>Coming Soon!</p>
+          </div> <!-- container -->
+        </div> <!-- navbar navbar-default navbar-fixed-top-->
+
+        <div class="fluid-row" id="header">
+            <h2 class="title toc-ignore">Enriched Protocol Variables by Functional Outcome</h2>
+            <p>Last Updated: 17th September, 2024</p>
+        </div>
+
+        <hr/> <!-- horizontal line -->
 
 
+        <h3>1. Database Expansion</h3>
+        <!-- Database Expansion -->
+        <div class="well">
+          <p>The foundational database was expanded with 14 additional studies utilising metabolic techniques aimed at cardiac maturation and disease modeling. Categories for cell line sex and ancestry were also added to promote equity and representation in hiPSC cardiac studies.</p>
+        </div> <!-- well -->
+
+        <h3>2. Entry Categorisation</h3>
+        <!-- Entry Categorization -->
+        <div class="well">
+          <p>A flexible entry categorisation strategy was implemented to address feature cardinality and incorporate new biological annotations. Entries that are reported in less than 3 studies are classified as 'Specialised'. Together, this enhances protocol interpretability and comparability for future data submissions, leading to the <a href="benchmark_tool.html">benchmarking tool</a> in this web portal.</p>
+        </div> <!-- well -->
+
+        <h3>3. Data Encoding and Assumptions</h3>
+        <!-- Data Encoding and Assumptions -->
+        <div class="well">
+          <p>One-hot encoding was applied to all categorised features. This is the ket step that takes advantage of informative missingness, which assumes that the absence of a protocol variable is an intentional decision that may impact a functional outcome. This encoding approach expanded the original database to encompass 314 published protocols and 441 features.</p>
+        </div> <!-- well -->
+
+        <h3>4. Feature Importance Analysis</h3>
+        <!-- Feature Importance Analysis -->
+        <div class="well">
+          <p>We evaluated feature importance for 15 physiological maturation parameters of hiPSC-CM using Shannon Entropy (for information gain) and Gini Impurity (to assess the likelihood of misclassification after feature-based splitting). From our preliminary analyses, the binary enrichments using different hyperparameters are correlated. Therefore, default random forest models from the Sklearn package were utilised for the analysis.</p>
+          <p>The full set of studies, given they have reported values for the functional outcome, is used for model fitting due to the limited sample size. The aim was to ultilise the calculation packages instead of training an accurate, predictive model.</p>
+        </div> <!-- well -->
+
+        <h3>5. Null Distribution Construction</h3>
+        <!-- Null Distribution Construction -->
+        <div class="well">
+          <p>To assess the reliability of the enrichments, we generate a set of 2000 stochastic datasets by permuting the exisiting values for each protocol feature to form null distributions for Shannon Entropy and Gini Impurity metrics. These were evaluated across 15 functional outcomes using a one-tailed bootstrapping approach.</p>
+        </div> <!-- well -->
+
+        <h3>6. Jaccard Index Analysis</h3>
+        <!-- Jaccard Index Analysis -->
+        <div class="well">
+          <p>A Jaccard Index analysis was conducted to determine whether limited protocol sampling dilutes biologically relevant feature enrichment. This similarity analysis aims to assess if the enrichments are technical artifacts of data processing due to co-reporting of protocol variables from e.g. high contractility studies. The analysis confirmed that Boolean features in the updated database remained highly unique, as indicated by the results.</p>
+          <p>Additionally, we show that the reduction in enrichments by imposing the statistical significance still retains the uniqueness by having an average fold-change reduction of >0.1. A Jaccard distance analysis was employed to evaluate dissimilarity between significantly enriched protocol parameters and random feature sets.</p>
+        </div> <!-- well -->
+
+        <h3>7. Statistical Summary</h3>
+        <!-- Statistical Results -->
+        <div class="well">
+          <p>Hierarchical clustering of protocol parameters by statistical significance revealed distinct parameters associated with physiological maturation. This suggest the effects of most protocol paramters are not pleotropic. Additionally, the number of significant enrichments was found to correlate strongly with fold-change dissimilarity between significant and all protocol features. This affirms that our bootstrapping-based approach of feature enrichment results in less technical artifacts as more significant enrichments are found. At a high level, it means our enrichments are effectively capturing signals from diverse, multiple studies.</p>
+          <p>Similarly, null distribution based a matching number of random protocol variables for significant enrichments is constructed for the Jaccard dissimilarity analysis.</p>
+        </div> <!-- well -->
+
+        <h3>8. Supplemental Analysis</h3>
+        <!-- Supplemental Analysis -->
+        <div class="well">
+          <p>Further analyses included generating null distribution enrichment values using random forest models and performing bootstrapping to assess statistical significance. </p>
+        </div> <!-- well -->
     </div> <!-- container-fluid main-container -->
-  </body>
+</body>
 </html>
-

@@ -191,17 +191,7 @@
 
               <li><a href="result_plots.html">Enriched Variables</a></li>
 
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  Methods<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="methods_overview.html">Overview</a></li>
-                  <li><a href="standard_terms.html">Standardising Terminologies</a></li>
-                  <li><a href="pCategory_define.html">Defining Protocol Categories</a></li>
-                  <li><a href="fit_dt.html">Configuring Decision Tree</a></li>
-                </ul> <!-- dropdown-menu -->
-              </li> <!-- dropdown -->
+              <li><a href="methods_overview.html">Methods</a></li>
             </ul> <!-- nav navbar-nav -->
 
             <ul class="nav navbar-nav navbar-right">
@@ -210,7 +200,7 @@
                   About<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="credits.html">Credits & Citations</a></li>
+                  <li><a href="credits.html">Data & Credits</a></li>
                   <li><a href="https://github.com/phycochow/palpantlab_hiPSC_database" target="_blank">Server Code</a></li>
                   <li><a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a></li>
                 </ul> <!-- dropdown-menu -->
@@ -228,11 +218,15 @@
         <p>Last Updated: 17th September, 2024</p>
       </div>
 
-      <p></p> <!-- Small line break -->
+      <hr/> <!-- horizontal line -->
 
       <div class="well">
         <p>
           Over the years, researchers have developed 2D and 3D protocols to promote the cardiac differentiation and maturation of human stem cells (hiPSC-CMs). However, there has been a lack of method benchmarking and knowledge consolidation as the methods are often exclusive to a few research groups and the results are not directly comparable. Our study addresses these gaps by augmenting a robust feature selection approach for protocol optimisation. Through comprehensive statistical analyses and functional validation studies, we find common themes that influence the physiological performance of hiPSC-CMs. 
+        </p>
+
+        <p>
+          Our preprint is publicly available at <a href="https://doi.org/10.1101/2024.09.04.611313" target="_blank">https://doi.org/10.1101/2024.09.04.611313</a>.
         </p>
 
         <p></p> <!-- Small line break -->
@@ -246,7 +240,8 @@
         <p></p> <!-- Small line break -->
 
         <p>
-          The <a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a> has been working on providing <strong>actionable outcomes</strong> of experimental data combining expertise in stem cell biology, bioinformatics, statistical genetics, regulatory epigenetics and machine learning. If you’re interested in similar findings, you can read more about an expert-independent data analytic tool <a href="http://cellfateexplorer.d24h.hk/" target="_blank">here</a> which prioritises biological data based on epigenetic signal.
+          The <a href="https://imb.uq.edu.au/research-groups/palpant" target="_blank">Palpant Group</a> has been working on providing <strong>actionable outcomes</strong> of experimental data combining expertise in stem cell biology, bioinformatics, statistical genetics, regulatory epigenetics and machine learning. 
+          <!-- If you’re interested in similar findings, you can read more about an expert-independent data analytic tool <a href="http://cellfateexplorer.d24h.hk/" target="_blank">here</a> which prioritises biological data based on epigenetic signal. -->
         </p>
   
         <p></p> <!-- Small line break -->
@@ -268,10 +263,6 @@
           We performed data mining on 314 hiPSC-CM studies to make data-driven recommendations to enhance the physiological maturation of hiPSC-derived cardiomyocytes. For each maturation parameters, we established 15 series of protocol combinations, like the cell's genetic background, that are enriched to impact downstream hiPSC-CM function. Then, we used the database to guide <i>in vitro</i> validation, demonstrating the roles of enriched media and supplements in promoting the functional maturation of hiPSC-CM.
         </p>
 
-        <p>
-          Our preprint is publicly available at <a href="https://www.biorxiv.org/content/10.1101/2024.09.04.611313v1" target="_blank">https://www.biorxiv.org/content/10.1101/2024.09.04.611313v1</a>.
-        </p>
-
         <p></p> <!-- Small line break -->
 
         <h4 id="what-does-the-current-dataset-contain"><strong>What does the current dataset contain?</strong></h4>
@@ -288,14 +279,14 @@
 
         <ul>
             <li><strong>Ascertainment Bias:</strong> While we have shown the dissimilarity of enrichments, they are based on the most reproduced study designs. Emerging modifications that could improve protocols might not be identified due to limited representation.</li>
-            <li><strong>Generalisation Challenges:</strong> It is difficult to generalize the biological causality of molecular variables towards functional outcomes, as some may counteract others that inhibit maturation.</li>
+            <li><strong>Generalisation Challenges:</strong> It is difficult to generalise the direct biological causality of molecular variables towards functional outcomes, as some may counteract others that inhibit maturation.</li>
             <li><strong>Ordinal Relationships:</strong> Tree models paired with one-hot encoding do not retain ordinal relationships between categories, which means the original study characteristics might be used in the same path, potentially making the enrichment a technical artifact. Fortunately, our novel bootstrapping-based technique assigns statistical insignificance.</li>
             <li><strong>Assay Design Differences:</strong> The database may overlook critical differences between assay designs, such as the cellular complexity and nutrient requirements of 2D versus 3D culture models, leading to contradictions in enrichment for maturation and modeling.</li>
         </ul>
 
       </div> <!-- well -->
 
-      <p></p> <!-- Small line break -->
+      <hr/> <!-- horizontal line -->
   
       <div class="well">
         <h3 id="faq"><strong>FAQ</strong></h3>
