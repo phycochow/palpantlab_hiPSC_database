@@ -32,7 +32,7 @@ This study addresses the challenges of benchmarking highly variable protocols. H
 - **Ordinal Relationships**: Data encoding methods may introduce technical artifacts.
 - **Assay Design Differences**: Variations in 2D vs. 3D culture models may lead to contradictory findings.
 
-Despite these challenges, we encourage users to submit their own protocols for benchmarking against the dataset.
+Given these challenges, we encourage users to submit their own protocols for benchmarking against the dataset.
 
 ## FAQ
 
