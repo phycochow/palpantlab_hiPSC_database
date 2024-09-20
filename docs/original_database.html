@@ -240,7 +240,7 @@
 
             async function loadTSV() {
                 try {
-                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/0_Modified_Summary_CSYChow.tsv');
+                    const response = await fetch('https://phycochow.github.io/palpantlab_hiPSC_database/datasets/0_Summary_CSYChow_21Aug24.tsv');
                     const tsvText = await response.text();
                     const rows = tsvText.split('\n').map(row => 
                         row.split('\t').map(cell => cell === '' ? 'NaN' : cell)
