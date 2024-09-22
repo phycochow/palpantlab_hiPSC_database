@@ -145,6 +145,14 @@
         }
     </style>
 
+    <style>
+        /* Target the dropdown or modal that appears for the column visibility */
+        .dt-button-collection {
+            min-width: 450px; /* Set the desired width here */
+            white-space: normal; /* Ensure long column names wrap within the width */
+        }
+    </style>
+
     <!-- Manages active state of menu based on current page -->
     <script>
         $(document).ready(function () {
@@ -236,7 +244,7 @@
                     <!-- Dynamically generated inputs based on the CSV headers -->
                     <div id="formInputs" class="mb-2"></div>
                     <p></p> <!-- Small line break -->
-                    <button type="submit" class="btn btn-primary ml-2">Reorder Studies by Protocol Similarity</button>
+                    <button type="submit" class="btn btn-primary ml-2">Click This and Scroll Down</button>
                 </form>
             </div> <!-- addRowForm -->
         </div> <!-- well -->
