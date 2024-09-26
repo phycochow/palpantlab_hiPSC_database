@@ -3,7 +3,7 @@
 **Last Updated:** 17th September, 2024
 
 ## Overview
-This data server compiles and analyzes over 300 published protocols for the differentiation and maturation of human induced pluripotent stem cells (hiPSC) into cardiomyocytes (hiPSC-CMs). The goal of this server is to consolidate knowledge and benchmark various methods that have historically been difficult to compare due to exclusivity to certain research groups and varying experimental designs.
+This [data server](https://phycochow.github.io/palpantlab_hiPSC_database/homepage.html) compiles and analyzes over 300 published protocols for the differentiation and maturation of human induced pluripotent stem cells (hiPSC) into cardiomyocytes (hiPSC-CMs). The goal of this server is to consolidate knowledge and benchmark various methods that have historically been difficult to compare due to exclusivity to certain research groups and varying experimental designs.
 
 Our study utilizes a robust feature selection approach to optimize protocols and identify factors that influence the physiological performance of hiPSC-CMs. Through comprehensive statistical analyses and validation studies, we have uncovered common themes that enhance cardiomyocyte function.
 
