@@ -145,6 +145,14 @@
         }
     </style>
 
+    <style>
+        /* Target the dropdown or modal that appears for the column visibility */
+        .dt-button-collection {
+            min-width: 450px; /* Set the desired width here */
+            white-space: normal; /* Ensure long column names wrap within the width */
+        }
+    </style>
+
     <!-- Manages active state of menu based on current page -->
     <script>
         $(document).ready(function () {
@@ -221,7 +229,7 @@
         <div class="fluid-row" id="header">
             <h3 class="title toc-ignore">Source database: Non-processed 314 hiPSC-CM Protocol Information</h3>
             <p>300 ventricular hiPSC-CM benchmarking studies and 14 metabolic maturation studies. Install datasets <a href="credits.html">here.</a></p>
-            <p>Last Updated: 17th September, 2024</p>
+            <p>Last Updated: 28th September, 2024</p>
         </div>
 
         <hr/> <!-- horizontal line -->
@@ -281,7 +289,7 @@
                             {
                                 "extend": "colvis",
                                 "className": "btn btn-primary",
-                                "text": "Select Protocol Features"
+                                "text": "Select Study Features"
                             }
                         ]
                     });
