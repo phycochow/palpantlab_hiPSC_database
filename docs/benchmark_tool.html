@@ -512,7 +512,7 @@
                         "autoWidth": false,
                         "dom": "Bfrtip",
                         "columnDefs": [
-                            { "visible": false, "targets": Array.from({length: data[0].length}, (v, i) => i).filter(index => ![0, 283, 288, 306, 312, 322, 326, 332, 338, 344, 348, 354, 360, 364, 370, 374].includes(index)) }
+                            { "visible": false, "targets": Array.from({length: data[0].length}, (v, i) => i).filter(index => ![0, 283, 288, 306, 312, 318, 322, 328, 334, 340, 344, 350, 356, 360, 366, 370].includes(index)) }
                         ],
                         "order": [[data[0].length - 1, 'desc']], // Sort by the "Similarity" column (ascending order)
                         "buttons": [
@@ -552,7 +552,7 @@
 
         <script>
             function showPopup() {
-                alert('Pending on Reviewer Feedback and Technical Feasibility');
+                alert('Pending on Reviewer Feedback and End-server Processing Update');
             }
         </script>
     
