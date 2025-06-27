@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noosa Trip - Carpool Schedule</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .group {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .group-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .group-info {
+            background: #34495e;
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .schedule-table th {
+            background: #ecf0f1;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #bdc3c7;
+        }
+        .schedule-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .driver-row {
+            background: #e8f5e8;
+            font-weight: 600;
+        }
+        .passenger-row {
+            background: #f8f9fa;
+        }
+        .destination-row {
+            background: #fff3cd;
+            font-weight: 600;
+        }
+        .time {
+            font-weight: bold;
+            color: #e74c3c;
+            min-width: 60px;
+        }
+        .driver-icon {
+            color: #27ae60;
+            font-size: 1.2em;
+        }
+        .passenger-icon {
+            color: #3498db;
+        }
+        .location-icon {
+            color: #f39c12;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            .schedule-table th,
+            .schedule-table td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Noosa Trip - Carpool Schedule 🏖️</h1>
+        
+        <div class="group">
+            <div class="group-header">Group 1 - Costco Food 🛒</div>
+            <div class="group-info">📍 Distance: 175km | ⏱️ Duration: 2h 33m + Costco time</div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Person</th>
+                        <th>Location</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="driver-row">
+                        <td class="time">07:10</td>
+                        <td><span class="driver-icon">🚙</span> Larrisa (DRIVER)</td>
+                        <td>Capalaba</td>
+                        <td>Pickup start</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">07:40</td>
+                        <td><span class="passenger-icon">👥</span> Claudia</td>
+                        <td>Spring Hill</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">07:50</td>
+                        <td><span class="passenger-icon">👥</span> Naveen</td>
+                        <td>Woolowin</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:10</td>
+                        <td><span class="passenger-icon">👥</span> Tanisha</td>
+                        <td>Carseldine</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">08:30</td>
+                        <td><span class="location-icon">🛒</span> Shopping</td>
+                        <td>Costco Wholesale North Lakes</td>
+                        <td>Arrive & Shop</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">09:15</td>
+                        <td><span class="location-icon">🚗</span> Leave</td>
+                        <td>Costco Wholesale North Lakes</td>
+                        <td>Depart for Noosa</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">10:45</td>
+                        <td><span class="location-icon">🏖️</span> Arrive</td>
+                        <td>Noosa</td>
+                        <td>Final destination</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="group">
+            <div class="group-header">Group 2 - University/Coronation Drive 🎓</div>
+            <div class="group-info">📍 Distance: 163km | ⏱️ Duration: 2h</div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Person</th>
+                        <th>Location</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="passenger-row">
+                        <td class="time">07:30</td>
+                        <td><span class="passenger-icon">👥</span> Angela</td>
+                        <td>Springfield</td>
+                        <td>First pickup</td>
+                    </tr>
+                    <tr class="driver-row">
+                        <td class="time">08:35</td>
+                        <td><span class="driver-icon">🚙</span> Grazielle (DRIVER)</td>
+                        <td>St Lucia</td>
+                        <td>Driver start</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:40</td>
+                        <td><span class="passenger-icon">👥</span> Divpreet</td>
+                        <td>St Lucia</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:45</td>
+                        <td><span class="passenger-icon">👥</span> Mana</td>
+                        <td>St Lucia</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:50</td>
+                        <td><span class="passenger-icon">👥</span> Nova</td>
+                        <td>Auchenflower</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">10:45</td>
+                        <td><span class="location-icon">🏖️</span> Arrive</td>
+                        <td>Noosa</td>
+                        <td>Final destination</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="group">
+            <div class="group-header">Group 3 - Southern/Eastern Suburbs 🏘️</div>
+            <div class="group-info">📍 Distance: 177km | ⏱️ Duration: 2h 55m</div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Person</th>
+                        <th>Location</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="driver-row">
+                        <td class="time">07:50</td>
+                        <td><span class="driver-icon">🚙</span> Chris (DRIVER)</td>
+                        <td>Sunnybank Hills</td>
+                        <td>Pickup start</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:25</td>
+                        <td><span class="passenger-icon">👥</span> Angela</td>
+                        <td>South Bank</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:35</td>
+                        <td><span class="passenger-icon">👥</span> Mari</td>
+                        <td>West End</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">08:40</td>
+                        <td><span class="passenger-icon">👥</span> Alice</td>
+                        <td>West End</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">10:45</td>
+                        <td><span class="location-icon">🏖️</span> Arrive</td>
+                        <td>Noosa</td>
+                        <td>Final destination</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="group">
+            <div class="group-header">Group 4 - Gold Coast 🏄</div>
+            <div class="group-info">📍 Distance: 223km | ⏱️ Duration: 2h 38m</div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Person</th>
+                        <th>Location</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="driver-row">
+                        <td class="time">08:00</td>
+                        <td><span class="driver-icon">🚙</span> Lily Nidea (DRIVER)</td>
+                        <td>Gold Coast</td>
+                        <td>Pickup start</td>
+                    </tr>
+                    <tr class="passenger-row">
+                        <td class="time">09:05</td>
+                        <td><span class="passenger-icon">👥</span> Kierren</td>
+                        <td>Everton Park</td>
+                        <td>Pickup</td>
+                    </tr>
+                    <tr class="destination-row">
+                        <td class="time">10:45</td>
+                        <td><span class="location-icon">🏖️</span> Arrive</td>
+                        <td>Noosa</td>
+                        <td>Final destination</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
