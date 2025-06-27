@@ -3,297 +3,807 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noosa Trip - Carpool Schedule</title>
+    <title>Noosa Boat Adventure - Carpool Schedule</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #2196F3 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Floating boat animation */
+        .floating-boat {
+            position: fixed;
+            top: 20px;
+            right: -100px;
+            font-size: 3em;
+            animation: sailAcross 20s linear infinite;
+            z-index: 1000;
+        }
+        
+        @keyframes sailAcross {
+            0% { right: -100px; transform: rotate(0deg); }
+            50% { right: 50%; transform: rotate(5deg); }
+            100% { right: 100vw; transform: rotate(0deg); }
+        }
+        
+        /* Wave animations */
+        .waves {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(transparent, rgba(255,255,255,0.2));
+            z-index: -1;
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C300,120 600,0 1200,60 L1200,120 L0,120 Z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E") repeat-x;
+            animation: wave 10s linear infinite;
+        }
+        
+        .wave:nth-child(2) {
+            animation-delay: -5s;
+            opacity: 0.7;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
-        h1 {
+        
+        .header {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
-            font-size: 2em;
+            margin-bottom: 40px;
+            animation: slideDown 1s ease-out;
         }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.5); }
+            to { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.8); }
+        }
+        
+        .countdown {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .countdown h2 {
+            color: white;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .time-unit {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            min-width: 80px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .time-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            display: block;
+        }
+        
+        .time-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        
         .group {
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            animation: slideIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .group:nth-child(1) { animation-delay: 0.2s; }
+        .group:nth-child(2) { animation-delay: 0.4s; }
+        .group:nth-child(3) { animation-delay: 0.6s; }
+        .group:nth-child(4) { animation-delay: 0.8s; }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .group:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .group-header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.3em;
+            position: relative;
             overflow: hidden;
         }
-        .group-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        .group-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .group-info {
+            background: rgba(0,0,0,0.2);
             color: white;
             padding: 15px 20px;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-size: 0.95em;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        .group-info {
-            background: #34495e;
-            color: white;
-            padding: 10px 20px;
-            font-size: 0.9em;
+        
+        .mood-tracker {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
         }
+        
+        .mood-emojis {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .mood-emoji {
+            font-size: 2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        
+        .mood-emoji:hover, .mood-emoji.selected {
+            transform: scale(1.3) rotate(10deg);
+            filter: grayscale(0%);
+        }
+        
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
         }
+        
         .schedule-table th {
-            background: #ecf0f1;
-            padding: 12px 15px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
             text-align: left;
             font-weight: 600;
-            color: #2c3e50;
-            border-bottom: 2px solid #bdc3c7;
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
         }
+        
         .schedule-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #ecf0f1;
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            transition: all 0.3s ease;
         }
+        
+        .schedule-table tr:hover td {
+            background: rgba(255,255,255,0.1);
+            transform: scale(1.02);
+        }
+        
         .driver-row {
-            background: #e8f5e8;
+            background: rgba(39, 174, 96, 0.3);
             font-weight: 600;
         }
+        
         .passenger-row {
-            background: #f8f9fa;
+            background: rgba(52, 152, 219, 0.2);
         }
+        
         .destination-row {
-            background: #fff3cd;
+            background: rgba(243, 156, 18, 0.3);
             font-weight: 600;
         }
+        
         .time {
             font-weight: bold;
-            color: #e74c3c;
-            min-width: 60px;
+            color: #FFD700;
+            min-width: 80px;
+            font-size: 1.1em;
         }
-        .driver-icon {
-            color: #27ae60;
-            font-size: 1.2em;
+        
+        .driver-icon, .passenger-icon, .location-icon {
+            font-size: 1.3em;
+            margin-right: 8px;
         }
-        .passenger-icon {
-            color: #3498db;
+        
+        .action-buttons {
+            padding: 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
         }
-        .location-icon {
-            color: #f39c12;
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        
+        .weather-widget {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            z-index: 100;
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            animation: particle-float 8s linear infinite;
+        }
+        
+        @keyframes particle-float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
         @media (max-width: 768px) {
             .container {
-                margin: 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
             }
             .schedule-table th,
             .schedule-table td {
                 padding: 8px 10px;
                 font-size: 0.9em;
             }
-            h1 {
-                font-size: 1.5em;
+            .countdown-timer {
+                gap: 10px;
+            }
+            .time-unit {
+                min-width: 60px;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="floating-boat">⛵</div>
+    
+    <div class="waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="weather-widget">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5em;">🌊</span>
+            <div>
+                <div style="font-weight: bold;">Noosa Waters</div>
+                <div style="font-size: 0.9em;">Perfect sailing weather!</div>
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
-        <h1>🚗 Noosa Trip - Carpool Schedule 🏖️</h1>
+        <div class="header">
+            <h1>⛵ Noosa Boat Adventure 🌊</h1>
+            
+            <div class="countdown">
+                <h2>
+                    <span>⏰</span>
+                    Departure Countdown
+                    <span>🚗</span>
+                </h2>
+                <div class="countdown-timer" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="group">
-            <div class="group-header">Group 1 - Costco Food 🛒</div>
-            <div class="group-info">📍 Distance: 175km | ⏱️ Duration: 2h 33m + Costco time</div>
+            <div class="group-header">Group 1 - Costco Food Crew 🛒⚓</div>
+            <div class="group-info">
+                <span>📍 Distance: 175km</span>
+                <span>⏱️ Duration: 2h 33m + Costco time</span>
+                <span>🎵 Road trip playlist ready!</span>
+            </div>
+            <div class="mood-tracker">
+                <div style="color: white; margin-bottom: 5px;">Group Vibe Check:</div>
+                <div class="mood-emojis">
+                    <span class="mood-emoji" onclick="selectMood(this, 1)">😴</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 1)">😊</span>
+                    <span class="mood-emoji selected" onclick="selectMood(this, 1)">🤩</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 1)">🚀</span>
+                </div>
+            </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Person</th>
-                        <th>Location</th>
-                        <th>Activity</th>
+                        <th>Sailor</th>
+                        <th>Port of Call</th>
+                        <th>Mission</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="driver-row">
                         <td class="time">07:10</td>
-                        <td><span class="driver-icon">🚙</span> Larrisa (DRIVER)</td>
-                        <td>Capalaba</td>
-                        <td>Pickup start</td>
+                        <td><span class="driver-icon">🚙</span> Captain Larrisa</td>
+                        <td>Capalaba Harbor</td>
+                        <td>Begin the voyage</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">07:40</td>
-                        <td><span class="passenger-icon">👥</span> Claudia</td>
-                        <td>Spring Hill</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> First Mate Claudia</td>
+                        <td>Spring Hill Dock</td>
+                        <td>All aboard!</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">07:50</td>
-                        <td><span class="passenger-icon">👥</span> Naveen</td>
-                        <td>Woolowin</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Crew Naveen</td>
+                        <td>Woolowin Wharf</td>
+                        <td>Join the crew</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:10</td>
-                        <td><span class="passenger-icon">👥</span> Tanisha</td>
-                        <td>Carseldine</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Navigator Tanisha</td>
+                        <td>Carseldine Marina</td>
+                        <td>Chart the course</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">08:30</td>
-                        <td><span class="location-icon">🛒</span> Shopping</td>
+                        <td><span class="location-icon">🛒</span> Supply Run</td>
                         <td>Costco Wholesale North Lakes</td>
-                        <td>Arrive & Shop</td>
+                        <td>Provision the ship</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">09:15</td>
-                        <td><span class="location-icon">🚗</span> Leave</td>
+                        <td><span class="location-icon">🚗</span> Set Sail</td>
                         <td>Costco Wholesale North Lakes</td>
-                        <td>Depart for Noosa</td>
+                        <td>Depart for adventure</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">10:45</td>
-                        <td><span class="location-icon">🏖️</span> Arrive</td>
-                        <td>Noosa</td>
-                        <td>Final destination</td>
+                        <td><span class="location-icon">⛵</span> Destination</td>
+                        <td>Noosa Waters</td>
+                        <td>Boat adventure begins!</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="action-buttons">
+                <button class="btn" onclick="openChat(1)">📱 Group Chat</button>
+                <button class="btn" onclick="showPlaylist(1)">🎵 Playlist</button>
+                <button class="btn" onclick="shareLocation(1)">📍 Share Location</button>
+            </div>
         </div>
 
         <div class="group">
-            <div class="group-header">Group 2 - University/Coronation Drive 🎓</div>
-            <div class="group-info">📍 Distance: 163km | ⏱️ Duration: 2h</div>
+            <div class="group-header">Group 2 - University Fleet 🎓⚓</div>
+            <div class="group-info">
+                <span>📍 Distance: 163km</span>
+                <span>⏱️ Duration: 2h</span>
+                <span>🎓 Scholar sailors unite!</span>
+            </div>
+            <div class="mood-tracker">
+                <div style="color: white; margin-bottom: 5px;">Group Vibe Check:</div>
+                <div class="mood-emojis">
+                    <span class="mood-emoji" onclick="selectMood(this, 2)">😴</span>
+                    <span class="mood-emoji selected" onclick="selectMood(this, 2)">😊</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 2)">🤩</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 2)">🚀</span>
+                </div>
+            </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Person</th>
-                        <th>Location</th>
-                        <th>Activity</th>
+                        <th>Sailor</th>
+                        <th>Port of Call</th>
+                        <th>Mission</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="passenger-row">
                         <td class="time">07:30</td>
-                        <td><span class="passenger-icon">👥</span> Angela</td>
-                        <td>Springfield</td>
-                        <td>First pickup</td>
+                        <td><span class="passenger-icon">👥</span> Sailor Angela</td>
+                        <td>Springfield Base</td>
+                        <td>Early departure</td>
                     </tr>
                     <tr class="driver-row">
                         <td class="time">08:35</td>
-                        <td><span class="driver-icon">🚙</span> Grazielle (DRIVER)</td>
-                        <td>St Lucia</td>
-                        <td>Driver start</td>
+                        <td><span class="driver-icon">🚙</span> Captain Grazielle</td>
+                        <td>St Lucia University Port</td>
+                        <td>Command the vessel</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:40</td>
-                        <td><span class="passenger-icon">👥</span> Divpreet</td>
-                        <td>St Lucia</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Scholar Divpreet</td>
+                        <td>St Lucia University Port</td>
+                        <td>Academic crew member</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:45</td>
-                        <td><span class="passenger-icon">👥</span> Mana</td>
-                        <td>St Lucia</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Student Mana</td>
+                        <td>St Lucia University Port</td>
+                        <td>Join the expedition</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:50</td>
-                        <td><span class="passenger-icon">👥</span> Nova</td>
-                        <td>Auchenflower</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Mate Nova</td>
+                        <td>Auchenflower Station</td>
+                        <td>Final pickup</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">10:45</td>
-                        <td><span class="location-icon">🏖️</span> Arrive</td>
-                        <td>Noosa</td>
-                        <td>Final destination</td>
+                        <td><span class="location-icon">⛵</span> Destination</td>
+                        <td>Noosa Waters</td>
+                        <td>Academic adventure awaits!</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="action-buttons">
+                <button class="btn" onclick="openChat(2)">📱 Group Chat</button>
+                <button class="btn" onclick="showPlaylist(2)">🎵 Playlist</button>
+                <button class="btn" onclick="shareLocation(2)">📍 Share Location</button>
+            </div>
         </div>
 
         <div class="group">
-            <div class="group-header">Group 3 - Southern/Eastern Suburbs 🏘️</div>
-            <div class="group-info">📍 Distance: 177km | ⏱️ Duration: 2h 55m</div>
+            <div class="group-header">Group 3 - Southern Squadron 🏘️⚓</div>
+            <div class="group-info">
+                <span>📍 Distance: 177km</span>
+                <span>⏱️ Duration: 2h 55m</span>
+                <span>🌊 Longest voyage, biggest adventure!</span>
+            </div>
+            <div class="mood-tracker">
+                <div style="color: white; margin-bottom: 5px;">Group Vibe Check:</div>
+                <div class="mood-emojis">
+                    <span class="mood-emoji" onclick="selectMood(this, 3)">😴</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 3)">😊</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 3)">🤩</span>
+                    <span class="mood-emoji selected" onclick="selectMood(this, 3)">🚀</span>
+                </div>
+            </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Person</th>
-                        <th>Location</th>
-                        <th>Activity</th>
+                        <th>Sailor</th>
+                        <th>Port of Call</th>
+                        <th>Mission</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="driver-row">
                         <td class="time">07:50</td>
-                        <td><span class="driver-icon">🚙</span> Chris (DRIVER)</td>
-                        <td>Sunnybank Hills</td>
-                        <td>Pickup start</td>
+                        <td><span class="driver-icon">🚙</span> Admiral Chris</td>
+                        <td>Sunnybank Hills Harbor</td>
+                        <td>Lead the southern fleet</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:25</td>
-                        <td><span class="passenger-icon">👥</span> Angela</td>
-                        <td>South Bank</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Sailor Angela</td>
+                        <td>South Bank Marina</td>
+                        <td>River crossing pickup</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:35</td>
-                        <td><span class="passenger-icon">👥</span> Mari</td>
-                        <td>West End</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Crew Mari</td>
+                        <td>West End Wharf</td>
+                        <td>Western waters recruit</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">08:40</td>
-                        <td><span class="passenger-icon">👥</span> Alice</td>
-                        <td>West End</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Mate Alice</td>
+                        <td>West End Wharf</td>
+                        <td>Complete the crew</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">10:45</td>
-                        <td><span class="location-icon">🏖️</span> Arrive</td>
-                        <td>Noosa</td>
-                        <td>Final destination</td>
+                        <td><span class="location-icon">⛵</span> Destination</td>
+                        <td>Noosa Waters</td>
+                        <td>Epic boat adventure!</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="action-buttons">
+                <button class="btn" onclick="openChat(3)">📱 Group Chat</button>
+                <button class="btn" onclick="showPlaylist(3)">🎵 Playlist</button>
+                <button class="btn" onclick="shareLocation(3)">📍 Share Location</button>
+            </div>
         </div>
 
         <div class="group">
-            <div class="group-header">Group 4 - Gold Coast 🏄</div>
-            <div class="group-info">📍 Distance: 223km | ⏱️ Duration: 2h 38m</div>
+            <div class="group-header">Group 4 - Gold Coast Armada 🏄⚓</div>
+            <div class="group-info">
+                <span>📍 Distance: 223km</span>
+                <span>⏱️ Duration: 2h 38m</span>
+                <span>🏄 Surf to sailing adventure!</span>
+            </div>
+            <div class="mood-tracker">
+                <div style="color: white; margin-bottom: 5px;">Group Vibe Check:</div>
+                <div class="mood-emojis">
+                    <span class="mood-emoji" onclick="selectMood(this, 4)">😴</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 4)">😊</span>
+                    <span class="mood-emoji selected" onclick="selectMood(this, 4)">🤩</span>
+                    <span class="mood-emoji" onclick="selectMood(this, 4)">🚀</span>
+                </div>
+            </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Person</th>
-                        <th>Location</th>
-                        <th>Activity</th>
+                        <th>Sailor</th>
+                        <th>Port of Call</th>
+                        <th>Mission</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="driver-row">
                         <td class="time">08:00</td>
-                        <td><span class="driver-icon">🚙</span> Lily Nidea (DRIVER)</td>
-                        <td>Gold Coast</td>
-                        <td>Pickup start</td>
+                        <td><span class="driver-icon">🚙</span> Captain Lily Nidea</td>
+                        <td>Gold Coast Base</td>
+                        <td>Surf coast commander</td>
                     </tr>
                     <tr class="passenger-row">
                         <td class="time">09:05</td>
-                        <td><span class="passenger-icon">👥</span> Kierren</td>
-                        <td>Everton Park</td>
-                        <td>Pickup</td>
+                        <td><span class="passenger-icon">👥</span> Surfer Kierren</td>
+                        <td>Everton Park Station</td>
+                        <td>Wave rider recruit</td>
                     </tr>
                     <tr class="destination-row">
                         <td class="time">10:45</td>
-                        <td><span class="location-icon">🏖️</span> Arrive</td>
-                        <td>Noosa</td>
-                        <td>Final destination</td>
+                        <td><span class="location-icon">⛵</span> Destination</td>
+                        <td>Noosa Waters</td>
+                        <td>From waves to sailing!</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="action-buttons">
+                <button class="btn" onclick="openChat(4)">📱 Group Chat</button>
+                <button class="btn" onclick="showPlaylist(4)">🎵 Playlist</button>
+                <button class="btn" onclick="shareLocation(4)">📍 Share Location</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const tripDate = new Date();
+            tripDate.setHours(7, 10, 0, 0); // Set to first departure time
+            if (tripDate < new Date()) {
+                tripDate.setDate(tripDate.getDate() + 1); // Next day if time has passed
+            }
+            
+            const now = new Date().getTime();
+            const distance = tripDate.getTime() - now;
+            
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Mood selection
+        function selectMood(emoji, groupId) {
+            const group = emoji.closest('.group');
+            const emojis = group.querySelectorAll('.mood-emoji');
+            emojis.forEach(e => e.classList.remove('selected'));
+            emoji.classList.add('selected');
+        }
+        
+        // Interactive buttons
+        function openChat(groupId) {
+            alert(`🔥 Group ${groupId} chat coming soon! Get ready to share the excitement! 💬`);
+        }
+        
+        function showPlaylist(groupId) {
+            const playlists = [
+                "🎵 Sea Shanties & Road Trip Hits",
+                "🎓 Study Break Bangers",
+                "🌊 Chill Coastal Vibes", 
+                "🏄 Surf Rock & Beach House"
+            ];
+            alert(`🎵 Suggested playlist: ${playlists[groupId - 1]} 🎶`);
+        }
+        
+        function shareLocation(groupId) {
+            alert(`📍 Location sharing activated for Group ${groupId}! 🗺️`);
+        }
+        
+        // Create floating particles
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                particles.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.group').forEach(group => {
+            observer.observe(group);
+        });
+        
+        // Add some interactive sound effects (visual feedback only)
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
 </body>
 </html>
